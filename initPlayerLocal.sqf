@@ -14,5 +14,3 @@
         player setUnitLoadout _loadout;
     }
 }] call CBA_fnc_addBISEventHandler;
-
-["test", { systemChat "testing"; }, "all"] call CBA_fnc_registerChatCommand;
