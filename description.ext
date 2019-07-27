@@ -1,0 +1,26 @@
+author="14th AAG";
+onLoadName = "Training";
+OnLoadMission = "";
+//overviewPicture = "loading.jpg";
+
+
+respawn = 3;
+respawnDelay = 180;
+respawnVehicleDelay = 30;
+respawnTemplates[] = {"ace_spectator"};
+respawnOnStart = 0;
+
+
+disabledAI = 0;
+joinUnassigned = 1;
+aiKills  = 1;
+
+enableDebugConsole[] = {"76561198073794863"};
+enableTargetDebug = 1;
+
+cba_settings_hasSettingsFile = 1;
+
+#include "KPGUI\KPGUI_defines.hpp"
+#include "KPCF\ui\KPCF_dialog.hpp"
+
+#include "CfgFunctions.hpp"
