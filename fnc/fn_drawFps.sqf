@@ -6,4 +6,4 @@
         private _color = if (_fps < 20) then { [1,0,0,0.7] } else { [1,1,1,0.5] };
         drawIcon3D ["", _color, _pos, 1, 1, 0, format ["FPS: %1", str _fps], 2, 0.04, "RobotoCondensed", "center"];
     };
-} forEach allUnits;
+} forEach allPlayers;
