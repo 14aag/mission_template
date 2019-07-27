@@ -11,7 +11,7 @@ respawnTemplates[] = {"ace_spectator"};
 respawnOnStart = 0;
 
 
-disabledAI = 0;
+disabledAI = 1;
 joinUnassigned = 1;
 aiKills  = 1;
 
