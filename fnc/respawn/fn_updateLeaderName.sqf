@@ -2,6 +2,10 @@ params ["_unit"];
 
 private _leaderName = (group _unit) getVariable ["leader_name", ""];
 private _leader = leader _unit;
+if (_leader != _unit && !(vehicleVarName _unit isEqualTo "")) then {
+    _unit setVehicleVarName "";
+};
+
 if (_leaderName isEqualTo "") exitWith {
     [_unit, false] call efn_respawn_fnc_setAction;
 };
