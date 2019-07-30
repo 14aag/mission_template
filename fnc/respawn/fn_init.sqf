@@ -19,4 +19,6 @@ if (side player == independent) then {
     [player] call efn_respawn_fnc_updateLeaderName;
 }, true] call CBA_fnc_addPlayerEventHandler;
 
+["efn_force_leader_name_update", { [player] call efn_respawn_fnc_updateLeaderName; }] call CBA_fnc_addEventHandler;
+
 nil
