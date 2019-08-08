@@ -1,19 +1,13 @@
 class CfgFunctions {
     class efn {
         class common {
+            file = "fnc";
             class init_splosionWorkaround {
-                file = "fnc\fn_init_splosionWorkaround.sqf";
                 preInit = 1;
             };
-            class updateFps {
-                file = "fnc\fn_updateFps.sqf";
-            };
-            class toggleShowFps {
-                file = "fnc\fn_toggleShowFps.sqf";
-            };
-            class drawFps {
-                file = "fnc\fn_drawFps.sqf";
-            };
+            class updateFps {};
+            class toggleShowFps {};
+            class drawFps {};
         };
         class loadoutBox {
             class loadoutBox_init {
@@ -21,39 +15,38 @@ class CfgFunctions {
             };
         };
         class intel {
-            class initIntel {
-                file = "fnc\intel\fn_initIntel.sqf";
-            };
-            class initIntelHold {
-                file = "fnc\intel\fn_initIntelHold.sqf";
-            };
-            class addIntel {
-                file = "fnc\intel\fn_addIntel.sqf";
-            };
-            class addIntelLocal {
-                file = "fnc\intel\fn_addIntelLocal.sqf";
-            };
+            file = "fnc\intel";
+            class initIntel {};
+            class initIntelHold {};
+            class addIntel {};
+            class addIntelLocal {};
         };
     };
 
     class efn_respawn {
         class respawn {
+            file = "fnc\respawn";
             class init {
-                file = "fnc\respawn\fn_init.sqf";
                 postInit = 1;
             };
-            class placeTent {
-                file = "fnc\respawn\fn_placeTent.sqf";
+            class placeTent {};
+            class findEmptyPosition {};
+            class setAction {};
+            class updateLeaderName {};
+        };
+    };
+
+    class efn_persistence {
+        class persistence {
+            file = "fnc\persistence";
+            class preInit {
+                preInit = 1;
             };
-            class findEmptyPosition {
-                file = "fnc\respawn\fn_findEmptyPosition.sqf";
+            class postInit {
+                postInit = 1;
             };
-            class setAction {
-                file = "fnc\respawn\fn_setAction.sqf";
-            };
-            class updateLeaderName {
-                file = "fnc\respawn\fn_updateLeaderName.sqf";
-            };
+            class getSanitizedUnitLoadout {};
+            class deInstancedRadios {};
         };
     };
 

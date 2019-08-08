@@ -1,4 +1,4 @@
-author="14th AAG";
+author = "14th AAG";
 onLoadName = "Training";
 OnLoadMission = "";
 //overviewPicture = "loading.jpg";
@@ -13,12 +13,16 @@ respawnOnStart = 0;
 
 disabledAI = 1;
 joinUnassigned = 1;
-aiKills  = 1;
+aiKills = 0;
 
 enableDebugConsole[] = {"76561198073794863"};
 enableTargetDebug = 1;
 
 cba_settings_hasSettingsFile = 1;
+
+efn_persistence_savePlayerLoadout = 1;
+efn_persistence_savePlayerPosition = 1;
+efn_persistence_serverRestart = 1;
 
 #include "KPGUI\KPGUI_defines.hpp"
 #include "KPCF\ui\KPCF_dialog.hpp"
