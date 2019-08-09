@@ -50,5 +50,19 @@ class CfgFunctions {
         };
     };
 
+    class efn_chatcommands {
+        class commands {
+            file = "fnc\commands";
+            class preInit {
+                preInit = 1;
+            };
+            class postInit {
+                postInit = 1;
+            };
+            class sendChatMessage {};
+            class getPlayer {};
+        };
+    };
+
     #include "KPCF\KPCF_functions.hpp"
 };
