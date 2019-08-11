@@ -8,7 +8,7 @@ if !(hasInterface) exitWith {};
 
     if !(_pos isEqualTo objNull) then {
         player setDir (_pos select 0);
-        player setPos (_pos select 1);
+        player setPosASL (_pos select 1);
     };
 
     [_thisType, _thisId] call CBA_fnc_removeEventHandler

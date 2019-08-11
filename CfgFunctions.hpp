@@ -47,6 +47,8 @@ class CfgFunctions {
             };
             class getSanitizedUnitLoadout {};
             class deInstancedRadios {};
+            class save {};
+            class resetCurrent {};
         };
     };
 

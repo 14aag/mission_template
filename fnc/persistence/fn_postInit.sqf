@@ -12,7 +12,7 @@ if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         params ["_unit", "_id", "_uid", "_name"];
         private _loadout = if (efn_saveLoadout) then {[_unit] call efn_persistence_fnc_getSanitizedUnitLoadout} else {objNull};
-        private _pos = if (efn_savePosition) then {[getDir _unit, getPos _unit]} else {objNull};
+        private _pos = if (efn_savePosition) then {[getDir _unit, getPosASL _unit]} else {objNull};
 
         efn_persistence setVariable [_uid, [_loadout, _pos]];
 
@@ -23,9 +23,7 @@ if (isServer) then {
     addMissionEventHandler ["PlayerDisconnected", {
         params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
         if ("__SERVER__" isEqualTo _name && efn_persist) then {
-            private _hash = efn_persistence call CBA_fnc_serializeNamespace;
-            profileNamespace setVariable [efn_save_key, _hash];
-            saveProfileNamespace;
+            [] call efn_persistence_fnc_save;
         };
 
         nil
