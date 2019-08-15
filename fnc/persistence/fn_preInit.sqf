@@ -1,16 +1,10 @@
+if (isServer) exitWith {
+    ["efn_persistence_player_ready", efn_persistence_fnc_handlePlayerReadyEvent] call CBA_fnc_addEventHandler;
+};
 if !(hasInterface) exitWith {};
 
-["efn_player_state", {
-    _this params ["_loadout", "_pos"];
-    if !(_loadout isEqualTo objNull) then {
-        player setUnitLoadout _loadout;
-    };
-
-    if !(_pos isEqualTo objNull) then {
-        player setDir (_pos select 0);
-        player setPosASL (_pos select 1);
-    };
-
+["efn_persistence_player_state", {
+    _this call efn_persistence_fnc_restoreUnitState;
     [_thisType, _thisId] call CBA_fnc_removeEventHandler
 }] call CBA_fnc_addEventHandlerArgs;
 

@@ -49,6 +49,9 @@ class CfgFunctions {
             class deInstancedRadios {};
             class save {};
             class resetCurrent {};
+            class handlePlayerReadyEvent {};
+            class buildUnitState {};
+            class restoreUnitState {};
         };
     };
 
