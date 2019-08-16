@@ -5,9 +5,6 @@ class CfgFunctions {
             class init_splosionWorkaround {
                 preInit = 1;
             };
-            class updateFps {};
-            class toggleShowFps {};
-            class drawFps {};
         };
         class loadoutBox {
             class loadoutBox_init {
@@ -20,6 +17,18 @@ class CfgFunctions {
             class initIntelHold {};
             class addIntel {};
             class addIntelLocal {};
+        };
+    };
+
+    class efn_fps {
+        class fps {
+            file = "fnc\fps";
+            class init {
+                postInit = 1;
+            };
+            class updateFps {};
+            class toggleShowFps {};
+            class drawFps {};
         };
     };
 
