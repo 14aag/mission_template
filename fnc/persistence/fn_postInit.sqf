@@ -27,11 +27,11 @@ if (isServer) then {
 if !(hasInterface) exitWith {};
 
 [player, "killed", {
-    player setVariable ["efn_persistence_loadout", player call efn_persistence_fnc_getSanitizedUnitLoadout, true];
+    player setVariable ["efn_persistence_loadout", player call efn_persistence_fnc_getSanitizedUnitLoadout, 2];
 }] call CBA_fnc_addBISEventHandler;
 
 [player, "respawn", {
-    player setVariable ["efn_persistence_loadout", nil, true];
+    player setVariable ["efn_persistence_loadout", nil, 2];
 }] call CBA_fnc_addBISEventHandler;
 
 ["efn_persistence_player_ready", [player]] call CBA_fnc_serverEvent;
