@@ -2,9 +2,6 @@ class CfgFunctions {
     class efn {
         class common {
             file = "fnc";
-            class init_splosionWorkaround {
-                preInit = 1;
-            };
         };
         class loadoutBox {
             class loadoutBox_init {
@@ -17,6 +14,15 @@ class CfgFunctions {
             class initIntelHold {};
             class addIntel {};
             class addIntelLocal {};
+        };
+    };
+
+    class efn_workarounds {
+        class workarounds {
+            file = "fnc\workarounds";
+            class splosionWorkaround {
+                preInit = 1;
+            };
         };
     };
 
