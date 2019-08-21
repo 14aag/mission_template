@@ -34,6 +34,4 @@ if !(hasInterface) exitWith {};
     player setVariable ["efn_persistence_loadout", nil, 2];
 }] call CBA_fnc_addBISEventHandler;
 
-["efn_persistence_player_ready", [player]] call CBA_fnc_serverEvent;
-
 nil

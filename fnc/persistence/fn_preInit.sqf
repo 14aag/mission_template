@@ -1,5 +1,5 @@
 if (isServer) exitWith {
-    ["efn_persistence_player_ready", efn_persistence_fnc_handlePlayerReadyEvent] call CBA_fnc_addEventHandler;
+    ["efn_player_ready", efn_persistence_fnc_handlePlayerReadyEvent] call CBA_fnc_addEventHandler;
 };
 if !(hasInterface) exitWith {};
 

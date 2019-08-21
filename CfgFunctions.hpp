@@ -23,6 +23,10 @@ class CfgFunctions {
             class splosionWorkaround {
                 preInit = 1;
             };
+            class zeusWorkaround {
+                preInit = 1;
+            };
+            class reassignZeus {};
         };
     };
 
