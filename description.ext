@@ -5,9 +5,9 @@ OnLoadMission = "";
 
 
 respawn = 3;
-respawnDelay = 180;
+respawnDelay = 5;
 respawnVehicleDelay = 30;
-respawnTemplates[] = {"ace_spectator"};
+respawnTemplates[] = {"Base"};
 respawnOnStart = 0;
 
 
@@ -23,6 +23,9 @@ cba_settings_hasSettingsFile = 1;
 efn_persistence_savePlayerLoadout = 1;
 efn_persistence_savePlayerPosition = 1;
 efn_persistence_serverRestart = 1;
+
+efn_respawn_ticketCount = 12;
+efn_respawn_timer = 175;
 
 #include "KPGUI\KPGUI_defines.hpp"
 #include "KPCF\ui\KPCF_dialog.hpp"

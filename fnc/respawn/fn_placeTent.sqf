@@ -8,12 +8,7 @@ if (speed player > 0) exitWith {
 private _tentPos = [player] call efn_respawn_fnc_findEmptyPosition;
 if !(_tentPos isEqualTo []) then {
     player playActionNow "PutDown";
-    if (isNil "tent") then {
-        tent = sideTentType createVehicle _tentPos;
-    } else {
-        tent setPos _tentPos;
-    };
-    (format ["respawn_%1", vehicleVarName player]) setMarkerPos _tentPos;
+    ["efn_respawn_place_tent", [player, _tentPos]] call CBA_fnc_serverEvent;
 } else {
     hint "Not enough space";
 };

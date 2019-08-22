@@ -52,6 +52,10 @@ class CfgFunctions {
             class findEmptyPosition {};
             class setAction {};
             class updateLeaderName {};
+            class getTent {};
+            class handlePlaceTentEvent {};
+            class handlePlayerRespawnEvent {};
+            class movePlayerToSpawn {};
         };
     };
 
