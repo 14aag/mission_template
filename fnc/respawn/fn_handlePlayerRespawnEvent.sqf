@@ -1,5 +1,7 @@
+#include "script_component.hpp"
+
 params ["_unit"];
 
-[_unit] call efn_respawn_fnc_movePlayerToSpawn;
-["efn_respawn_set_spectator", [false], _unit] call CBA_fnc_targetEvent;
+[_unit] call FUNC(movePlayerToSpawn);
+[QGVAR(set_spectator), [false], _unit] call CBA_fnc_targetEvent;
 

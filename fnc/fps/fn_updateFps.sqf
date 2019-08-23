@@ -1,1 +1,3 @@
-player setVariable ["efn_player_fps", floor diag_fps, true];
+#include "script_component.hpp"
+
+player setVariable [QGVAR(fps), floor diag_fps, true];

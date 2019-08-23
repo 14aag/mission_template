@@ -1,9 +1,11 @@
+#include "script_component.hpp"
+
 params ["_unit"];
 
 private _tent = [_unit] call efn_respawn_fnc_getTent;
 if (_tent isEqualTo objNull) exitWith {};
 
-private _tickets = _tent getVariable ["efn_respawn_tickets", 0];
+private _tickets = _tent getVariable [QGVAR(tickets), 0];
 if (_tickets <= 0) exitWith {};
 
 private _pos = (getPosATL _tent) findEmptyPosition [1, 30, "B_Soldier_F"];
@@ -20,7 +22,7 @@ if (!_hasFriendlies && !(_enemies isEqualTo [])) exitWith {};
 
 _unit setPosATL _pos;
 _tickets = _tickets - 1;
-_tent setVariable ["efn_respawn_tickets", _tickets];
+_tent setVariable [QGVAR(tickets), _tickets];
 
 nil
 

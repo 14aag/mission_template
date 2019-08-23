@@ -1,5 +1,7 @@
-private _hash = efn_persistence call CBA_fnc_serializeNamespace;
-profileNamespace setVariable [efn_save_key, _hash];
+#include "script_component.hpp"
+
+private _hash = GVAR(persistence) call CBA_fnc_serializeNamespace;
+profileNamespace setVariable [GVAR(saveKey), _hash];
 saveProfileNamespace;
 
 diag_log "[EFN] Mission saved";

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_msg", "_type", "_receiver"];
 
 private _callsign = switch (toLower _type) do {
@@ -6,9 +8,9 @@ private _callsign = switch (toLower _type) do {
     default {"Chat:"};
 };
 
-efn_chatcommands_chatChannel radioChannelAdd [ACE_player];
-efn_chatcommands_chatChannel radioChannelSetCallSign _callsign;
-player customChat [efn_chatcommands_chatChannel, _msg];
-efn_chatcommands_chatChannel radioChannelRemove [ACE_player];
+GVAR(chatChannel) radioChannelAdd [ACE_player];
+GVAR(chatChannel) radioChannelSetCallSign _callsign;
+player customChat [GVAR(chatChannel), _msg];
+GVAR(chatChannel) radioChannelRemove [ACE_player];
 
-["efn_chatcommands_chatMessage", [profileName, _msg, _type, _receiver]] call CBA_fnc_globalEvent;
+[QGVAR(chatMessage), [profileName, _msg, _type, _receiver]] call CBA_fnc_globalEvent;

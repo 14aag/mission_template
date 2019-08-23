@@ -1,3 +1,5 @@
-efn_persistence call CBA_fnc_deleteNamespace;
-efn_persistence = false call CBA_fnc_createNamespace;
-[] call efn_persistence_fnc_save;
+#include "script_component.hpp"
+
+GVAR(persistence) call CBA_fnc_deleteNamespace;
+GVAR(persistence) = false call CBA_fnc_createNamespace;
+[] call FUNC(save);

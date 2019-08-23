@@ -1,22 +1,24 @@
+#include "script_component.hpp"
+
 if (isServer) then {
-    efn_saveLoadout = getMissionConfigValue ["efn_persistence_savePlayerLoadout", false] in [true, 1];
-    efn_savePosition = getMissionConfigValue ["efn_persistence_savePlayerPosition", false] in [true, 1];
+    GVAR(saveLoadout) = getMissionConfigValue [QGVAR(savePlayerLoadout), false] in [true, 1];
+    GVAR(savePosition) = getMissionConfigValue [QGVAR(savePlayerPosition), false] in [true, 1];
 
-    if (!efn_saveLoadout && !efn_savePosition) exitWith {};
-    efn_persist = getMissionConfigValue ["efn_persistence_serverRestart", false] in [true, 1];
+    if (!GVAR(saveLoadout) && !GVAR(savePosition)) exitWith {};
+    GVAR(persist) = getMissionConfigValue [QGVAR(serverRestart), false] in [true, 1];
 
-    efn_save_key = format ["efn_save_%1.%2", missionName, worldName];
-    private _hash = if (efn_persist) then {profileNamespace getVariable [efn_save_key, [] call CBA_fnc_hashCreate]} else {[] call CBA_fnc_hashCreate};
-    efn_persistence = [_hash] call CBA_fnc_deserializeNamespace;
+    GVAR(saveKey) = format ["efn_save_%1.%2", missionName, worldName];
+    private _hash = if (GVAR(persist)) then {profileNamespace getVariable [GVAR(saveKey), [] call CBA_fnc_hashCreate]} else {[] call CBA_fnc_hashCreate};
+    GVAR(persistence) = [_hash] call CBA_fnc_deserializeNamespace;
 
     addMissionEventHandler ["HandleDisconnect", {
         params ["_unit", "_id", "_uid", "_name"];
-        private _unitState = [_unit] call efn_persistence_fnc_buildUnitState;
-        efn_persistence setVariable [_uid, _unitState];
+        private _unitState = [_unit] call FUNC(buildUnitState);
+        GVAR(persistence) setVariable [_uid, _unitState];
 
         private _playerCount = count allPlayers;
-        if (_playerCount == 0 && efn_persist) then {
-            [] call efn_persistence_fnc_save;
+        if (_playerCount == 0 && GVAR(persist)) then {
+            [] call FUNC(save);
         };
 
         // We don't want the unit to live on as AI
@@ -27,11 +29,11 @@ if (isServer) then {
 if !(hasInterface) exitWith {};
 
 [player, "killed", {
-    player setVariable ["efn_persistence_loadout", player call efn_persistence_fnc_getSanitizedUnitLoadout, 2];
+    player setVariable [QGVAR(loadout), player call FUNC(getSanitizedUnitLoadout), 2];
 }] call CBA_fnc_addBISEventHandler;
 
 [player, "respawn", {
-    player setVariable ["efn_persistence_loadout", nil, 2];
+    player setVariable [QGVAR(loadout), nil, 2];
 }] call CBA_fnc_addBISEventHandler;
 
 nil

@@ -1,8 +1,10 @@
+#include "script_component.hpp"
+
 params ["_unit"];
 
 if !(isServer) exitWith {};
 
-private _curator = _unit getVariable "efn_workarounds_zeus_logic";
+private _curator = _unit getVariable QGVAR(zeus_logic);
 if (isNil "_curator") exitWith {};
 
 unassignCurator _curator;

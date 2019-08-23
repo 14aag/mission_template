@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 params ["_loadout", "_pos", ["_chestpack", []], ["_earplugs", false]];
 
 if !(_loadout isEqualTo objNull) then {
