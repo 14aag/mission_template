@@ -2,7 +2,7 @@
 
 params ["_unit"];
 
-private _tent = [_unit] call efn_respawn_fnc_getTent;
+private _tent = [_unit] call FUNC(getTent);
 if (_tent isEqualTo objNull) exitWith {};
 
 private _tickets = _tent getVariable [QGVAR(tickets), 0];

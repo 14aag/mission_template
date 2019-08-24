@@ -27,7 +27,7 @@ GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
     [{
         [QGVAR(handle_player_respawn), [player]] call CBA_fnc_serverEvent;
         hideBody (_this select 0);
-    }, [_corpse], efn_respawn_timer] call CBA_fnc_waitAndExecute;
+    }, [_corpse], GVAR(timer)] call CBA_fnc_waitAndExecute;
 
     nil
 }] call CBA_fnc_addBISEventHandler;
