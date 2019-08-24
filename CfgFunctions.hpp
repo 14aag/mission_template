@@ -78,7 +78,7 @@ class CfgFunctions {
         };
     };
 
-    class efn_chatcommands {
+    class efn_commands {
         class commands {
             file = "fnc\commands";
             class preInit {
