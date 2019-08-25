@@ -10,6 +10,7 @@ if (isServer) then {
 if (!hasInterface) exitWith {};
 
 GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
+GVAR(spectatorDelay) = 0.1;
 [player, "killed", {
     player setVariable [QGVAR(saved_loadout), getUnitLoadout player];
     [player, false] call FUNC(setAction);
@@ -23,7 +24,9 @@ GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
         player setUnitLoadout _loadout;
     };
 
-    [true] call ace_spectator_fnc_setSpectator;
+    [{
+        [true] call FUNC(setSpectator);
+    }, [], GVAR(spectatorDelay)] call CBA_fnc_waitAndExecute;
     [{
         [QGVAR(handle_player_respawn), [player]] call CBA_fnc_serverEvent;
         hideBody (_this select 0);
@@ -36,7 +39,7 @@ GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
     [player] call FUNC(updateLeaderName);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
-[QGVAR(set_spectator), ace_spectator_fnc_setSpectator] call CBA_fnc_addEventHandler;
+[QGVAR(set_spectator), FUNC(setSpectator)] call CBA_fnc_addEventHandler;
 [QGVARMAIN(force_leader_name_update), { [player] call FUNC(updateLeaderName); }] call CBA_fnc_addEventHandler;
 
 nil

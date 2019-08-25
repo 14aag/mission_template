@@ -56,6 +56,7 @@ class CfgFunctions {
             class handlePlaceTentEvent {};
             class handlePlayerRespawnEvent {};
             class movePlayerToSpawn {};
+            class setSpectator {};
         };
     };
 
