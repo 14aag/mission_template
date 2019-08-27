@@ -2,11 +2,11 @@
 
 params ["_loadout", "_pos", ["_chestpack", []], ["_earplugs", false]];
 
-if !(isNull _loadout) then {
+if (_loadout isEqualType []) then {
     player setUnitLoadout _loadout;
 };
 
-if !(isNull _pos) then {
+if (_pos isEqualType []) then {
     player setDir (_pos select 0);
     player setPosASL (_pos select 1);
 };
