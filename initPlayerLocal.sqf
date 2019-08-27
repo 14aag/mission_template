@@ -1,3 +1,5 @@
 #include "script_component.hpp"
 
-[QGVARMAIN(player_ready), [player]] call CBA_fnc_serverEvent;
+["CBA_loadingScreenDone", {
+    [QGVARMAIN(player_ready), [player]] call CBA_fnc_serverEvent;
+}] call CBA_fnc_addEventHandler;
