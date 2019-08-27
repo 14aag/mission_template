@@ -52,7 +52,17 @@ if (["ace_hearing"] call ace_common_fnc_isModLoaded) then {
 
 // Toggle spectator mode in 3rd party radio addons
 if (["acre_sys_radio"] call ace_common_fnc_isModLoaded) then {[_set] call acre_api_fnc_setSpectator};
-if (["task_force_radio"] call ace_common_fnc_isModLoaded) then {[player, _set] call TFAR_fnc_forceSpectator};
+if (["task_force_radio"] call ace_common_fnc_isModLoaded) then {
+    [player, _set] call TFAR_fnc_forceSpectator;
+    if (_set) then {
+        [{
+            if (ace_spectator_isSet && !(player getVariable ["TFAR_forceSpectator", false])) then {
+                [player, true] call TFAR_fnc_forceSpectator;
+            };
+            !ace_spectator_isSet
+        }, {}] call CBA_fnc_waitUntilAndExecute;
+    };
+};
 
 if (_set) then {
     // Initalize the camera

@@ -10,7 +10,6 @@ if (isServer) then {
 if (!hasInterface) exitWith {};
 
 GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
-GVAR(spectatorDelay) = 0.1;
 [player, "killed", {
     player setVariable [QGVAR(saved_loadout), getUnitLoadout player];
     [player, false] call FUNC(setAction);
@@ -24,9 +23,7 @@ GVAR(spectatorDelay) = 0.1;
         player setUnitLoadout _loadout;
     };
 
-    [{
-        [true] call FUNC(setSpectator);
-    }, [], GVAR(spectatorDelay)] call CBA_fnc_waitAndExecute;
+    [true] call FUNC(setSpectator);
     [{
         [QGVAR(handle_player_respawn), [player]] call CBA_fnc_serverEvent;
         hideBody (_this select 0);
