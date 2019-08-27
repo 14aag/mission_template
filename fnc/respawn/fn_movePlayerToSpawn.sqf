@@ -3,7 +3,7 @@
 params ["_unit"];
 
 private _tent = [_unit] call FUNC(getTent);
-if (_tent isEqualTo objNull) exitWith {};
+if (isNull _tent) exitWith {};
 
 private _tickets = _tent getVariable [QGVAR(tickets), 0];
 if (_tickets <= 0) exitWith {};
