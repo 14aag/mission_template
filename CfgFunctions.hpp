@@ -1,19 +1,20 @@
 class CfgFunctions {
     class efn {
-        class common {
-            file = "fnc";
-        };
-        class loadoutBox {
-            class loadoutBox_init {
-                file = "fnc\loadout\fn_loadoutBox_init.sqf";
-            };
-        };
         class intel {
             file = "fnc\intel";
             class initIntel {};
             class initIntelHold {};
             class addIntel {};
             class addIntelLocal {};
+        };
+    };
+
+    class efn_inventory {
+        class inventory {
+            file = "fnc\inventory";
+            class initArsenalWhitelist {};
+            class initLoadoutBox {};
+            class loadWhitelist {};
         };
     };
 
