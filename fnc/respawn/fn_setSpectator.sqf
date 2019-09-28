@@ -107,6 +107,8 @@ if (_set) then {
         ace_nametags_showNamesForAI = ace_spectator_nametagSettingCache select 1;
         ace_spectator_nametagSettingCache = nil;
     };
+
+    [] call ace_common_fnc_showHud;
 };
 
 // Hide/Unhide the player if enabled and alive
