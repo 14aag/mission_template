@@ -286,7 +286,7 @@ force ace_scopes_zeroReferenceTemperature = 15;
 
 // ACE Spectator
 force ace_spectator_enableAI = false;
-force ace_spectator_restrictModes = 3;
+force ace_spectator_restrictModes = 1;
 force ace_spectator_restrictVisions = 1;
 
 // ACE Switch Units
