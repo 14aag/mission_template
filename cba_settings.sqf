@@ -108,7 +108,7 @@ ace_interact_menu_useListMenu = false;
 
 // ACE Logistics
 force ace_cargo_enable = true;
-ace_cargo_loadTimeCoefficient = 5;
+force ace_cargo_loadTimeCoefficient = 5;
 force ace_cargo_paradropTimeCoefficent = 2.5;
 force ace_rearm_level = 1;
 force ace_rearm_supply = 0;
@@ -141,7 +141,7 @@ force ace_map_mapGlow = true;
 force ace_map_mapIllumination = true;
 ace_map_mapLimitZoom = false;
 force ace_map_mapShake = true;
-ace_map_mapShowCursorCoordinates = false;
+force ace_map_mapShowCursorCoordinates = false;
 ace_markers_moveRestriction = 0;
 
 // ACE Map Gestures
@@ -374,9 +374,9 @@ force ace_weather_updateInterval = 60;
 force ace_weather_windSimulation = false;
 
 // ACE Wind Deflection
-ace_winddeflection_enabled = true;
-ace_winddeflection_simulationInterval = 0.05;
-ace_winddeflection_vehicleEnabled = true;
+force ace_winddeflection_enabled = true;
+force ace_winddeflection_simulationInterval = 0.05;
+force ace_winddeflection_vehicleEnabled = true;
 
 // ACE Zeus
 ace_zeus_autoAddObjects = false;
@@ -423,7 +423,7 @@ acex_viewrestriction_preserveView = false;
 force acex_volume_enabled = true;
 acex_volume_fadeDelay = 1;
 acex_volume_lowerInVehicles = false;
-force acex_volume_reduction = 8;
+acex_volume_reduction = 8;
 acex_volume_remindIfLowered = false;
 acex_volume_showNotification = true;
 
@@ -522,6 +522,13 @@ Achilles_var_UK3CB_CHC_B = true;
 Achilles_var_UK3CB_CHC_C = true;
 Achilles_var_UK3CB_CHC_I = true;
 Achilles_var_UK3CB_CHC_O = true;
+Achilles_var_UK3CB_CPD_B = true;
+Achilles_var_UK3CB_CPD_I = true;
+Achilles_var_UK3CB_CPD_O = true;
+Achilles_var_UK3CB_CW_SOV_O_EARLY = true;
+Achilles_var_UK3CB_CW_SOV_O_LATE = true;
+Achilles_var_UK3CB_CW_US_B_EARLY = true;
+Achilles_var_UK3CB_CW_US_B_LATE = true;
 Achilles_var_UK3CB_TKA_B = true;
 Achilles_var_UK3CB_TKA_I = true;
 Achilles_var_UK3CB_TKA_O = true;
@@ -537,6 +544,7 @@ Achilles_var_UK3CB_TKP_I = true;
 Achilles_var_UK3CB_TKP_O = true;
 Achilles_var_UK3CB_UN_B = true;
 Achilles_var_UK3CB_UN_I = true;
+Achilles_var_USAF = true;
 Achilles_var_Virtual_F = true;
 Achilles_var_VSM_GP = true;
 
@@ -648,55 +656,16 @@ Achilles_var_moduleTreeSearchPatch = false;
 // ADV - ACE Splint
 force adv_aceSplint_enable = true;
 force adv_aceSplint_patientCondition = 0;
-adv_aceSplint_reopenChance_medic = 0;
-adv_aceSplint_reopenChance_regular = 30;
+force adv_aceSplint_reopenChance_medic = 0;
+force adv_aceSplint_reopenChance_regular = 30;
 force adv_aceSplint_reopenTime = 600;
 force adv_aceSplint_reuseChance = 80;
-
-// AIME Ammo Type Menu
-UPSL_aime_change_ammo_setting_ammo_class = true;
-UPSL_aime_change_ammo_setting_vehicle_ammo_class = true;
-
-// AIME General
-UPSL_aime_setting_hide = true;
-
-// AIME GPS and UAV Terminal
-UPSL_aime_uav_terminal_setting_gps_action = true;
-UPSL_aime_uav_terminal_setting_term_action = true;
-UPSL_aime_uav_terminal_setting_uav_action = true;
-
-// AIME Group Management
-UPSL_aime_group_setting_drop_leader_action = true;
-
-// AIME Inventory
-UPSL_aime_inventory_setting_assemble_action = true;
-UPSL_aime_inventory_setting_backpack_action = true;
-UPSL_aime_inventory_setting_holder_action = true;
-UPSL_aime_inventory_setting_open_action = true;
-
-// AIME Vehicle Controls
-UPSL_aime_vehicle_controls_setting_arty_computer_action = true;
-UPSL_aime_vehicle_controls_setting_collision_action = true;
-UPSL_aime_vehicle_controls_setting_engine_action = true;
-UPSL_aime_vehicle_controls_setting_flaps_action = true;
-UPSL_aime_vehicle_controls_setting_gear_action = true;
-UPSL_aime_vehicle_controls_setting_hover_action = true;
-UPSL_aime_vehicle_controls_setting_lights_action = true;
-UPSL_aime_vehicle_controls_setting_manual_action = true;
-UPSL_aime_vehicle_controls_setting_user_actions = true;
-
-// AIME Vehicle Seats
-UPSL_aime_vehicle_seats_setting_change_action = true;
-UPSL_aime_vehicle_seats_setting_force_eject = false;
-UPSL_aime_vehicle_seats_setting_getin_action = true;
-UPSL_aime_vehicle_seats_setting_getout_action = true;
-UPSL_aime_vehicle_seats_setting_turnout_action = true;
 
 // ASR AI3
 force asr_ai3_control_onteamswitchleader = true;
 force asr_ai3_danger_AD_INSIDE = 50;
 force asr_ai3_danger_AD_OUTSIDE = 250;
-force asr_ai3_danger_ADVANCED_COVER = false;
+force asr_ai3_danger_ADVANCED_COVER = true;
 force asr_ai3_danger_ATTACK_TIMER = 60;
 force asr_ai3_danger_AUTO_ATTACK_WITHIN = 35;
 force asr_ai3_danger_COUNTER_ATTACK = true;
@@ -757,7 +726,7 @@ force CF_BAI_subskills_minimum_spotDistance = 0.35;
 force CF_BAI_subskills_minimum_spotTime = 0.5;
 force CF_BAI_subskills_sleep = 30;
 force CF_BAI_subskills_terrain_maximum_default = 30;
-force CF_BAI_subskills_terrain_maximum_world_code = "[[""pja310"",25],[""Panthera3"",25]]";
+force CF_BAI_subskills_terrain_maximum_world_code = "[]";
 force CF_BAI_subskills_terrain_range = 25;
 
 // CF_BAI_boost
@@ -900,6 +869,13 @@ CBRN_factionMask_UK3CB_CHC_B = "";
 CBRN_factionMask_UK3CB_CHC_C = "";
 CBRN_factionMask_UK3CB_CHC_I = "";
 CBRN_factionMask_UK3CB_CHC_O = "";
+CBRN_factionMask_UK3CB_CPD_B = "";
+CBRN_factionMask_UK3CB_CPD_I = "";
+CBRN_factionMask_UK3CB_CPD_O = "";
+CBRN_factionMask_UK3CB_CW_SOV_O_EARLY = "";
+CBRN_factionMask_UK3CB_CW_SOV_O_LATE = "";
+CBRN_factionMask_UK3CB_CW_US_B_EARLY = "";
+CBRN_factionMask_UK3CB_CW_US_B_LATE = "";
 CBRN_factionMask_UK3CB_TKA_B = "";
 CBRN_factionMask_UK3CB_TKA_I = "";
 CBRN_factionMask_UK3CB_TKA_O = "";
@@ -915,6 +891,8 @@ CBRN_factionMask_UK3CB_TKP_I = "";
 CBRN_factionMask_UK3CB_TKP_O = "";
 CBRN_factionMask_UK3CB_UN_B = "";
 CBRN_factionMask_UK3CB_UN_I = "";
+CBRN_factionMask_USAF = "";
+CBRN_factionMask_USAF_ServiceMenu = "";
 CBRN_factionMask_Virtual_F = "";
 CBRN_factionMask_VSM_GP = "";
 
@@ -981,13 +959,13 @@ diwako_dui_use_layout_editor = false;
 // dzn Artillery Illumination
 dzn_Flares_H_Color = [1,1,0.5];
 dzn_Flares_H_Deviation = 25;
-dzn_Flares_H_Enabled = true;
+force dzn_Flares_H_Enabled = true;
 dzn_Flares_H_Intensity = 10;
 dzn_Flares_H_ListSetting = "StaticCannon, rhs_2s3tank_base";
 dzn_Flares_H_Range = 450;
 dzn_Flares_M_Color = [1,1,0.5];
 dzn_Flares_M_Deviation = 25;
-dzn_Flares_M_Enabled = true;
+force dzn_Flares_M_Enabled = true;
 dzn_Flares_M_Intensity = 10;
 dzn_Flares_M_ListSetting = "StaticMortar, Mortar_01_base_F, CUP_B_M1129_MC_MK19_Desert, CUP_B_M1129_MC_MK19_Woodland";
 dzn_Flares_M_Range = 400;
@@ -1000,7 +978,7 @@ force dzn_EJAM_feed_failure_2_ChanceSettings = 20;
 force dzn_EJAM_feed_failure_ChanceSettings = 30;
 force dzn_EJAM_Force = true;
 force dzn_EJAM_ForceOverallChance = true;
-force dzn_EJAM_MappingSettings = "[""arifle_MX_F"",0.05,45,10,45,0,0],[""rhs_weap_MP44"",100,100,100,100,100,100]";
+force dzn_EJAM_MappingSettings = "";
 force dzn_EJAM_OverallChanceSetting = 0.05;
 force dzn_EJAM_SubsonicJamEffectSetting = "1";
 
@@ -1022,18 +1000,25 @@ force grad_trenches_functions_smallEnvelopeDigTime = 30;
 grad_trenches_functions_stopBuildingAtFatigueMax = false;
 force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
 
-// Laxemann Immerse
-L_Immerse_exShake = true;
-L_Immerse_force = true;
-L_Immerse_recoil = true;
-L_Immerse_twitch = true;
-
 // NIArms
 niarms_accswitch = true;
 niarms_magSwitch = true;
 
 // Simplex Support Services
-SSS_setting_GiveUAVTerminal = true;
+force SSS_setting_adminFullAccess = true;
+force SSS_setting_adminLimitSide = false;
+force SSS_setting_cleanupCrew = true;
+force SSS_setting_deleteVehicleOnEntityRemoval = false;
+force SSS_setting_GiveUAVTerminal = true;
+force SSS_setting_milsimModeArtillery = true;
+force SSS_setting_milsimModeCAS = true;
+force SSS_setting_milsimModeTransport = true;
+force SSS_setting_removeSupportOnVehicleDeletion = true;
+force SSS_setting_resetVehicleOnRTB = true;
+force SSS_setting_restoreCrewOnRTB = true;
+SSS_setting_specialItems = "";
+SSS_setting_specialItemsLimitSide = true;
+SSS_setting_specialItemsLogic = true;
 SSS_setting_useChatNotifications = false;
 
 // TacSalmon Buttstroke
@@ -1104,6 +1089,17 @@ TFAR_voiceCone = true;
 // TFT Dismount
 tft_dismount_setting_override = true;
 force tft_dismount_setting_priority = 7;
+
+// USAF
+usaf_serviceMenu_setting_allowHangarRearm = true;
+usaf_serviceMenu_setting_allowHangarRefuel = true;
+usaf_serviceMenu_setting_allowHangarRepair = true;
+usaf_serviceMenu_setting_allowLoadoutModification = true;
+usaf_serviceMenu_setting_enabled = true;
+usaf_serviceMenu_setting_refuelTime = "100";
+usaf_serviceMenu_setting_reloadTime = "2";
+usaf_serviceMenu_setting_repairTime = "100";
+usaf_serviceMenu_setting_replaceSources = false;
 
 // VET_Unflipping
 vet_unflipping_require_serviceVehicle = false;
