@@ -68,8 +68,8 @@ force ace_explosives_requireSpecialist = false;
 force ace_frag_enabled = true;
 force ace_frag_maxTrack = 10;
 force ace_frag_maxTrackPerFrame = 10;
-force ace_frag_reflectionsEnabled = false;
-force ace_frag_spallEnabled = false;
+force ace_frag_reflectionsEnabled = true;
+force ace_frag_spallEnabled = true;
 
 // ACE Goggles
 ace_goggles_effects = 2;
@@ -1010,9 +1010,9 @@ force SSS_setting_adminLimitSide = false;
 force SSS_setting_cleanupCrew = true;
 force SSS_setting_deleteVehicleOnEntityRemoval = false;
 force SSS_setting_GiveUAVTerminal = true;
-force SSS_setting_milsimModeArtillery = true;
-force SSS_setting_milsimModeCAS = true;
-force SSS_setting_milsimModeTransport = true;
+force SSS_setting_milsimModeArtillery = false;
+force SSS_setting_milsimModeCAS = false;
+force SSS_setting_milsimModeTransport = false;
 force SSS_setting_removeSupportOnVehicleDeletion = true;
 force SSS_setting_resetVehicleOnRTB = true;
 force SSS_setting_restoreCrewOnRTB = true;
