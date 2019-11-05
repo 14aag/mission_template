@@ -69,7 +69,7 @@ force ace_frag_enabled = true;
 force ace_frag_maxTrack = 10;
 force ace_frag_maxTrackPerFrame = 10;
 force ace_frag_reflectionsEnabled = true;
-force ace_frag_spallEnabled = true;
+force ace_frag_spallEnabled = false;
 
 // ACE Goggles
 ace_goggles_effects = 2;
@@ -169,7 +169,7 @@ force ace_medical_consumeItem_SurgicalKit = 0;
 ace_medical_convertItems = 0;
 ace_medical_delayUnconCaptive = 3;
 force ace_medical_enableAdvancedWounds = true;
-force ace_medical_enableFor = 0;
+force ace_medical_enableFor = 1;
 force ace_medical_enableOverdosing = true;
 force ace_medical_enableRevive = 0;
 force ace_medical_enableScreams = true;
@@ -661,40 +661,6 @@ force adv_aceSplint_reopenChance_regular = 30;
 force adv_aceSplint_reopenTime = 600;
 force adv_aceSplint_reuseChance = 80;
 
-// ASR AI3
-force asr_ai3_control_onteamswitchleader = true;
-force asr_ai3_danger_AD_INSIDE = 50;
-force asr_ai3_danger_AD_OUTSIDE = 250;
-force asr_ai3_danger_ADVANCED_COVER = true;
-force asr_ai3_danger_ATTACK_TIMER = 60;
-force asr_ai3_danger_AUTO_ATTACK_WITHIN = 35;
-force asr_ai3_danger_COUNTER_ATTACK = true;
-force asr_ai3_danger_debug_findcover = false;
-force asr_ai3_danger_debug_reveal = false;
-force asr_ai3_danger_getinweapons = 0.5;
-force asr_ai3_danger_MAX_DIST_TO_COVER = 50;
-force asr_ai3_danger_NO_COVER_FOR_DANGER_WITHIN = 75;
-force asr_ai3_danger_radiorange = 700;
-force asr_ai3_danger_rrdelaymin = 5;
-force asr_ai3_danger_rrdelayplus = 10;
-force asr_ai3_danger_seekcover = true;
-force asr_ai3_danger_usebuildings = 0.8;
-force asr_ai3_hitreactions_fallDown = true;
-force asr_ai3_hitreactions_STAY_IN_VEH = true;
-asr_ai3_incognito_incodbg = false;
-asr_ai3_incognito_incodiff = 0;
-asr_ai3_incognito_incohint = false;
-force asr_ai3_main_factionskip_str = "['LOP_AFR_Civ','LOP_CHR_Civ','LOP_TAK_Civ']";
-force asr_ai3_rearming_debug_rearm = false;
-force asr_ai3_rearming_rearm = 40;
-force asr_ai3_rearming_rearm_fak = 1;
-force asr_ai3_rearming_rearm_mags = 3;
-force asr_ai3_skills_debug_setcamo = false;
-force asr_ai3_skills_debug_setskill = false;
-force asr_ai3_skills_packNVG = true;
-force asr_ai3_skills_setskills = true;
-force asr_ai3_skills_teamsuperai = true;
-
 // CBA UI
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
@@ -1057,7 +1023,7 @@ TFAR_objectInterceptionStrength = 400;
 tfar_radiocode_east = "_opfor";
 tfar_radiocode_independent = "_independent";
 tfar_radiocode_west = "_bluefor";
-tfar_radioCodesDisabled = false;
+force tfar_radioCodesDisabled = true;
 TFAR_SameLRFrequenciesForSide = false;
 TFAR_SameSRFrequenciesForSide = false;
 TFAR_setting_defaultFrequencies_lr_east = "";
@@ -1085,10 +1051,6 @@ TFAR_Teamspeak_Channel_Name = "TaskForceRadio";
 TFAR_Teamspeak_Channel_Password = "123";
 tfar_terrain_interception_coefficient = 7;
 TFAR_voiceCone = true;
-
-// TFT Dismount
-tft_dismount_setting_override = true;
-force tft_dismount_setting_priority = 7;
 
 // USAF
 usaf_serviceMenu_setting_allowHangarRearm = true;
