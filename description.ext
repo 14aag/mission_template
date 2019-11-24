@@ -32,3 +32,4 @@ efn_respawn_minDistance = 0;
 #include "KPCF\ui\KPCF_dialog.hpp"
 
 #include "CfgFunctions.hpp"
+#include "CfgEventHandlers.hpp"
