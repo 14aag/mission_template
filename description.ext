@@ -26,6 +26,7 @@ efn_persistence_serverRestart = 1;
 
 efn_respawn_ticketCount = 12;
 efn_respawn_timer = 175;
+efn_respawn_minDistance = 0;
 
 #include "KPGUI\KPGUI_defines.hpp"
 #include "KPCF\ui\KPCF_dialog.hpp"

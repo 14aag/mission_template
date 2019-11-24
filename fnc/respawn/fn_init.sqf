@@ -5,6 +5,7 @@ if (isServer) then {
     [QGVAR(place_tent), FUNC(handlePlaceTentEvent)] call CBA_fnc_addEventHandler;
 
     GVAR(ticketCount) = getMissionConfigValue [QGVAR(ticketCount), 0];
+    GVAR(minDistance) = getMissionConfigValue [QGVAR(minDistance), 0];
 };
 
 if (!hasInterface) exitWith {};
@@ -38,5 +39,7 @@ GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
 
 [QGVAR(set_spectator), FUNC(setSpectator)] call CBA_fnc_addEventHandler;
 [QGVARMAIN(force_leader_name_update), { [player] call FUNC(updateLeaderName); }] call CBA_fnc_addEventHandler;
+[QGVAR(notify), FUNC(notify)] call CBA_fnc_addEventHandler;
+[QGVAR(tent_placed), { player playActionNow "PutDown"; }] call CBA_fnc_addEventHandler;
 
 nil
