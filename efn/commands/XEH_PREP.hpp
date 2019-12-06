@@ -1,0 +1,2 @@
+PREP(getPlayer);
+PREP(sendChatMessage);

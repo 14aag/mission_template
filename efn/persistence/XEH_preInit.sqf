@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "XEH_PREP.hpp"
 
 if (isServer) then {
     [QGVARMAIN(player_ready), FUNC(handlePlayerReadyEvent)] call CBA_fnc_addEventHandler;
