@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (!isServer) exitWith {};
+if (!isDedicated) exitWith {};
 
 private _setVulnerable = {
     params ["_vulnerable"];
