@@ -671,66 +671,6 @@ cba_disposable_replaceDisposableLauncher = true;
 cba_events_repetitionMode = 1;
 cba_optics_usePipOptics = true;
 
-// CF_BAI
-force CF_BAI_subskills_maximum_aimingAccuracy = 0;
-force CF_BAI_subskills_maximum_aimingShake = 0;
-force CF_BAI_subskills_maximum_aimingSpeed = 0;
-force CF_BAI_subskills_maximum_commanding = 0;
-force CF_BAI_subskills_maximum_courage = 0;
-force CF_BAI_subskills_maximum_general = 0;
-force CF_BAI_subskills_maximum_reloadSpeed = 0;
-force CF_BAI_subskills_maximum_spotDistance = 0;
-force CF_BAI_subskills_maximum_spotTime = 0;
-force CF_BAI_subskills_minimum_aimingAccuracy = 0.41;
-force CF_BAI_subskills_minimum_aimingShake = 0.5;
-force CF_BAI_subskills_minimum_aimingSpeed = 0.5;
-force CF_BAI_subskills_minimum_commanding = 0.5;
-force CF_BAI_subskills_minimum_courage = 0.5;
-force CF_BAI_subskills_minimum_general = 1;
-force CF_BAI_subskills_minimum_reloadSpeed = 0.5;
-force CF_BAI_subskills_minimum_spotDistance = 0.35;
-force CF_BAI_subskills_minimum_spotTime = 0.5;
-force CF_BAI_subskills_sleep = 30;
-force CF_BAI_subskills_terrain_maximum_default = 30;
-force CF_BAI_subskills_terrain_maximum_world_code = "[]";
-force CF_BAI_subskills_terrain_range = 25;
-
-// CF_BAI_boost
-force CF_BAI_boost_bulletsToMaxBoost = 5;
-force CF_BAI_boost_disableBoost = false;
-force CF_BAI_boost_maxBoost = 1.1;
-force CF_BAI_boost_minimumShotDistance = 300;
-force CF_BAI_boost_minimumShotInterval = 2;
-force CF_BAI_boost_targetChangeSleepTime = 0.1;
-force CF_BAI_boost_toleranceRange = 50;
-
-// CF_BAI_detect
-force CF_BAI_detect_disableDetect = false;
-force CF_BAI_detect_playerVisibility_crouch_chance = 0.5;
-force CF_BAI_detect_playerVisibility_crouch_knowledge = 1;
-force CF_BAI_detect_playerVisibility_movement = 0.5;
-force CF_BAI_detect_playerVisibility_movement_knowledge = 1;
-force CF_BAI_detect_playerVisibility_prone_chance = 0.1;
-force CF_BAI_detect_playerVisibility_prone_knowledge = 1;
-force CF_BAI_detect_playerVisibility_standing_chance = 1;
-force CF_BAI_detect_playerVisibility_standing_knowledge = 1;
-force CF_BAI_detect_playerVisibility_terrain_count = 4;
-
-// CF_BAI_suppression
-force CF_BAI_suppression_aimingAccuracy = 0.2;
-force CF_BAI_suppression_aimingShake = 0.2;
-force CF_BAI_suppression_aimingSpeed = 0.2;
-force CF_BAI_suppression_bulletImpact = 0.1;
-force CF_BAI_suppression_commanding = 0.2;
-force CF_BAI_suppression_courage = 0.2;
-force CF_BAI_suppression_decay = 0.003;
-force CF_BAI_suppression_disableSuppression = false;
-force CF_BAI_suppression_general = 0.5;
-force CF_BAI_suppression_heldTime = 20;
-force CF_BAI_suppression_reloadSpeed = 0.5;
-force CF_BAI_suppression_spotDistance = 0.5;
-force CF_BAI_suppression_spotTime = 0.5;
-
 // Chemical Warfare
 force CBRN_color_contamination0 = [0.9294,0.9843,1];
 force CBRN_color_contamination1 = [0.8353,0.9294,0.4627];
