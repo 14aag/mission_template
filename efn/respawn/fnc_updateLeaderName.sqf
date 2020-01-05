@@ -9,6 +9,6 @@ if (_leaderName isEqualTo "") exitWith {
     [_unit, false] call FUNC(setAction);
 };
 
-[_unit, _leader == _unit] call FUNC(setAction);
+[_unit, GVAR(enabled) && _leader == _unit] call FUNC(setAction);
 
 nil

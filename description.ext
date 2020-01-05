@@ -24,6 +24,7 @@ efn_persistence_savePlayerLoadout = 1;
 efn_persistence_savePlayerPosition = 1;
 efn_persistence_serverRestart = 1;
 
+efn_respawn_enabled = 1;
 efn_respawn_ticketCount = 12;
 efn_respawn_timer = 175;
 efn_respawn_minDistance = 0;
