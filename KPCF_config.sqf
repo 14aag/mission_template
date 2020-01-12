@@ -49,7 +49,7 @@ KPCF_blacklistedItems = [
 
 // Defines the whitelisted items
 // Whitelisted items will be added after the item detection to ensure the availability
-KPCF_whitelistedItems = [""];
+KPCF_whitelistedItems = ["standard"] call efn_inventory_fnc_loadWhitelist;
 
 // ----- These Variables will be replaced with activated generatedLists -----
 
