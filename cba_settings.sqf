@@ -128,12 +128,12 @@ ace_interact_menu_useListMenuSelf = false;
 
 // ACE Logistics
 force ace_cargo_enable = true;
-force ace_cargo_loadTimeCoefficient = 5;
+force ace_cargo_loadTimeCoefficient = 1.5;
 force ace_cargo_paradropTimeCoefficent = 2.5;
 force ace_rearm_distance = 20;
 force ace_rearm_level = 1;
 force ace_rearm_supply = 0;
-force ace_refuel_hoseLength = 15;
+force ace_refuel_hoseLength = 20;
 force ace_refuel_rate = 2;
 force ace_repair_addSpareParts = true;
 force ace_repair_autoShutOffEngineWhenStartingRepair = false;
