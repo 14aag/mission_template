@@ -1,0 +1,1 @@
+[[],[],[],["VSM_Multicam_Camo",[["ACE_EarPlugs",1],["Chemlight_green",2,1]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]]
