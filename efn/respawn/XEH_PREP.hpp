@@ -8,3 +8,4 @@ PREP(placeTent);
 PREP(setAction);
 PREP(setSpectator);
 PREP(updateLeaderName);
+PREP(moduleAssignRespawn);

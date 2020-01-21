@@ -41,7 +41,7 @@ GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 [QGVAR(set_spectator), FUNC(setSpectator)] call CBA_fnc_addEventHandler;
-[QGVARMAIN(force_leader_name_update), { [player] call FUNC(updateLeaderName); }] call CBA_fnc_addEventHandler;
+[QGVAR(force_leader_name_update), { [player] call FUNC(updateLeaderName); }] call CBA_fnc_addEventHandler;
 [QGVAR(notify), FUNC(notify)] call CBA_fnc_addEventHandler;
 [QGVAR(tent_placed), { player playActionNow "PutDown"; }] call CBA_fnc_addEventHandler;
 [QGVAR(enabled), {
