@@ -6,7 +6,7 @@ private _cfg = configFile >> "CfgAmmo";
 private _explosive = ([_cfg >> (typeOf _object) >> "explosive", "NUMBER", 0] call CBA_fnc_getConfigEntry);
 private _ret = false;
 
-if (_explosive >= 0.7) then {
+if (_explosive >= 0.5) then {
     TRACE_2("is explosive", _explosive, _threshold);
     private _explosiveRange = [_cfg >> (typeOf _object) >> "indirectHitRange", "NUMBER", 0] call CBA_fnc_getConfigEntry;
     private _distance = (_pos distance _object) - 3;
