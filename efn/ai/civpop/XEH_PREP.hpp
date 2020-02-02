@@ -18,3 +18,4 @@ PREP(findPlayer);
 PREP(getUnitTypes);
 
 PREP(moduleCreateCivilianCenter);
+PREP(createCivilianCenter);

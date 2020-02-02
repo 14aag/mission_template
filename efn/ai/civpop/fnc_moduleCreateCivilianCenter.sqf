@@ -9,9 +9,5 @@ params ["_pos", ""];
     params ["_dialogValues", "_pos"];
     _dialogValues params ["_size", "_amount", "_preset"];
 
-    if (isNil QGVAR(logicGroup)) then {
-        GVAR(logicGroup) = createGroup sideLogic;
-    };
-    private _logic = GVAR(logicGroup) createUnit ["Logic", _pos, [], 0, "CAN_COLLIDE"];
-    [_logic, _size, _size, _preset, _amount] call FUNC(init);
+    [QGVAR(createCivilianCenter), [_pos, _size, _amount, _preset]] call CBA_fnc_serverEvent;
 }, {}, _pos] call zen_dialog_fnc_create;
