@@ -1,6 +1,10 @@
 #include "script_component.hpp"
 #include "XEH_PREP.hpp"
 
+if (hasInterface) then {
+    ["14 AAG", "Create civilian center", FUNC(moduleCreateCivilianCenter)] call zen_custom_modules_fnc_register;
+};
+
 if (!isServer) exitWith {};
 
 GVAR(centers) = [];

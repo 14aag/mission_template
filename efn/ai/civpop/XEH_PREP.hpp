@@ -16,3 +16,5 @@ PREP(init);
 PREP(move);
 PREP(findPlayer);
 PREP(getUnitTypes);
+
+PREP(moduleCreateCivilianCenter);
