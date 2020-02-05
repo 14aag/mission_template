@@ -42,4 +42,5 @@ if (hasInterface) then {
     KPCF_sortedItems = [KPCF_items] call KPCF_fnc_sortList;
     KPCF_sortedBackpacks = [KPCF_backpacks] call KPCF_fnc_sortList;
 
+    KPCF_compatibleMagazinesHash = [KPCF_compatibleMagazineExtras] call CBA_fnc_hashCreate;
 };

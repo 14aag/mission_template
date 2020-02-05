@@ -46,6 +46,11 @@ switch (_catIndex) do {
         private _glType = (getArray (configfile >> "CfgWeapons" >> _weaponType >> "muzzles")) select 1;
         private _magazines = [_weaponType] call CBA_fnc_compatibleMagazines;
         _magazines append ([configfile >> "CfgWeapons" >> _weaponType >> _glType] call CBA_fnc_compatibleMagazines);
+        private _extra = [KPCF_compatibleMagazinesHash, _weaponType] call CBA_fnc_hashGet;
+        if (!isNil "_extra") then {
+            _magazines append ([_extra] call CBA_fnc_compatibleMagazines);
+        };
+        _magazines = _magazines arrayIntersect KPCF_whitelistedItems;
         private _sortedMagazines = [_magazines] call KPCF_fnc_sortList;
 
         private _index = 0;

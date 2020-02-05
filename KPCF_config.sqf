@@ -51,6 +51,8 @@ KPCF_blacklistedItems = [
 // Whitelisted items will be added after the item detection to ensure the availability
 KPCF_whitelistedItems = ["standard", "whitelists"] call efn_inventory_fnc_loadInventoryFile;
 
+KPCF_compatibleMagazineExtras = [["potato_vz99_carryWeapon", "potato_vz99_mortar60mm"]];
+
 // ----- These Variables will be replaced with activated generatedLists -----
 
 // Defines the available weapons
