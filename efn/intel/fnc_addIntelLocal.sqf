@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 params ["_object", "_caller", "_var", "_marker"];
 
 private _record = _object getVariable ["efn_intel_record", []];
@@ -15,8 +16,8 @@ if (_texture != "") then {_text = _text + format ["<br /><img image='%1' height=
 
 ["intelAdded",[_title,_texture]] call bis_fnc_showNotification;
 
-if !(player diarysubjectexists _fnc_scriptName) then {player creatediarysubject [_fnc_scriptName,localize "STR_A3_BIS_fnc_initIntelObject_intel"];};
-player creatediaryrecord [_fnc_scriptName,[_title,_text]];
+if !(player diarysubjectexists QFUNC(addIntelLocal)) then {player creatediarysubject [QFUNC(addIntelLocal),localize "STR_A3_BIS_fnc_initIntelObject_intel"];};
+player creatediaryrecord [QFUNC(addIntelLocal),[_title,_text]];
 
 private _action = _object getVariable ["efn_intel_action_id", -1];
 if (_action >= 0) then {
