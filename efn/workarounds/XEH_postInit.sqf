@@ -7,6 +7,11 @@
     [_unit, false] call ace_medical_engine_fnc_setUnconsciousAnim;
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
+["ace_medical_injured", FUNC(updateDamage)] call CBA_fnc_addEventHandler;
+["ace_medical_treatment_bandageLocal", FUNC(updateDamage)] call CBA_fnc_addEventHandler;
+["ace_medical_treatment_splintLocal", FUNC(updateDamage)] call CBA_fnc_addEventHandler;
+["ace_medical_treatment_fullHealLocal", FUNC(updateDamage)] call CBA_fnc_addEventHandler;
+
 if (hasInterface) then {
     [player, "killed", {
         ["unconscious", false] call ace_common_fnc_setDisableUserInputStatus;
