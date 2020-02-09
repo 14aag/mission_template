@@ -35,6 +35,12 @@ class Extended_PreStart_EventHandlers {
     class efn_mission_ai_civpop {
         init = "call compile preprocessFileLineNumbers 'efn\ai\civpop\XEH_preStart.sqf'";
     };
+    class efn_mission_common {
+        init = "call compile preprocessFileLineNumbers 'efn\common\XEH_preStart.sqf'";
+    };
+    class efn_mission_zeus {
+        init = "call compile preprocessFileLineNumbers 'efn\zeus\XEH_preStart.sqf'";
+    };
 };
 
 class Extended_PreInit_EventHandlers {
@@ -68,6 +74,12 @@ class Extended_PreInit_EventHandlers {
     class efn_mission_ai_civpop {
         init = "call compile preprocessFileLineNumbers 'efn\ai\civpop\XEH_preInit.sqf'";
     };
+    class efn_mission_common {
+        init = "call compile preprocessFileLineNumbers 'efn\common\XEH_preInit.sqf'";
+    };
+    class efn_mission_zeus {
+        init = "call compile preprocessFileLineNumbers 'efn\zeus\XEH_preInit.sqf'";
+    };
 };
 
 class Extended_PostInit_EventHandlers {
@@ -100,5 +112,11 @@ class Extended_PostInit_EventHandlers {
     };
     class efn_mission_ai_civpop {
         init = "call compile preprocessFileLineNumbers 'efn\ai\civpop\XEH_postInit.sqf'";
+    };
+    class efn_mission_common {
+        init = "call compile preprocessFileLineNumbers 'efn\common\XEH_postInit.sqf'";
+    };
+    class efn_mission_zeus {
+        init = "call compile preprocessFileLineNumbers 'efn\zeus\XEH_postInit.sqf'";
     };
 };

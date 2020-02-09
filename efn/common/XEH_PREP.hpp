@@ -1,0 +1,2 @@
+PREP(disableWeapons);
+PREP(safeZone);
