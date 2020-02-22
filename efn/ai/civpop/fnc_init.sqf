@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params [["_logic", objNull, [objNull]], ["_width", 100, [0]], ["_height", 100, [0]], ["_unitTypes", "altis", ["", []]], ["_unitCount", 15, [0]]];
+params [["_logic", objNull, [objNull]], ["_width", 100, [0]], ["_height", 100, [0]], ["_unitTypes", "altis", ["", []]], ["_unitCount", 15, [0]], ["_vehicleTypes", [], [[]]], ["_vehicleCount", 0, [0]]];
 
 if (!isServer) exitWith {};
 
@@ -18,5 +18,7 @@ if (_unitTypes isEqualType "") then {
 	_unitTypes = [_unitTypes] call FUNC(getUnitTypes);
 };
 _logic setVariable [QGVAR(unitTypes), _unitTypes];
+_logic setVariable [QGVAR(vehicleTypes), _vehicleTypes];
+_logic setVariable [QGVAR(vehicleCount), _vehicleCount];
 
 GVAR(centers) pushBack _logic;

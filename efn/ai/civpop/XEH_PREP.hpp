@@ -19,3 +19,6 @@ PREP(getUnitTypes);
 
 PREP(moduleCreateCivilianCenter);
 PREP(createCivilianCenter);
+
+PREP(findParkingSpot);
+PREP(spawnVehicle);

@@ -26,3 +26,18 @@ private _units = _logic getVariable [QGVAR(units), []];
 _units pushBack _unit;
 _logic setVariable [QGVAR(units), _units];
 _logic setVariable [QGVAR(locations), _buildings];
+
+private _vehicles = _logic getVariable [QGVAR(vehicles), []];
+private _vehicleTypes = _logic getVariable [QGVAR(vehicleTypes), []];
+private _vehicleCount = _logic getVariable [QGVAR(vehicleCount), 0];
+if (!(_vehicleTypes isEqualTo []) && {count _vehicles < _vehicleCount}) then {
+    private _vehicleType = selectRandom _vehicleTypes;
+    private _spot = [_vehicleType, _location] call FUNC(findParkingSpot);
+    if !(_spot isEqualTo []) then {
+        private _vehicle = [_spot, _vehicleType] call FUNC(spawnVehicle);
+        _vehicles pushBack _vehicle;
+        _logic setVariable [QGVAR(vehicles), _vehicles];
+    };
+};
+
+nil
