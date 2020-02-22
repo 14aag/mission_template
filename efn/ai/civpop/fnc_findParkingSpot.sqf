@@ -23,7 +23,7 @@ if (count _nearRoads > 0) then {
         TRACE_2("items", _list, _item);
         private _itemPos = getPos _item;
         _itemPos set [2, 1];
-        if !(lineIntersects [_position, _itemPos]) then {
+        if (!(lineIntersects [_position, _itemPos]) && {(nearestObjects [_position, ["Car", "Tank"], 15]) isEqualTo []}) then {
             _ret = [_position, _direction];
         };
     } else {
