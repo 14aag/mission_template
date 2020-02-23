@@ -695,23 +695,40 @@ force grad_trenches_functions_smallEnvelopeDigTime = 30;
 grad_trenches_functions_stopBuildingAtFatigueMax = false;
 force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
 
-// LAMBS - Danger
+// LAMBS Danger
+force lambs_danger_autoAddArtillery = false;
+force lambs_danger_CQB_formations_COLUMN = false;
+force lambs_danger_CQB_formations_DIAMOND = true;
+force lambs_danger_CQB_formations_ECH LEFT = false;
+force lambs_danger_CQB_formations_ECH RIGHT = false;
+force lambs_danger_CQB_formations_FILE = true;
+force lambs_danger_CQB_formations_LINE = false;
+force lambs_danger_CQB_formations_STAG COLUMN = false;
+force lambs_danger_CQB_formations_VEE = false;
+force lambs_danger_CQB_formations_WEDGE = false;
 force lambs_danger_CQB_range = 50;
 force lambs_danger_debug_Drawing = false;
 force lambs_danger_debug_FSM = false;
 force lambs_danger_debug_FSM_civ = false;
 force lambs_danger_debug_functions = false;
+force lambs_danger_disableAIAutonomousManoeuvres = false;
+force lambs_danger_disableAIHideFromTanksAndAircraft = false;
 force lambs_danger_disableAIPlayerGroup = false;
 force lambs_danger_disableAIPlayerGroupReaction = false;
 force lambs_danger_disableAIPlayerGroupSuppression = false;
 force lambs_danger_minSuppression_range = 25;
 force lambs_danger_panic_chance = 10;
 force lambs_danger_radio_backpack = 2000;
+force lambs_danger_radio_disabled = false;
 force lambs_danger_radio_EAST = 500;
 force lambs_danger_radio_GUER = 500;
 force lambs_danger_radio_shout = 50;
 force lambs_danger_radio_WEST = 500;
 force lambs_danger_RenderExpectedDestination = false;
+
+// LAMBS Danger Eventhandlers
+force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
+force lambs_eventhandlers_ExplosionReactionTime = 9;
 
 // NIArms
 niarms_accswitch = true;
