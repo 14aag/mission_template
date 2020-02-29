@@ -4,4 +4,4 @@ private _hash = GVAR(persistence) call CBA_fnc_serializeNamespace;
 profileNamespace setVariable [GVAR(saveKey), _hash];
 saveProfileNamespace;
 
-diag_log "[EFN] Mission saved";
+diag_log text "[EFN] Mission saved";

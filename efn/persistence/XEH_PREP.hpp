@@ -5,3 +5,7 @@ PREP(handlePlayerReadyEvent);
 PREP(resetCurrent);
 PREP(restoreUnitState);
 PREP(save);
+PREP(getInventory);
+PREP(setContainerInventory);
+PREP(buildContainersState);
+PREP(restoreContainersState);

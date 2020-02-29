@@ -3,9 +3,9 @@
 if (isServer) then {
     GVAR(saveLoadout) = getMissionConfigValue [QGVAR(savePlayerLoadout), false] in [true, 1];
     GVAR(savePosition) = getMissionConfigValue [QGVAR(savePlayerPosition), false] in [true, 1];
-
-    if (!GVAR(saveLoadout) && !GVAR(savePosition)) exitWith {};
     GVAR(persist) = getMissionConfigValue [QGVAR(serverRestart), false] in [true, 1];
+
+    if (!GVAR(saveLoadout) && !GVAR(savePosition) && !GVAR(persist)) exitWith {};
 
     GVAR(saveKey) = format ["efn_save_%1.%2", missionName, worldName];
     private _hash = if (GVAR(persist)) then {profileNamespace getVariable [GVAR(saveKey), [] call CBA_fnc_hashCreate]} else {[] call CBA_fnc_hashCreate};
@@ -18,12 +18,19 @@ if (isServer) then {
 
         private _playerCount = count allPlayers;
         if (_playerCount == 0 && GVAR(persist)) then {
+            GVAR(persistence) setVariable ["containers", call FUNC(buildContainersState)];
             [] call FUNC(save);
         };
 
         // We don't want the unit to live on as AI
         false
     }];
+    [{CBA_missionTime > 0}, {
+        if (GVAR(persist)) then {
+            private _containers = GVAR(persistence) getVariable ["containers", []];
+            [_containers] call FUNC(restoreContainersState);
+        };
+    }] call CBA_fnc_waitUntilAndExecute;
 };
 
 if !(hasInterface) exitWith {};
