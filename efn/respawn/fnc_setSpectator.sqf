@@ -62,6 +62,9 @@ if (["task_force_radio"] call ace_common_fnc_isModLoaded) then {
             !ace_spectator_isSet
         }, {}] call CBA_fnc_waitUntilAndExecute;
     };
+    if (!_set && TFAR_ShowVolumeHUD) then {
+        ("tfar_core_HUDVolumeIndicatorRsc" call BIS_fnc_rscLayer) cutRsc ["tfar_core_HUDVolumeIndicatorRsc", "PLAIN", 0, true];
+    };
 };
 
 if (_set) then {
