@@ -732,7 +732,7 @@ force lambs_eventhandlers_ExplosionReactionTime = 9;
 
 // NIArms
 niarms_accswitch = true;
-niarms_magSwitch = true;
+niarms_magSwitch = false;
 
 // Simplex Support Services
 force SSS_setting_adminFullAccess = true;
