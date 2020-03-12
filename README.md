@@ -12,32 +12,6 @@ Before you do anything, load into the arma editor and load the map you want to c
 C:\Users\%USERPROFILE%\Documents\Arma 3 - Other Profiles\SGT%20B%2e%20Wayne\missions\mission_name.map_name
 ```
 
-- Download this repo and copy the contents of the `mission_dir` folder into your own mission save folder.
+- Download this repo and copy the contents into your own mission save folder.
 
 Your mission will now have all the required scripts and modules that a 14AAG mission needs.
-
-## Loading the basic composition
-
-Unless you are creating a completely custom mission you will need the basic unit composition.
-
-- Locate your profile compositions folder, most likely here: 
-
-```
-C:\Users\%USERPROFILE%\Documents\Arma 3 - Other Profiles\SGT%20B%2e%20Wayne\compositions
-```
-
-- Copy the contents of `compositions` into that folder, if you're already in the editor then you'll need to exit and enter again.
-
-You should have `14AAG Base` under the custom compositions tab.
-
-## Creating a limited arsenal
-
-- Copy the contents of [whitelists/standard.txt](whitelists/standard.txt) to your clipboard
-
-- In the arma3 editor, spawn an empty object like a box.
-
-- Bring up the object attributes `right-click > attributes`
-
-- In the `Object: ACE Arsenal` dropdown, click on the import button. (make sure the whitelist is still in your clipboard)
-
-🎉 The arsenal is on the object and is now limited 🎉
