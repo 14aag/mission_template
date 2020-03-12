@@ -1,14 +1,10 @@
 # 14 AAG Mission Template
 
-This repository holds all the logic we require to run our missions, everything from custom Zeus modules & compositions to the respawn system and whitelist.
-
-<img src="https://www.14aag.com/assets/img/logo-512.png" alt="14aag logo" width=100>
+***This repository holds all the logic we require to run our missions, everything from custom Zeus modules & compositions to the respawn system and whitelist.***
 
 ## Loading the template
 
-***This guide will go over creating a simple mission using this template.***
-
-- Before you do anything, load into the arma editor and load the map you want to create a mission on. save this as a new mission. 
+Before you do anything, load into the arma editor and load the map you want to create a mission on. save this as a new mission. 
 
 - Go to where this mission was saved. In most cases it will be saved here:
 
@@ -44,4 +40,4 @@ You should have `14AAG Base` under the custom compositions tab.
 
 - In the `Object: ACE Arsenal` dropdown, click on the import button. (make sure the whitelist is still in your clipboard)
 
-The arsenal is now limited 🎉🎉
+🎉 The arsenal is on the object and is now limited 🎉
