@@ -15,3 +15,5 @@ C:\Users\%USERPROFILE%\Documents\Arma 3 - Other Profiles\SGT%20B%2e%20Wayne\miss
 - Download this repo and copy the contents into your own mission save folder.
 
 Your mission will now have all the required scripts and modules that a 14AAG mission needs.
+
+Check the wiki tab for more detail on different aspects of the mission template
