@@ -9,7 +9,7 @@ private _tentName = format ["efn_respawn_tent_%1", _name];
 private _tent = missionNamespace getVariable [_tentName, objNull];
 if (isNull _tent && _create) then {
     private _sideTentType = if (side _unit == independent) then {
-        "Land_WW2_Zeltbahn"
+        "Misc_Backpackheap"
     } else {
         "Misc_Backpackheap"
     };
