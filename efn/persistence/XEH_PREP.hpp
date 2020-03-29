@@ -9,3 +9,4 @@ PREP(getInventory);
 PREP(setContainerInventory);
 PREP(buildContainersState);
 PREP(restoreContainersState);
+PREP(forceSave);

@@ -11,16 +11,20 @@ if (isServer) then {
     private _hash = if (GVAR(persist)) then {profileNamespace getVariable [GVAR(saveKey), [] call CBA_fnc_hashCreate]} else {[] call CBA_fnc_hashCreate};
     GVAR(persistence) = [_hash] call CBA_fnc_deserializeNamespace;
 
+    addMissionEventHandler ["PlayerDisconnected", {
+        params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
+        diag_log text format ["Player Disconnected %1", str _this];
+
+        if (_owner == 2 && GVAR(persist)) then {
+            [] call FUNC(forceSave);
+        };
+    }];
+
     addMissionEventHandler ["HandleDisconnect", {
         params ["_unit", "_id", "_uid", "_name"];
+        diag_log text format ["Handle Disconnect %1", str _this];
         private _unitState = [_unit] call FUNC(buildUnitState);
         GVAR(persistence) setVariable [_uid, _unitState];
-
-        private _playerCount = count allPlayers;
-        if (_playerCount == 0 && GVAR(persist)) then {
-            GVAR(persistence) setVariable ["containers", call FUNC(buildContainersState)];
-            [] call FUNC(save);
-        };
 
         // We don't want the unit to live on as AI
         false
