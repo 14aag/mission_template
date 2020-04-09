@@ -1,1 +1,2 @@
 PREP(moduleAllowWeapons);
+PREP(setZeusMarkerVisibility);
