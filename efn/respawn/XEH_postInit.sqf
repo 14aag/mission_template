@@ -6,6 +6,8 @@ if (isServer) then {
 
     GVAR(ticketCount) = getMissionConfigValue [QGVAR(ticketCount), 0];
     GVAR(minDistance) = getMissionConfigValue [QGVAR(minDistance), 0];
+    GVAR(outOfTicketsRemove) = getMissionConfigValue [QGVAR(outOfTicketsRemove), true] in [true, 1];
+    GVAR(tentCooldown) = getMissionConfigValue [QGVAR(tentCooldown), 0];
 };
 
 if (!hasInterface) exitWith {};

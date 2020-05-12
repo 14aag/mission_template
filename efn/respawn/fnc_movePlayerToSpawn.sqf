@@ -30,7 +30,11 @@ _tickets = _tickets - 1;
 _tent setVariable [QGVAR(tickets), _tickets];
 
 if (_tickets <= 0) then {
-    _tent setPos [0,0,0];
+    if (GVAR(outOfTicketsRemove)) then {
+        _tent hideObjectGlobal true; // this is quicker than setPos for hiding -.-, setPos is still used to negate the effects of minDistance
+        _tent setPos [0,0,0]; // not actually removing because it's still holding information about cooldown and stuff
+    };
+    _tent setVariable [QGVAR(cooldown), CBA_missionTime];
     [QGVAR(notify), "Respawn tent out of tickets", (leader _unit)] call CBA_fnc_targetEvent;
 };
 
