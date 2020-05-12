@@ -27,3 +27,17 @@ if !(hasInterface) exitWith {};
     [_msg, "whisper", name _receiver] call FUNC(sendChatMessage);
 }, "all"] call CBA_fnc_registerChatCommand;
 
+["help", {
+    [{
+        systemChat "--- Available chat commands ---";
+        systemChat "zeus - Send a message to zeus (#zeus smite me)";
+        systemChat "whisper - Send a whisper to a player (#whisper clips what's up)";
+        systemChat "--- End ---";
+    }] call CBA_fnc_execNextFrame;
+}, "all"] call CBA_fnc_registerChatCommand;
+
+["CBA_loadingScreenDone", {
+    [{
+        systemChat "Type #help to see available commands";
+    }, [], 5] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;
