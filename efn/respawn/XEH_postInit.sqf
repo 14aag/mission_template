@@ -49,4 +49,11 @@ GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
     [player] call FUNC(updateLeaderName);
 }] call CBA_fnc_addEventHandler;
 
+[missionNamespace, "OnGameInterrupt", {
+    params ["_display"];
+    if (ace_spectator_isSet) then {
+        (_display displayCtrl 1010) ctrlEnable false;
+    };
+}] call BIS_fnc_addScriptedEventHandler;
+
 nil
