@@ -10,6 +10,7 @@ if (isServer) then {
     GVAR(saveKey) = format ["efn_save_%1.%2", missionName, worldName];
     private _hash = if (GVAR(persist)) then {profileNamespace getVariable [GVAR(saveKey), [] call CBA_fnc_hashCreate]} else {[] call CBA_fnc_hashCreate};
     GVAR(persistence) = [_hash] call CBA_fnc_deserializeNamespace;
+    GVAR(runCount) = (GVAR(persistence) getVariable ["runCount", 0]) + 1;
 
     addMissionEventHandler ["PlayerDisconnected", {
         params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
@@ -33,6 +34,8 @@ if (isServer) then {
         if (GVAR(persist)) then {
             private _containers = GVAR(persistence) getVariable ["containers", []];
             [_containers] call FUNC(restoreContainersState);
+            private _vehicles = GVAR(persistence) getVariable ["vehicles", []];
+            [_vehicles] call FUNC(restoreVehiclesState);
         };
     }] call CBA_fnc_waitUntilAndExecute;
 };

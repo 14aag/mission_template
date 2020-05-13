@@ -20,4 +20,4 @@ private _earplugs = GVAR(saveLoadout) && _unit getVariable ["ACE_hasEarPlugsIn",
 
 private _pos = if (GVAR(savePosition) && alive _unit && (vehicle _unit) == _unit) then {[getDir _unit, getPosASL _unit]} else {objNull};
 
-[_loadout, _pos, _chestpack, _earplugs]
+[[_loadout, _pos, _chestpack, _earplugs], GVAR(runCount)]

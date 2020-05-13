@@ -18,7 +18,7 @@ params ["_containerStates"];
     if (!isNull _container) then {
         _container setPosASL _pos;
         _container setVectorDirAndUp _vectorDirAndUp;
-        _container setDamage _damage;
+        _container setDamage [_damage, false];
         [_container, _inventory] call FUNC(setContainerInventory);
     };
 } forEach _containerStates;

@@ -10,3 +10,5 @@ PREP(setContainerInventory);
 PREP(buildContainersState);
 PREP(restoreContainersState);
 PREP(forceSave);
+PREP(buildVehiclesState);
+PREP(restoreVehiclesState);

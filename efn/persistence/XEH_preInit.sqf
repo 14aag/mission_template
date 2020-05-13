@@ -5,6 +5,13 @@ if (isServer) then {
     [QGVARMAIN(player_ready), FUNC(handlePlayerReadyEvent)] call CBA_fnc_addEventHandler;
     [QGVAR(force_save), FUNC(forceSave)] call CBA_fnc_addEventHandler;
 };
+
+[QGVAR(setVehicleVarNameEvent), {
+    params ["_vehicle", "_name"];
+    _vehicle setVehicleVarName _name;
+    missionNamespace setVariable [_name, _vehicle];
+}] call CBA_fnc_addEventHandler;
+
 if !(hasInterface) exitWith {};
 
 [QGVAR(player_state), {

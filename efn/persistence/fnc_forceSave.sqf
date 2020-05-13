@@ -10,4 +10,6 @@ if !(GVAR(persist)) exitWith {};
 } forEach allPlayers;
 
 GVAR(persistence) setVariable ["containers", call FUNC(buildContainersState)];
+GVAR(persistence) setVariable ["vehicles", call FUNC(buildVehiclesState)];
+GVAR(persistence) setVariable ["runCount", GVAR(runCount)];
 [] call FUNC(save);

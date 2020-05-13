@@ -29,7 +29,13 @@ private _nonBackpacks = everyContainer _target;
     } else {
         _target addBackpackCargoGlobal [_name, 1];
         private _backpacks = everyBackpack _target;
-        _backpacks select (count _backpacks - 1);
+        if (count _backpacks > 0) then {
+            _backpacks select (count _backpacks - 1);
+        } else {
+            objNull;
+        };
     };
-    [_c, _inventory] call FUNC(setContainerInventory);
+    if (!isNull _c) then {
+        [_c, _inventory] call FUNC(setContainerInventory);
+    };
 } forEach _containers;
