@@ -7,16 +7,13 @@ params ["_vehicleStates"];
     private _vehicle = objNull;
     if (_varName != "") then {
         private _found = call compile _varName;
-        if (!isNil "_found") then {
+        if (!isNil "_found" && {typeOf _found isEqualTo _type}) then {
             _vehicle = _found;
         };
     };
 
     if (isNull _vehicle) then {
         _vehicle = createVehicle [_type, [0,0,0], [], 0, "CAN_COLLIDE"];
-        if (_varName != "") then {
-            [QGVAR(setVehicleVarNameEvent), [_vehicle, _varName]] call CBA_fnc_globalEventJIP;
-        };
     };
 
     if (!isNull _vehicle) then {
