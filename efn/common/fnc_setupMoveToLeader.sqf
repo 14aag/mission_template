@@ -15,7 +15,7 @@ private _id = _newUnit addAction [
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
         _target removeAction _actionId;
-        _target setPos (getPos leader _target);
+        _target setPosASL (getPosASL leader _target);
         _target setVariable [QGVAR(tpId), nil];
     },
     nil,
