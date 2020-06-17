@@ -12,8 +12,10 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-GVAR(enabled) = getMissionConfigValue [QGVAR(enabled), true] in [true, 1];
+GVAR(mode) = getMissionConfigValue [QGVAR(mode), 1];
 GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
+GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
+
 [player, "killed", {
     player setVariable [QGVAR(saved_loadout), getUnitLoadout player];
     [player, false] call FUNC(setAction);
@@ -28,11 +30,16 @@ GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
     };
 
     if (GVAR(enabled)) then {
+        player setVariable [QGVAR(dead), true, true];
         [true] call FUNC(setSpectator);
-        [{
-            [QGVAR(handle_player_respawn), [player]] call CBA_fnc_serverEvent;
-            hideBody (_this select 0);
-        }, [_corpse], GVAR(timer)] call CBA_fnc_waitAndExecute;
+        player setVariable [QGVAR(corpse), _corpse];
+        if (GVAR(mode) == RESPAWN_MODE_TENT) then {
+            [{
+                if (player getVariable [QGVAR(dead), false]) then {
+                    [QGVAR(handle_player_respawn), [player]] call CBA_fnc_serverEvent;
+                };
+            }, [], GVAR(timer)] call CBA_fnc_waitAndExecute;
+        };
     };
 
     nil
@@ -42,12 +49,22 @@ GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
     [player] call FUNC(updateLeaderName);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
-[QGVAR(set_spectator), FUNC(setSpectator)] call CBA_fnc_addEventHandler;
+[QGVAR(respawn), {
+    private _corpse = player getVariable [QGVAR(corpse), objNull];
+    if (!isNull _corpse) then {
+        hideBody _corpse;
+    };
+    player setVariable [QGVAR(corpse), nil];
+    player setVariable [QGVAR(dead), false, true];
+
+    [false] call FUNC(setSpectator);
+}] call CBA_fnc_addEventHandler;
 [QGVAR(force_leader_name_update), { [player] call FUNC(updateLeaderName); }] call CBA_fnc_addEventHandler;
 [QGVAR(notify), FUNC(notify)] call CBA_fnc_addEventHandler;
 [QGVAR(tent_placed), { player playActionNow "PutDown"; }] call CBA_fnc_addEventHandler;
-[QGVAR(enabled), {
-    GVAR(enabled) = _this;
+[QGVAR(set_mode), {
+    GVAR(mode) = _this;
+    GVAR(enabled) = _this != RESPAWN_MODE_DISABLED;
     [player] call FUNC(updateLeaderName);
 }] call CBA_fnc_addEventHandler;
 

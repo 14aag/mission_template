@@ -24,7 +24,11 @@ efn_persistence_savePlayerLoadout = 1;
 efn_persistence_savePlayerPosition = 1;
 efn_persistence_serverRestart = 1;
 
-efn_respawn_enabled = 1;
+// Modes:
+// 0 - disabled (skips spectator and all of these respawn settings below)
+// 1 - tent (spawn at tent after timer seconds has passed, given that safe respawn conditions are met)
+// 2 - zeus (people stay in spectator until zeus decides to release them)
+efn_respawn_mode = 1;
 efn_respawn_ticketCount = 12;
 efn_respawn_timer = 175;
 efn_respawn_minDistance = 0;

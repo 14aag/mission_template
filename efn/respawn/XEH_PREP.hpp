@@ -9,3 +9,4 @@ PREP(setAction);
 PREP(setSpectator);
 PREP(updateLeaderName);
 PREP(moduleAssignRespawn);
+PREP(moduleRespawnPlayers);
