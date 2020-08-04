@@ -679,7 +679,7 @@ force dzn_EJAM_feed_failure_2_ChanceSettings = 20;
 force dzn_EJAM_feed_failure_ChanceSettings = 30;
 force dzn_EJAM_Force = true;
 force dzn_EJAM_ForceOverallChance = true;
-force dzn_EJAM_MappingSettings = "[""arifle_MX_F"",0.05,45,10,45,0,0],[""rhs_weap_MP44"",100,100,100,100,100,100]";
+force dzn_EJAM_MappingSettings = "[""arifle_MX_F"",0.05,45,10,45,0,0],[""CUP_arifle_m16A1GL_USA"",100,100,100,100,100,100]";
 force dzn_EJAM_OverallChanceSetting = 0.05;
 force dzn_EJAM_SubsonicJamEffectSetting = "1";
 
