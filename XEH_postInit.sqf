@@ -16,6 +16,6 @@
     ["07 Sniper Loadout", "07_sniper"],
     ["08 Medic Loadout", "08_medic"],
     ["09 Engineer Loadout", "09_engineer"],
-    ["10 FTL/TL Loadout", "10_FTL_TL"]
+    ["10 FTL/TL Loadout", "10_FTL_TL"],
     ["11 XO/CO Loadout", "11_XO_CO"]
 ];
