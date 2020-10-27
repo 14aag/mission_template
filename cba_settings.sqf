@@ -265,9 +265,9 @@ ace_nametags_tagSize = 2;
 // ACE Nightvision
 force ace_nightvision_aimDownSightsBlur = 0.5;
 force ace_nightvision_disableNVGsWithSights = false;
-force ace_nightvision_effectScaling = 0.642791;
-force ace_nightvision_fogScaling = 0.312786;
-force ace_nightvision_noiseScaling = 0.269743;
+force ace_nightvision_effectScaling = 0.6;
+force ace_nightvision_fogScaling = 0.3;
+force ace_nightvision_noiseScaling = 0.3;
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -727,8 +727,8 @@ diwako_dui_radar_icon_scale_crew = 6;
 diwako_dui_radar_leadingZeroes = false;
 diwako_dui_radar_namelist_hideWhenLeader = false;
 diwako_dui_radar_namelist_vertical_spacing = 0.75;
-diwako_dui_radar_occlusion_fade_in_time = 1;
-diwako_dui_radar_occlusion_fade_time = 10;
+force diwako_dui_radar_occlusion_fade_in_time = 1;
+force diwako_dui_radar_occlusion_fade_time = 10;
 diwako_dui_radar_pointer_color = [1,0.5,0,1];
 diwako_dui_radar_pointer_style = "standard";
 diwako_dui_radar_show_cardinal_points = true;
