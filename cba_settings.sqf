@@ -257,17 +257,17 @@ force ace_nametags_playerNamesViewDistance = 5;
 ace_nametags_showCursorTagForVehicles = false;
 ace_nametags_showNamesForAI = false;
 ace_nametags_showPlayerNames = 1;
-ace_nametags_showPlayerRanks = true;
+force ace_nametags_showPlayerRanks = false;
 ace_nametags_showSoundWaves = 1;
 ace_nametags_showVehicleCrewInfo = true;
 ace_nametags_tagSize = 2;
 
 // ACE Nightvision
-force ace_nightvision_aimDownSightsBlur = 0.4;
+force ace_nightvision_aimDownSightsBlur = 0.5;
 force ace_nightvision_disableNVGsWithSights = false;
-force ace_nightvision_effectScaling = 0.6;
-force ace_nightvision_fogScaling = 0.2;
-force ace_nightvision_noiseScaling = 0.1;
+force ace_nightvision_effectScaling = 0.642791;
+force ace_nightvision_fogScaling = 0.312786;
+force ace_nightvision_noiseScaling = 0.269743;
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -478,6 +478,9 @@ acex_volume_showNotification = true;
 // AI
 cfp_autoEquipNVG = true;
 
+// BettIR
+force BettIR_ViewDistance = 300;
+
 // CBA UI
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
@@ -579,6 +582,7 @@ CBRN_factionMask_CPC_I_Pirate = "";
 CBRN_factionMask_CPC_O_NAM_CIV = "";
 CBRN_factionMask_CPC_O_NAM_VC = "";
 CBRN_factionMask_CPC_O_NPFD = "";
+CBRN_factionMask_CUP_ARMY_ASIA = "";
 CBRN_factionMask_CUP_B_CDF = "";
 CBRN_factionMask_CUP_B_CZ = "";
 CBRN_factionMask_CUP_B_GB = "";
@@ -587,17 +591,20 @@ CBRN_factionMask_CUP_B_HIL = "";
 CBRN_factionMask_CUP_B_RNZN = "";
 CBRN_factionMask_CUP_B_US = "";
 CBRN_factionMask_CUP_B_US_Army = "";
+CBRN_factionMask_CUP_B_US_OFP = "";
 CBRN_factionMask_CUP_B_USMC = "";
 CBRN_factionMask_CUP_C_CHERNARUS = "";
 CBRN_factionMask_CUP_C_RU = "";
 CBRN_factionMask_CUP_C_SAHRANI = "";
 CBRN_factionMask_CUP_C_Special = "";
 CBRN_factionMask_CUP_C_TK = "";
+CBRN_factionMask_CUP_CIV_ASIA = "";
 CBRN_factionMask_CUP_I_NAPA = "";
 CBRN_factionMask_CUP_I_PMC_ION = "";
 CBRN_factionMask_CUP_I_RACS = "";
 CBRN_factionMask_CUP_I_TK_GUE = "";
 CBRN_factionMask_CUP_I_UN = "";
+CBRN_factionMask_CUP_INS_ASIA = "";
 CBRN_factionMask_CUP_O_ChDKZ = "";
 CBRN_factionMask_CUP_O_RU = "";
 CBRN_factionMask_CUP_O_SLA = "";
@@ -615,12 +622,6 @@ CBRN_factionMask_OPF_GEN_F = "";
 CBRN_factionMask_OPF_R_F = "";
 CBRN_factionMask_OPF_T_F = "";
 CBRN_factionMask_OPF_V_F = "";
-CBRN_factionMask_PLA_Faction = "";
-CBRN_factionMask_PLA_UN_Faction = "";
-CBRN_factionMask_PLAAF_Faction = "";
-CBRN_factionMask_PLAARF_Faction = "";
-CBRN_factionMask_PLADES_Faction = "";
-CBRN_factionMask_PLAN_Faction = "";
 CBRN_factionMask_rhs_faction_socom = "";
 CBRN_factionMask_rhs_faction_usaf = "";
 CBRN_factionMask_rhs_faction_usarmy = "";
@@ -630,12 +631,18 @@ CBRN_factionMask_rhs_faction_usmc = "";
 CBRN_factionMask_rhs_faction_usmc_d = "";
 CBRN_factionMask_rhs_faction_usmc_wd = "";
 CBRN_factionMask_rhs_faction_usn = "";
+CBRN_factionMask_USAF = "";
+CBRN_factionMask_USAF_ServiceMenu = "";
 CBRN_factionMask_Virtual_F = "";
-CBRN_factionMask_VME_PLA = "";
 CBRN_factionMask_VSM_GP = "";
 
 // CUP
+CUP_CheckCfgPatches = false;
 CUP_Vehicles_PreventBarrelClip = true;
+
+// CUP Static Weapons
+CUP_staticWeapons_allowMovement = false;
+CUP_staticWeapons_allowRotation = false;
 
 // DUI - Squad Radar - Indicators
 diwako_dui_indicators_crew_range_enabled = false;
@@ -662,6 +669,30 @@ diwako_dui_main_squadGreen = [0,1,0,1];
 diwako_dui_main_squadMain = [1,1,1,1];
 diwako_dui_main_squadRed = [1,0,0,1];
 diwako_dui_main_squadYellow = [1,1,0,1];
+diwako_dui_main_trackingColor = [0.93,0.26,0.93,1];
+diwako_dui_reset_ui_pos = false;
+
+// DUI - Squad Radar - Nametags
+diwako_dui_nametags_deadColor = [0.2,0.2,0.2,1];
+diwako_dui_nametags_deadRenderDistance = 3.5;
+diwako_dui_nametags_drawRank = true;
+force diwako_dui_nametags_enabled = false;
+diwako_dui_nametags_enableFOVBoost = true;
+diwako_dui_nametags_enableOcclusion = true;
+diwako_dui_nametags_fadeInTime = 0.05;
+diwako_dui_nametags_fadeOutTime = 0.5;
+diwako_dui_nametags_fontGroup = "RobotoCondensedLight";
+diwako_dui_nametags_fontGroupNameSize = 8;
+diwako_dui_nametags_fontName = "RobotoCondensedBold";
+diwako_dui_nametags_fontNameSize = 10;
+diwako_dui_nametags_groupColor = [1,1,1,1];
+diwako_dui_nametags_groupFontShadow = 1;
+diwako_dui_nametags_groupNameOtherGroupColor = [0.6,0.85,0.6,1];
+diwako_dui_nametags_nameFontShadow = 1;
+diwako_dui_nametags_nameOtherGroupColor = [0.2,1,0,1];
+diwako_dui_nametags_renderDistance = 40;
+diwako_dui_nametags_showUnconAsDead = true;
+diwako_dui_nametags_useSideIsFriendly = true;
 
 // DUI - Squad Radar - Radar
 diwako_dui_compass_hide_alone_group = false;
@@ -686,12 +717,17 @@ diwako_dui_namelist_size = 1.5396;
 diwako_dui_namelist_text_shadow = 2;
 diwako_dui_namelist_width = 215;
 diwako_dui_radar_ace_finger = true;
+diwako_dui_radar_ace_medic = true;
 diwako_dui_radar_compassRangeCrew = 500;
+diwako_dui_radar_dir_padding = 25;
 diwako_dui_radar_group_by_vehicle = false;
+diwako_dui_radar_icon_opacity = 1;
+diwako_dui_radar_icon_opacity_no_player = true;
 diwako_dui_radar_icon_scale_crew = 6;
 diwako_dui_radar_leadingZeroes = false;
 diwako_dui_radar_namelist_hideWhenLeader = false;
 diwako_dui_radar_namelist_vertical_spacing = 0.75;
+diwako_dui_radar_occlusion_fade_in_time = 1;
 diwako_dui_radar_occlusion_fade_time = 10;
 diwako_dui_radar_pointer_color = [1,0.5,0,1];
 diwako_dui_radar_pointer_style = "standard";
@@ -701,9 +737,7 @@ diwako_dui_radar_showSpeaking_radioOnly = false;
 diwako_dui_radar_showSpeaking_replaceIcon = true;
 diwako_dui_radar_sortType = "none";
 diwako_dui_radar_sqlFirst = false;
-diwako_dui_radar_trackingColor = [0.93,0.26,0.93,1];
 diwako_dui_radar_vehicleCompassEnabled = false;
-diwako_dui_reset_ui_pos = false;
 diwako_dui_use_layout_editor = false;
 
 // dzn Artillery Illumination
@@ -731,6 +765,45 @@ force dzn_EJAM_ForceOverallChance = true;
 force dzn_EJAM_MappingSettings = "[""arifle_MX_F"",0.05,45,10,45,0,0],[""CUP_arifle_m16A1GL_USA"",100,100,100,100,100,100]";
 force dzn_EJAM_OverallChanceSetting = 0.05;
 force dzn_EJAM_SubsonicJamEffectSetting = "1";
+
+// GRAD Civs
+grad_civs_cars_animalTransportChance = 0.4;
+grad_civs_cars_automaticVehicleGroupSize = true;
+grad_civs_cars_vehicles = "[""C_Van_01_fuel_F"",""C_Hatchback_01_F"",""C_Truck_02_fuel_F"",""C_Truck_02_covered_F"",""C_Offroad_01_F"",""C_SUV_01_F"",""C_Van_01_transport_F"",""C_Van_01_box_F""]";
+grad_civs_common_civClasses = "C_Man_1";
+grad_civs_diagnostics_showFps = false;
+grad_civs_diagnostics_showInfoLine = false;
+grad_civs_diagnostics_showMisc = false;
+grad_civs_diagnostics_showOnMap = false;
+grad_civs_diagnostics_showPinkArrows = false;
+grad_civs_gta_carOwnershipRatio = 0.2;
+grad_civs_legacy_cleanupCorpses = true;
+grad_civs_legacy_minCivOwnerFps = 30;
+grad_civs_legacy_minCivUpdateTime = 3;
+grad_civs_legacy_minServerFps = 40;
+grad_civs_legacy_panicCooldown = "[15, 120, 240]";
+grad_civs_legacy_smMultiplicator = 1;
+grad_civs_legacy_spawnOnlyWithPlayers = true;
+grad_civs_loadout_backpackProbability = 0.5;
+grad_civs_loadout_backpacks = "[]";
+grad_civs_loadout_clothes = "[]";
+grad_civs_loadout_faces = "[]";
+grad_civs_loadout_goggles = "[]";
+grad_civs_loadout_headgear = "[]";
+grad_civs_main_enabled = false;
+grad_civs_mimikry_enabled = true;
+grad_civs_patrol_initialGroupSize = 3;
+grad_civs_patrol_maxCivsOnFoot = 30;
+grad_civs_patrol_spawnDistancesOnFoot = "[1000, 4500]";
+grad_civs_residents_chatTime = 20;
+grad_civs_residents_maxCivsResidents = 20;
+grad_civs_residents_meetNeighborCooldown = 150;
+grad_civs_residents_spawnDistancesResidents = "[500,  1000]";
+grad_civs_transit_maxVehiclesInTransit = 5;
+grad_civs_transit_vehicles = "[]";
+grad_civs_voyage_maxCivsInVehicles = 10;
+grad_civs_voyage_maxTravelRadius = 0;
+grad_civs_voyage_spawnDistancesInVehicles = "[1500, 6000]";
 
 // GRAD Trenches
 force grad_trenches_functions_allowBigEnvelope = true;
@@ -825,11 +898,28 @@ SSS_setting_useChatNotifications = false;
 force Salmon_bs_ff = false;
 force Salmon_bs_rd = true;
 
+// TFAR - Animations
+radioAnims_cba_ads = true;
+radioAnims_cba_Earpieces = "[""G_WirelessEarpiece_F""]";
+radioAnims_cba_main = true;
+radioAnims_cba_preference_fadak = "Vest";
+radioAnims_cba_preference_Others = "Hand";
+radioAnims_cba_preference_pnr1000 = "Vest";
+radioAnims_cba_preference_PRC148 = "Hand";
+radioAnims_cba_preference_PRC152 = "Vest";
+radioAnims_cba_preference_PRC154 = "Hand";
+radioAnims_cba_preference_rf7800 = "Vest";
+radioAnims_cba_vehicles = true;
+radioAnims_cba_vestarmor = true;
+radioAnims_cba_vests = "[]";
+
 // TFAR - Clientside settings
+TFAR_curatorCamEars = false;
 TFAR_default_radioVolume = 6;
 TFAR_intercomDucking = 0.2;
 TFAR_intercomVolume = 0.2;
 TFAR_moveWhileTabbedOut = false;
+TFAR_noAutomoveSpectator = false;
 TFAR_oldVolumeHint = false;
 TFAR_pluginTimeout = 4;
 TFAR_PosUpdateMode = 0.1;
@@ -845,8 +935,9 @@ TFAR_volumeModifier_forceSpeech = false;
 force TFAR_AICanHearPlayer = true;
 force TFAR_AICanHearSpeaker = true;
 TFAR_allowDebugging = true;
-TFAR_curatorCamEars = false;
+tfar_core_noTSNotConnectedHint = false;
 TFAR_defaultIntercomSlot = 0;
+TFAR_disableAutoMute = false;
 TFAR_enableIntercom = true;
 TFAR_experimentalVehicleIsolation = true;
 TFAR_fullDuplex = true;
@@ -855,7 +946,6 @@ force TFAR_giveMicroDagrToSoldier = true;
 force TFAR_givePersonalRadioToRegularSoldier = true;
 TFAR_globalRadioRangeCoef = 1;
 TFAR_instantiate_instantiateAtBriefing = false;
-TFAR_noAutomoveSpectator = false;
 force TFAR_objectInterceptionEnabled = false;
 TFAR_objectInterceptionStrength = 400;
 tfar_radiocode_east = "_opfor";
@@ -900,6 +990,23 @@ Fat_Lurch_ShowAz = true;
 Fat_Lurch_ShowEl = true;
 Fat_Lurch_ShowNorth = true;
 Fat_Lurch_ShowTarget = true;
+
+// USAF
+usaf_afterburner_setting_allow_ai = true;
+USAF_allowNuke = true;
+usaf_debug_setting_enabled_clients = false;
+usaf_debug_setting_enabled_server = false;
+usaf_serviceMenu_setting_allowHangarRearm = true;
+usaf_serviceMenu_setting_allowHangarRefuel = true;
+usaf_serviceMenu_setting_allowHangarRepair = true;
+usaf_serviceMenu_setting_allowLoadoutModification = true;
+usaf_serviceMenu_setting_enabled = true;
+usaf_serviceMenu_setting_refuelTime = "100";
+usaf_serviceMenu_setting_reloadTime = "2";
+usaf_serviceMenu_setting_repairTime = "100";
+usaf_serviceMenu_setting_replaceSources = false;
+usaf_serviceMenu_setting_selectorSearchRadius = "15";
+usaf_setting_allow_aiFormlights = true;
 
 // VET_Unflipping
 vet_unflipping_require_serviceVehicle = false;
