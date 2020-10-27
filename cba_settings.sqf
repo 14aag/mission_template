@@ -267,7 +267,7 @@ force ace_nightvision_aimDownSightsBlur = 0.5;
 force ace_nightvision_disableNVGsWithSights = false;
 force ace_nightvision_effectScaling = 0.7;
 force ace_nightvision_fogScaling = 0.2;
-force ace_nightvision_noiseScaling = 0.4;
+force ace_nightvision_noiseScaling = 0.5;
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
