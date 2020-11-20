@@ -16,4 +16,13 @@ if (hasInterface) then {
     [player, "killed", {
         ["unconscious", false] call ace_common_fnc_setDisableUserInputStatus;
     }] call CBA_fnc_addBISEventHandler;
+
+    [player, "respawn", {
+        params ["_unit"];
+        if !(local _unit) then {
+            private _text = text format ['[EFN] (workarounds) INFO: Unit not local: %1', name player];
+            [_text] remoteExec ["diag_log", 2];
+        };
+        [_unit, ace_medical_state_machine, "Dead", "Default"] call CBA_statemachine_fnc_manualTransition;
+    }] call CBA_fnc_addBISEventHandler;
 };
