@@ -10,3 +10,4 @@ PREP(setSpectator);
 PREP(updateLeaderName);
 PREP(moduleAssignRespawn);
 PREP(moduleRespawnPlayers);
+PREP(initVehicleRespawn);
