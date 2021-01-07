@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+if (hasInterface) then {
+    GVAR(requireAFMmode) = getMissionConfigValue [QGVAR(requireAFMmode), 0];
+};
 if (!hasInterface) exitWith {};
 GVAR(missionStartTime) = getMissionConfigValue [QGVAR(missionStartTime), 0];
 GVAR(disabledChannels) = [0, 1];

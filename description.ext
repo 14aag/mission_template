@@ -37,6 +37,7 @@ efn_respawn_tentCooldown = 0;
 efn_respawn_outOfTicketsRemove = 1;
 
 efn_common_missionStartTime = 1800;
+efn_common_requireAFMmode = 1;
 
 #include "KPGUI\KPGUI_defines.hpp"
 #include "KPCF\ui\KPCF_dialog.hpp"
