@@ -32,3 +32,25 @@ if (hasInterface) then {
         ace_common_localUnits pushBackUnique _unit;
     }] call CBA_fnc_addBISEventHandler;
 };
+
+// Apparently groups just stop if their leader has binocs out in not combat mode... (lambs danger fix)
+[{
+    private _groups = allGroups;
+    private _binocUser = _groups findIf {
+        private _leader = leader _x;
+        local _leader &&
+        {!(isPlayer _leader) &&
+        {(behaviour _leader) in ["CARELESS", "SAFE", "AWARE"] &&
+        {(currentWeapon _leader) isEqualTo (binocular _leader)}}}
+    };
+    if (_binocUser != -1) then {
+        private _leader = leader (_groups select _binocUser);
+        private _weapon = primaryWeapon _leader;
+        if (_weapon isEqualTo "") then {
+            _weapon = secondaryWeapon _leader;
+        };
+        if !(_weapon isEqualTo "") then {
+            _leader selectWeapon _weapon;
+        };
+    };
+}, 5] call CBA_fnc_addPerFrameHandler;
