@@ -23,6 +23,12 @@ if (hasInterface) then {
             private _text = text format ['[EFN] (workarounds) INFO: Unit not local: %1', name player];
             [_text] remoteExec ["diag_log", 2];
         };
+        [_unit, ace_medical_state_machine, "Dead", "Default"] call CBA_statemachine_fnc_manualTransition;
+
+        if ((ace_common_localUnits find _unit) == -1) then {
+            private _text = text format ['[EFN] (workarounds) INFO: Unit not in localUnits: %1', name player];
+            [_text] remoteExec ["diag_log", 2];
+        };
         ace_common_localUnits pushBackUnique _unit;
     }] call CBA_fnc_addBISEventHandler;
 };
