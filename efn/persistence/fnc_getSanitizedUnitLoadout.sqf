@@ -19,5 +19,9 @@ if (count _backpack > 1) then {
 };
 _items = [_items] call FUNC(deInstancedRadios);
 
-[_loadout select 0, _loadout select 1, _loadout select 2, _uniform, _vest, _backpack, _loadout select 6, _loadout select 7, _loadout select 8, _items]
+private _facewear = _loadout select 7;
+if (_facewear isEqualTo "") then {
+    _facewear = _unit getVariable [QGVAR(facewear), ""];
+};
+[_loadout select 0, _loadout select 1, _loadout select 2, _uniform, _vest, _backpack, _loadout select 6, _facewear, _loadout select 8, _items]
 

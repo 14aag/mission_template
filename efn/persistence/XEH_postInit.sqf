@@ -50,4 +50,9 @@ if !(hasInterface) exitWith {};
     player setVariable [QGVAR(loadout), nil, 2];
 }] call CBA_fnc_addBISEventHandler;
 
+["loadout", {
+    params ["", "_newLoadout"];
+    player setVariable [QGVAR(facewear), _newLoadout select 7, 2];
+}] call CBA_fnc_addPlayerEventHandler;
+
 nil
