@@ -3,12 +3,13 @@
 if (!isDedicated) exitWith {};
 
 private _setVulnerable = {
-    params ["_vulnerable"];
+    params ["_vehicles", "_vulnerable"];
     {
         _x allowDamage _vulnerable;
         _x enableSimulationGlobal _vulnerable;
-    } forEach vehicles;
+    } forEach _vehicles;
 };
 
-[_setVulnerable, false, 0] call CBA_fnc_waitAndExecute;
-[_setVulnerable, true, 60] call CBA_fnc_waitAndExecute;
+private _vehicles = vehicles select { simulationEnabled _x && isDamageAllowed _x };
+[_setVulnerable, [_vehicles, false], 0] call CBA_fnc_waitAndExecute;
+[_setVulnerable, [_vehicles, true], 60] call CBA_fnc_waitAndExecute;
