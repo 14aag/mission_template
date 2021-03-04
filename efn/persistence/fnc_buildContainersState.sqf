@@ -2,9 +2,10 @@
 
 private _containers = vehicles select {
     (_x isKindOf "ThingX") &&
-    {!(_x isKindOf "Static")} &&
-    {alive _x} &&
-    {(getNumber (configFile >> "CfgVehicles" >> typeOf _x >> "maximumLoad")) > 0}
+    {!(_x isKindOf "Static") &&
+    {!(_x getVariable [QGVAR(excluded),false]) &&
+    {alive _x &&
+    {(getNumber (configFile >> "CfgVehicles" >> typeOf _x >> "maximumLoad")) > 0}}}}
 };
 
 _containers apply {

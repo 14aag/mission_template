@@ -14,12 +14,11 @@ if (isServer) then {
 
 if !(hasInterface) exitWith {};
 
-[QGVAR(player_state), {
-    _this call FUNC(restoreUnitState);
-    [_thisType, _thisId] call CBA_fnc_removeEventHandler
-}] call CBA_fnc_addEventHandlerArgs;
+[QGVAR(player_state), FUNC(restoreUnitState)] call CBA_fnc_addEventHandlerArgs;
 
 ["14 AAG Persistence", "Save current state", {[QGVAR(force_save)] call CBA_fnc_serverEvent;}] call zen_custom_modules_fnc_register;
+["14 AAG Persistence", "Load fetched state", FUNC(moduleLoadState)] call zen_custom_modules_fnc_register;
+["14 AAG Persistence", "Fetch saved state", FUNC(moduleSaveLocally)] call zen_custom_modules_fnc_register;
 
 GVAR(excludeZeusPlaced) = getMissionConfigValue [QGVAR(excludeZeus), false] in [true, 1];
 ["ModuleCurator_F", "init", {

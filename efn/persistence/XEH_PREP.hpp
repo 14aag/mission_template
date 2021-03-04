@@ -12,3 +12,8 @@ PREP(restoreContainersState);
 PREP(forceSave);
 PREP(buildVehiclesState);
 PREP(restoreVehiclesState);
+PREP(loadState);
+PREP(moduleLoadState);
+PREP(moduleSaveLocally);
+PREP(fetchState);
+PREP(saveFetchedState);
