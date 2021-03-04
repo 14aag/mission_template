@@ -21,4 +21,14 @@ if !(hasInterface) exitWith {};
 
 ["14 AAG Persistence", "Save current state", {[QGVAR(force_save)] call CBA_fnc_serverEvent;}] call zen_custom_modules_fnc_register;
 
+GVAR(excludeZeusPlaced) = getMissionConfigValue [QGVAR(excludeZeus), false] in [true, 1];
+["ModuleCurator_F", "init", {
+    params ["_logic"];
+
+    _logic addEventHandler ["CuratorObjectPlaced", {
+        params ["", "_entity"];
+        _entity setVariable [QGVAR(excluded), GVAR(excludeZeusPlaced), 2];
+    }];
+}] call CBA_fnc_addClassEventHandler;
+
 nil
