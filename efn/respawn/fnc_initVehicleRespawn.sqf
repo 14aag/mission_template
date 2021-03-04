@@ -8,7 +8,7 @@ private _respawnData = [
     typeOf _vehicle,
     getPosASL _vehicle,
     [vectorDir _vehicle, vectorUp _vehicle],
-    [_vehicle] call FUNC(getInventory)
+    [_vehicle] call EFUNC(persistence,getInventory)
 ];
 
 [_vehicle, "killed", {
