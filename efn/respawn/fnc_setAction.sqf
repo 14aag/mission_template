@@ -3,7 +3,8 @@
 params ["_unit", "_isLeader"];
 
 if (_isLeader && isNil QGVAR(actionId)) then {
-    GVAR(actionId) = _unit addAction ["Place respawn", FUNC(placeTent), nil, 0, false];
+    private _condition = QUOTE(vehicle player == player);
+    GVAR(actionId) = _unit addAction ["Place respawn", FUNC(placeTent), nil, 0, false, true, "", _condition];
 };
 
 if (!_isLeader && !(isNil QGVAR(actionId))) then {

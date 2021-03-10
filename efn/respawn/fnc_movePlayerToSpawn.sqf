@@ -12,7 +12,7 @@ if (_tickets <= 0) exitWith {
     [QGVAR(notify), "Respawn tent out of tickets", _unit] call CBA_fnc_targetEvent;
 };
 
-private _pos = (getPosATL _tent) findEmptyPosition [1, 30, "B_Soldier_F"];
+private _pos = (getPosATL _tent); // findEmptyPosition [1, 30, "B_Soldier_F"];
 if (_pos isEqualTo []) exitWith { diag_log "no valid position found"; };
 private _entities = (ASLToAGL getPosASL _tent) nearEntities ["Man", 100];
 private _enemies = _entities select { [side _unit, side _x] call BIS_fnc_sideIsEnemy };

@@ -12,6 +12,8 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
+GVAR(minPlayersNear) = getMissionConfigValue [QGVAR(minPlayersNear), 1];
+GVAR(maxPlayerDistance) = getMissionConfigValue [QGVAR(maxPlayerDistance), 5];
 GVAR(mode) = getMissionConfigValue [QGVAR(mode), 1];
 GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
 GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
@@ -44,6 +46,10 @@ GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
 
     nil
 }] call CBA_fnc_addBISEventHandler;
+
+["ace_interactMenuOpened", {
+    call FUNC(endTentPlacementMode);
+}] call CBA_fnc_addEventHandler;
 
 ["leader", {
     [player] call FUNC(updateLeaderName);
