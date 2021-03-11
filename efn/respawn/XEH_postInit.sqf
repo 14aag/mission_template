@@ -31,6 +31,10 @@ GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
         player setUnitLoadout _loadout;
     };
 
+    if (!isNil QGVAR(position) && !isNull GVAR(position)) then {
+        player setPosASL getPosASL GVAR(position);
+    };
+
     if (GVAR(enabled)) then {
         player setVariable [QGVAR(dead), true, true];
         [true] call FUNC(setSpectator);
