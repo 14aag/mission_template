@@ -54,3 +54,10 @@ if (hasInterface) then {
         };
     };
 }, 5] call CBA_fnc_addPerFrameHandler;
+
+// Keep people muted when dead, ACE will unmute them when they respawn
+["ace_medical_death", {
+    params ["_unit"];
+    if (_unit != ACE_player) exitWith {};
+    [false, _unit] call EFUNC(common,setVolume);
+}] call CBA_fnc_addEventHandler;
