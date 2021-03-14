@@ -16,6 +16,8 @@
 
 // Dialog controls
 private _dialog = findDisplay 758067;
+if (isNull _dialog) exitWith {};
+
 private _ctrlStorage = _dialog displayCtrl 75802;
 
 // Clear the lists
