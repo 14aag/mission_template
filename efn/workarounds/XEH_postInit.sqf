@@ -59,5 +59,5 @@ if (hasInterface) then {
 ["ace_medical_death", {
     params ["_unit"];
     if (_unit != ACE_player) exitWith {};
-    [false, _unit] call EFUNC(common,setVolume);
+    [false, _unit] call ace_common_fnc_setVolume;
 }] call CBA_fnc_addEventHandler;
