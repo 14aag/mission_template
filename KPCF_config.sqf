@@ -31,8 +31,24 @@ KPCF_interactRadius = 5;
 
 // Defines the available crates
 KPCF_crates = [
-    "B_supplyCrate_F",
-    "CargoNet_01_box_F",
+    	"ACE_medicalSupplyCrate_advanced",
+	"aag14_logistics_ammo_v11",
+	"aag14_logistics_launcher_v11",
+	"aag14_logistics_ammo_v12",
+	"aag14_logistics_launcher_v12",
+	"aag14_logistics_ammo_v13",
+	"aag14_logistics_launcher_v13",
+	"aag14_logistics_ammo_loki",
+	"aag14_logistics_launcher_loki",
+	"aag14_logistics_explosives_hq",
+	"aag14_logistics_weapons_hq",
+	"aag14_logistics_special_soar",
+	"aag14_logistics_special_v11",
+	"aag14_logistics_special_v12",
+	"aag14_logistics_special_v13",
+	"aag14_logistics_special_loki",
+	"B_supplyCrate_F",
+    	"CargoNet_01_box_F",
 	"Box_NATO_Ammo_F",
 	"B_CargoNet_01_ammo_F"
 ];
