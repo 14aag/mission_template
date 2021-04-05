@@ -68,6 +68,7 @@ KPCF_blacklistedItems = [
 KPCF_whitelistedItems = ["KPCF", "whitelists"] call efn_inventory_fnc_loadInventoryFile;
 
 KPCF_compatibleMagazineExtras = [["potato_vz99_carryWeapon", "potato_vz99_mortar60mm"]];
+KPCF_grenadesExtras = ["MS_Strobe_Mag_1", "MS_Strobe_Mag_2"];
 
 // ----- These Variables will be replaced with activated generatedLists -----
 
