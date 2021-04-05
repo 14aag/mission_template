@@ -1,0 +1,12 @@
+PREP(registerWave);
+PREP(processGroup);
+PREP(processUnit);
+PREP(processVehicle);
+PREP(spawnWave);
+PREP(spawnGroup);
+PREP(spawnUnit);
+PREP(spawnVehicle);
+PREP(createWaveConfiguration);
+PREP(start);
+PREP(stop);
+PREP(wavePfh);
