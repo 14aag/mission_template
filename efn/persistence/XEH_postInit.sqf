@@ -51,7 +51,9 @@ if !(hasInterface) exitWith {};
 
 ["loadout", {
     params ["", "_newLoadout"];
-    player setVariable [QGVAR(facewear), _newLoadout select 7, 2];
+    if (count _newLoadout == 10) then {
+        player setVariable [QGVAR(facewear), _newLoadout select 7, 2];
+    };
 }] call CBA_fnc_addPlayerEventHandler;
 
 nil
