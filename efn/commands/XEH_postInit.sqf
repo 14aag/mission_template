@@ -27,11 +27,27 @@ if !(hasInterface) exitWith {};
     [_msg, "whisper", name _receiver] call FUNC(sendChatMessage);
 }, "all"] call CBA_fnc_registerChatCommand;
 
+["groupname", {
+    params ["_name"];
+
+    if !((leader ace_player) isEqualTo ace_player) exitWith {
+        systemChat "Only the group leader can set the name!";
+    };
+
+    private _index = allGroups findIf {(groupId _x) isEqualTo _name};
+    if (_index > -1) exitWith {
+        systemChat "That group name already exists!";
+    };
+
+    (group ace_player) setGroupIdGlobal [_name];
+}, "all"] call CBA_fnc_registerChatCommand;
+
 ["help", {
     [{
         systemChat "--- Available chat commands ---";
         systemChat "zeus - Send a message to zeus (#zeus smite me)";
         systemChat "whisper - Send a whisper to a player (#whisper clips what's up)";
+        systemChat "groupname - Change name of group on cTab (group leaders only)";
         systemChat "--- End ---";
     }] call CBA_fnc_execNextFrame;
 }, "all"] call CBA_fnc_registerChatCommand;
