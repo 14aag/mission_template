@@ -25,7 +25,7 @@ _vehicle setDamage _damage;
 {
     _x params ["_pylonIndex", "", "_turretPath", "_magazine", "_ammoCount"];
 
-    _vehicle setPylonLoadOut [_pylonIndex, str _magazine, _turretPath];
+    _vehicle setPylonLoadOut [_pylonIndex, str _magazine, false, _turretPath];
     _vehicle setAmmoOnPylon [_pylonIndex, _ammoCount]; 
 } forEach _pylonInfo;
 
