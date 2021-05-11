@@ -7,24 +7,15 @@ if (!isServer) exitWith {};
 private _objects = synchronizedObjects _logic;
 if (_objects isEqualTo []) exitWith {};
 
+private _groups = _objects apply { group _x };
+_groups = _groups arrayIntersect _groups;
+
 [{CBA_missionTime > 0}, 
 {
-    params ["_logic", "_objects"];
-    private _template = [];
-    {
-        _template pushBack ([_x] call FUNC(processGroup));
-        TRACE_1("remove groups",_logic);
-        {
-            private _veh = vehicle _x;
-            deleteVehicle _x;
-            if (!isNull _veh && {crew _veh isEqualTo []}) then {
-                deleteVehicle _veh;
-            };
-        } forEach units group _x;
-    } forEach _objects;
-
+    params ["_logic", "_groups"];
+    private _template = _groups apply {[_x] call FUNC(processGroup)};
     _logic setVariable [QGVAR(template), _template];
-}, [_logic, _objects]] call CBA_fnc_waitUntilAndExecute;
+}, [_logic, _groups]] call CBA_fnc_waitUntilAndExecute;
 
 _logic setVariable [QGVAR(name), _name];
 GVAR(waves) set [_name, _logic];
