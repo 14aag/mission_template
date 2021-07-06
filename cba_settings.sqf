@@ -912,11 +912,11 @@ force niarms_accswitch = true;
 force niarms_magSwitch = false;
 
 // Simplex Support Services
-force SSS_setting_adminFullAccess = true;
+force SSS_setting_adminFullAccess = false;
 force SSS_setting_adminLimitSide = false;
 force SSS_setting_cleanupCrew = true;
 force SSS_setting_deleteVehicleOnEntityRemoval = false;
-force SSS_setting_directActionRequirement = false;
+force SSS_setting_directActionRequirement = true;
 force SSS_setting_GiveUAVTerminal = true;
 force SSS_setting_milsimModeArtillery = false;
 force SSS_setting_milsimModeCAS = false;
@@ -927,7 +927,7 @@ force SSS_setting_resetVehicleOnRTB = true;
 force SSS_setting_restoreCrewOnRTB = true;
 force SSS_setting_slingLoadSearchRadius = 100;
 force SSS_setting_slingLoadWhitelist = "";
-SSS_setting_useChatNotifications = false;
+SSS_setting_useChatNotifications = true;
 
 // TacSalmon Buttstroke
 force Salmon_bs_ff = false;
