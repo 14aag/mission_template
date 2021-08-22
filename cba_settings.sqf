@@ -112,9 +112,9 @@ force ace_hearing_unconsciousnessVolume = 0.325311;
 
 // ACE Interaction
 force ace_interaction_disableNegativeRating = true;
-force ace_interaction_enableMagazinePassing = true;
+ace_interaction_enableMagazinePassing = true;
 force ace_interaction_enableTeamManagement = true;
-force ace_interaction_enableWeaponAttachments = true;
+ace_interaction_enableWeaponAttachments = true;
 
 // ACE Interaction Menu
 ace_gestures_showOnInteractionMenu = 2;
@@ -318,7 +318,7 @@ force ace_pylons_timePerPylon = 5;
 force ace_quickmount_distance = 3;
 force ace_quickmount_enabled = true;
 ace_quickmount_enableMenu = 3;
-force ace_quickmount_priority = 3;
+ace_quickmount_priority = 3;
 force ace_quickmount_speed = 18;
 
 // ACE Respawn
