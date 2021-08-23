@@ -1,1 +1,1 @@
-[[],[],[],["VSM_Multicam_Camo",[["ACE_EarPlugs",1],["Chemlight_green",2,1]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]]
+[[],[],[],["tfl_g3_field_uniform",[]],[],[],"AAG_Beret_NCO","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch",""]]
