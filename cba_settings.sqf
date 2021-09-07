@@ -498,6 +498,10 @@ acex_volume_showNotification = true;
 // AI
 cfp_autoEquipNVG = true;
 
+// Backpack On Chest
+bocr_main_disabled = false;
+bocr_main_walk = true;
+
 // BettIR
 force BettIR_ViewDistance = 300;
 
@@ -512,162 +516,13 @@ cba_disposable_replaceDisposableLauncher = true;
 cba_events_repetitionMode = 1;
 cba_optics_usePipOptics = true;
 
-// Chemical Warfare
-force CBRN_color_contamination0 = [0.9294,0.9843,1];
-force CBRN_color_contamination1 = [0.8353,0.9294,0.4627];
-force CBRN_color_contamination2 = [1,0.6666,0.6666];
-force CBRN_exposureCoughThreshold = 3;
-force CBRN_exposureDeathThreshold = 20;
-force CBRN_exposureKnockoutThreshold = 10;
-force CBRN_exposureLimpThreshold = 7;
-CBRN_factionMask_2Mercs_FACTION = "";
-CBRN_factionMask_2Mercs_FACTION_EN = "";
-CBRN_factionMask_2Mercs_FACTION_Khark_Rev = "";
-CBRN_factionMask_2Mercs_FACTION_Khark_Royal = "";
-CBRN_factionMask_2Mercs_FACTION_Minos_Peace = "";
-CBRN_factionMask_2Mercs_FACTION_Minos_Rep = "";
-CBRN_factionMask_2Mercs_FACTION_Pomerania_Lib = "";
-CBRN_factionMask_2Mercs_FACTION_Pomerania_People = "";
-CBRN_factionMask_2Mercs_FACTION_Stat = "";
-CBRN_factionMask_BLU_CTRG_F = "";
-CBRN_factionMask_BLU_F = "";
-CBRN_factionMask_BLU_G_F = "";
-CBRN_factionMask_BLU_GEN_F = "";
-CBRN_factionMask_BLU_T_F = "";
-CBRN_factionMask_BLU_W_F = "";
-CBRN_factionMask_CFP_B_AFARMY = "";
-CBRN_factionMask_CFP_B_AFGPOLICE = "";
-CBRN_factionMask_CFP_B_CAF = "";
-CBRN_factionMask_CFP_B_CDF_SNW = "";
-CBRN_factionMask_CFP_B_CZARMY_WDL = "";
-CBRN_factionMask_CFP_B_DEARMY_WDL = "";
-CBRN_factionMask_CFP_B_GBARMY_WDL = "";
-CBRN_factionMask_CFP_B_ILIDF = "";
-CBRN_factionMask_CFP_B_IQARMY = "";
-CBRN_factionMask_CFP_B_IQPOLICE = "";
-CBRN_factionMask_CFP_B_KEARMY = "";
-CBRN_factionMask_CFP_B_MLARMY = "";
-CBRN_factionMask_CFP_B_NAARMY = "";
-CBRN_factionMask_CFP_B_PESH = "";
-CBRN_factionMask_CFP_B_UGARMY = "";
-CBRN_factionMask_CFP_B_USARMY_1991_DES = "";
-CBRN_factionMask_CFP_B_USARMY_1991_WDL = "";
-CBRN_factionMask_CFP_B_USARMY_2003_DES = "";
-CBRN_factionMask_CFP_B_USARMY_2003_WDL = "";
-CBRN_factionMask_CFP_B_USARMY_WDL = "";
-CBRN_factionMask_CFP_B_USCIA = "";
-CBRN_factionMask_CFP_B_USMC_DES = "";
-CBRN_factionMask_CFP_B_USRANGERS_WDL = "";
-CBRN_factionMask_CFP_B_USSEALS_DES = "";
-CBRN_factionMask_CFP_B_USSEALS_WDL = "";
-CBRN_factionMask_CFP_B_YPG = "";
-CBRN_factionMask_CFP_C_AFG = "";
-CBRN_factionMask_CFP_C_AFRCHRISTIAN = "";
-CBRN_factionMask_CFP_C_AFRISLAMIC = "";
-CBRN_factionMask_CFP_C_ASIA = "";
-CBRN_factionMask_CFP_C_CHERNO_WIN = "";
-CBRN_factionMask_CFP_C_MALDEN = "";
-CBRN_factionMask_CFP_C_ME = "";
-CBRN_factionMask_CFP_I_ALNUSRA = "";
-CBRN_factionMask_CFP_I_IS = "";
-CBRN_factionMask_CFP_I_SDRebels = "";
-CBRN_factionMask_CFP_I_SDRebelsrf = "";
-CBRN_factionMask_CFP_I_SSArmy = "";
-CBRN_factionMask_CFP_I_TUAREG = "";
-CBRN_factionMask_CFP_I_WAGNER = "";
-CBRN_factionMask_CFP_I_WAGNER_WDL = "";
-CBRN_factionMask_CFP_I_WAGNER_WIN = "";
-CBRN_factionMask_CFP_I_WestUltra = "";
-CBRN_factionMask_CFP_O_ABUSAYYAF = "";
-CBRN_factionMask_CFP_O_ALQAEDA = "";
-CBRN_factionMask_CFP_O_ALSHABAAB = "";
-CBRN_factionMask_CFP_O_ANSARALLAH = "";
-CBRN_factionMask_CFP_O_BOKOHARAM = "";
-CBRN_factionMask_CFP_O_CFRebels = "";
-CBRN_factionMask_CFP_O_CHDKZ_SNW = "";
-CBRN_factionMask_CFP_O_HAMAS = "";
-CBRN_factionMask_CFP_O_HEZBOLLAH = "";
-CBRN_factionMask_CFP_O_IQARMY = "";
-CBRN_factionMask_CFP_O_IRARMY = "";
-CBRN_factionMask_CFP_O_IS = "";
-CBRN_factionMask_CFP_O_NKARMY = "";
-CBRN_factionMask_CFP_O_RUARMY_DES = "";
-CBRN_factionMask_CFP_O_RUMVD = "";
-CBRN_factionMask_CFP_O_SDARMY = "";
-CBRN_factionMask_CFP_O_SDMilitia = "";
-CBRN_factionMask_CFP_O_SOREBEL = "";
-CBRN_factionMask_CFP_O_SSREBELS = "";
-CBRN_factionMask_CFP_O_SYARMY = "";
-CBRN_factionMask_CFP_O_TBAN = "";
-CBRN_factionMask_CFP_O_WAGNER = "";
-CBRN_factionMask_CFP_O_WAGNER_WDL = "";
-CBRN_factionMask_CFP_O_WAGNER_WIN = "";
-CBRN_factionMask_CIV_F = "";
-CBRN_factionMask_CIV_IDAP_F = "";
-CBRN_factionMask_CPC_B_EJE = "";
-CBRN_factionMask_CPC_B_GFD = "";
-CBRN_factionMask_CPC_B_NAM_US = "";
-CBRN_factionMask_CPC_I_PIC = "";
-CBRN_factionMask_CPC_I_Pirate = "";
-CBRN_factionMask_CPC_O_NAM_CIV = "";
-CBRN_factionMask_CPC_O_NAM_VC = "";
-CBRN_factionMask_CPC_O_NPFD = "";
-CBRN_factionMask_CUP_ARMY_ASIA = "";
-CBRN_factionMask_CUP_B_CDF = "";
-CBRN_factionMask_CUP_B_CZ = "";
-CBRN_factionMask_CUP_B_GB = "";
-CBRN_factionMask_CUP_B_GER = "";
-CBRN_factionMask_CUP_B_HIL = "";
-CBRN_factionMask_CUP_B_RNZN = "";
-CBRN_factionMask_CUP_B_US = "";
-CBRN_factionMask_CUP_B_US_Army = "";
-CBRN_factionMask_CUP_B_US_OFP = "";
-CBRN_factionMask_CUP_B_USMC = "";
-CBRN_factionMask_CUP_C_CHERNARUS = "";
-CBRN_factionMask_CUP_C_RU = "";
-CBRN_factionMask_CUP_C_SAHRANI = "";
-CBRN_factionMask_CUP_C_Special = "";
-CBRN_factionMask_CUP_C_TK = "";
-CBRN_factionMask_CUP_CIV_ASIA = "";
-CBRN_factionMask_CUP_I_NAPA = "";
-CBRN_factionMask_CUP_I_PMC_ION = "";
-CBRN_factionMask_CUP_I_RACS = "";
-CBRN_factionMask_CUP_I_TK_GUE = "";
-CBRN_factionMask_CUP_I_UN = "";
-CBRN_factionMask_CUP_INS_ASIA = "";
-CBRN_factionMask_CUP_O_ChDKZ = "";
-CBRN_factionMask_CUP_O_RU = "";
-CBRN_factionMask_CUP_O_SLA = "";
-CBRN_factionMask_CUP_O_TK = "";
-CBRN_factionMask_CUP_O_TK_MILITIA = "";
-CBRN_factionMask_IND_C_F = "";
-CBRN_factionMask_IND_E_F = "";
-CBRN_factionMask_IND_F = "";
-CBRN_factionMask_IND_G_F = "";
-CBRN_factionMask_IND_L_F = "";
-CBRN_factionMask_Interactive_F = "";
-CBRN_factionMask_OPF_F = "";
-CBRN_factionMask_OPF_G_F = "";
-CBRN_factionMask_OPF_GEN_F = "";
-CBRN_factionMask_OPF_R_F = "";
-CBRN_factionMask_OPF_T_F = "";
-CBRN_factionMask_OPF_V_F = "";
-CBRN_factionMask_rhs_faction_socom = "";
-CBRN_factionMask_rhs_faction_usaf = "";
-CBRN_factionMask_rhs_faction_usarmy = "";
-CBRN_factionMask_rhs_faction_usarmy_d = "";
-CBRN_factionMask_rhs_faction_usarmy_wd = "";
-CBRN_factionMask_rhs_faction_usmc = "";
-CBRN_factionMask_rhs_faction_usmc_d = "";
-CBRN_factionMask_rhs_faction_usmc_wd = "";
-CBRN_factionMask_rhs_faction_usn = "";
-CBRN_factionMask_USAF = "";
-CBRN_factionMask_USAF_ServiceMenu = "";
-CBRN_factionMask_Virtual_F = "";
-CBRN_factionMask_VSM_GP = "";
-
 // Community Base Addons - Network
 cba_network_loadoutValidation = 0;
+
+// COXHOUND Ordnance and Ammo Settings
+cox_40mm_setting_bbdivider = 2;
+cox_40mm_setting_bbenable = true;
+cox_40mm_setting_bbincap = true;
 
 // CUP
 CUP_CheckCfgPatches = false;
@@ -696,6 +551,7 @@ diwako_dui_ace_hide_interaction = true;
 diwako_dui_colors = "sthud";
 diwako_dui_font = "RobotoCondensed";
 diwako_dui_icon_style = "standard";
+diwako_dui_main_hide_dialog = true;
 diwako_dui_main_hide_ui_by_default = false;
 diwako_dui_main_squadBlue = [0,0,1,1];
 diwako_dui_main_squadGreen = [0,1,0,1];
@@ -725,6 +581,7 @@ diwako_dui_nametags_nameFontShadow = 1;
 diwako_dui_nametags_nameOtherGroupColor = [0.2,1,0,1];
 diwako_dui_nametags_renderDistance = 40;
 diwako_dui_nametags_showUnconAsDead = true;
+diwako_dui_nametags_useLIS = true;
 diwako_dui_nametags_useSideIsFriendly = true;
 
 // DUI - Squad Radar - Radar
@@ -753,9 +610,11 @@ diwako_dui_radar_ace_finger = true;
 diwako_dui_radar_ace_medic = true;
 diwako_dui_radar_compassRangeCrew = 500;
 diwako_dui_radar_dir_padding = 25;
+diwako_dui_radar_dir_shadow = 2;
 diwako_dui_radar_group_by_vehicle = false;
 diwako_dui_radar_icon_opacity = 1;
 diwako_dui_radar_icon_opacity_no_player = true;
+diwako_dui_radar_icon_priority_setting = 1;
 diwako_dui_radar_icon_scale_crew = 6;
 diwako_dui_radar_leadingZeroes = false;
 diwako_dui_radar_namelist_hideWhenLeader = false;
@@ -788,6 +647,7 @@ dzn_Flares_M_ListSetting = "StaticMortar, Mortar_01_base_F, CUP_B_M1129_MC_MK19_
 dzn_Flares_M_Range = 400;
 
 // dzn Extended Jamming
+dzn_EJAM_AllowFullInspectMenu = true;
 force dzn_EJAM_dud_ChanceSettings = 30;
 force dzn_EJAM_fail_to_eject_ChanceSettings = 20;
 force dzn_EJAM_fail_to_extract_ChanceSettings = 20;
@@ -797,11 +657,14 @@ force dzn_EJAM_Force = true;
 force dzn_EJAM_ForceOverallChance = true;
 force dzn_EJAM_MappingSettings = "[""arifle_MX_F"",0.05,45,10,45,0,0],[""CUP_arifle_m16A1GL_USA"",100,100,100,100,100,100]";
 force dzn_EJAM_OverallChanceSetting = 0.05;
+dzn_EJAM_PullBoltOnReload = true;
 force dzn_EJAM_SubsonicJamEffectSetting = "1";
+dzn_EJAM_SubsonicMagazinesSettings = """cup_30rnd_subsonic_545x39_ak_m"",""cup_20rnd_subsonic_545x39_aksu_m"",""cup_30rnd_subsonic_545x39_ak74m_m"",""cup_30rnd_subsonic_545x39_ak74_plum_m"",""cup_30rnd_subsonic_762x39_ak47_m"",""cup_20rnd_subsonic_762x39_amd63_m"",""cup_30rnd_subsonic_762x39_ak47_bakelite_m"",""cup_30rnd_subsonic_762x39_ak103_bakelite_m"",""cup_30rnd_subsonic_762x39_akm_bakelite_desert_m"",""cup_30rnd_subsonic_545x39_fort224_m"",""rhs_30rnd_545x39_7u1_ak"",""rhs_45rnd_545x39_7u1_ak"",""rhs_30rnd_762x39mm_u"",""rhs_30rnd_762x39mm_bakelite_u"",""rhs_30rnd_762x39mm_polymer_u"",""hlc_30rnd_545x39_s_ak"",""hlc_30rnd_545x39_s_ak_plum"",""hlc_30rnd_545x39_s_ak_black"",""hlc_20rnd_762x51_s_fal"",""hlc_10rnd_762x51_s_fal"",""hlc_20rnd_762x51_s_g3""";
 
 // GRAD Civs
 grad_civs_activities_panicCooldown = "[15, 120, 240]";
 grad_civs_cars_animalTransportChance = 0.4;
+grad_civs_cars_animalTransportVehicles = "";
 grad_civs_cars_automaticVehicleGroupSize = true;
 grad_civs_cars_vehicles = "[""C_Van_01_fuel_F"",""C_Hatchback_01_F"",""C_Truck_02_fuel_F"",""C_Truck_02_covered_F"",""C_Offroad_01_F"",""C_SUV_01_F"",""C_Van_01_transport_F"",""C_Van_01_box_F""]";
 grad_civs_diagnostics_showFps = false;
@@ -842,27 +705,36 @@ grad_civs_voyage_spawnDistancesInVehicles = "[1500, 6000]";
 force grad_trenches_functions_allowBigEnvelope = true;
 force grad_trenches_functions_allowCamouflage = true;
 force grad_trenches_functions_allowDigging = true;
+grad_trenches_functions_allowEffects = true;
 force grad_trenches_functions_allowGiantEnvelope = true;
+grad_trenches_functions_allowHitDecay = true;
 force grad_trenches_functions_allowLongEnvelope = true;
 force grad_trenches_functions_allowShortEnvelope = true;
 force grad_trenches_functions_allowSmallEnvelope = true;
 force grad_trenches_functions_allowTrenchDecay = false;
 force grad_trenches_functions_allowVehicleEnvelope = true;
+grad_trenches_functions_bigEnvelopeDamageMultiplier = 2;
 force grad_trenches_functions_bigEnvelopeDigTime = 40;
 force grad_trenches_functions_bigEnvelopeRemovalTime = -1;
 force grad_trenches_functions_buildFatigueFactor = 1;
 force grad_trenches_functions_camouflageRequireEntrenchmentTool = false;
+grad_trenches_functions_createTrenchMarker = false;
 force grad_trenches_functions_decayTime = 1800;
+grad_trenches_functions_giantEnvelopeDamageMultiplier = 1;
 force grad_trenches_functions_giantEnvelopeDigTime = 90;
 force grad_trenches_functions_giantEnvelopeRemovalTime = -1;
+grad_trenches_functions_hitDecayMultiplier = 1;
 force grad_trenches_functions_LongEnvelopeDigTime = 100;
 force grad_trenches_functions_LongEnvelopeRemovalTime = -1;
+grad_trenches_functions_shortEnvelopeDamageMultiplier = 2;
 force grad_trenches_functions_shortEnvelopeDigTime = 20;
 force grad_trenches_functions_shortEnvelopeRemovalTime = -1;
+grad_trenches_functions_smallEnvelopeDamageMultiplier = 3;
 force grad_trenches_functions_smallEnvelopeDigTime = 30;
 force grad_trenches_functions_smallEnvelopeRemovalTime = -1;
 force grad_trenches_functions_stopBuildingAtFatigueMax = false;
 force grad_trenches_functions_timeoutToDecay = 7200;
+grad_trenches_functions_vehicleEnvelopeDamageMultiplier = 1;
 force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
 force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
 
@@ -875,17 +747,18 @@ force lambs_danger_disableAIHideFromTanksAndAircraft = false;
 force lambs_danger_disableAIPlayerGroup = false;
 force lambs_danger_disableAIPlayerGroupReaction = false;
 force lambs_danger_disableAutonomousFlares = false;
-force lambs_danger_panicChance = 0.2;
 
 // LAMBS Danger Eventhandlers
 force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
 force lambs_eventhandlers_ExplosionReactionTime = 9;
+lambs_eventhandlers_panicChance = 0.1;
 
 // LAMBS Danger WP
 force lambs_wp_autoAddArtillery = false;
 
 // LAMBS Main
 force lambs_main_combatShareRange = 200;
+lambs_main_debug_drawAllUnitsInVehicles = false;
 force lambs_main_debug_Drawing = false;
 force lambs_main_debug_FSM = false;
 force lambs_main_debug_FSM_civ = false;
@@ -895,10 +768,12 @@ force lambs_main_disableAICallouts = false;
 force lambs_main_disableAIDodge = false;
 force lambs_main_disableAIFleeing = false;
 force lambs_main_disableAIGestures = false;
+lambs_main_disableAutonomousMunitionSwitching = false;
 force lambs_main_disablePlayerGroupSuppression = false;
 force lambs_main_indoorMove = 0.1;
 force lambs_main_maxRevealValue = 1;
 force lambs_main_minFriendlySuppressionDistance = 5;
+lambs_main_minObstacleProximity = 5;
 force lambs_main_minSuppressionRange = 25;
 force lambs_main_radioBackpack = 2000;
 force lambs_main_radioDisabled = false;
@@ -1026,23 +901,6 @@ Fat_Lurch_ShowEl = true;
 Fat_Lurch_ShowNorth = true;
 Fat_Lurch_ShowTarget = true;
 
-// USAF
-usaf_afterburner_setting_allow_ai = true;
-USAF_allowNuke = true;
-usaf_debug_setting_enabled_clients = false;
-usaf_debug_setting_enabled_server = false;
-usaf_serviceMenu_setting_allowHangarRearm = true;
-usaf_serviceMenu_setting_allowHangarRefuel = true;
-usaf_serviceMenu_setting_allowHangarRepair = true;
-usaf_serviceMenu_setting_allowLoadoutModification = true;
-usaf_serviceMenu_setting_enabled = true;
-usaf_serviceMenu_setting_refuelTime = "100";
-usaf_serviceMenu_setting_reloadTime = "2";
-usaf_serviceMenu_setting_repairTime = "100";
-usaf_serviceMenu_setting_replaceSources = false;
-usaf_serviceMenu_setting_selectorSearchRadius = "15";
-usaf_setting_allow_aiFormlights = true;
-
 // VET_Unflipping
 vet_unflipping_require_serviceVehicle = false;
 vet_unflipping_require_toolkit = false;
@@ -1064,6 +922,7 @@ zen_common_disableGearAnim = false;
 force zen_common_preferredArsenal = 1;
 zen_compat_ace_hideModules = true;
 zen_context_menu_enabled = 2;
+zen_context_menu_overrideWaypoints = false;
 zen_editor_addGroupIcons = false;
 zen_editor_declutterEmptyTree = true;
 zen_editor_disableLiveSearch = false;
@@ -1086,6 +945,10 @@ zen_vision_enableWhiteHot = true;
 zen_vision_enableWhiteHotRedCold = false;
 
 // Zeus Enhanced - Faction Filter
+zen_faction_filter_0_ACM_O_HDF = true;
+zen_faction_filter_0_ACM_O_HDF2 = true;
+zen_faction_filter_0_ACM_O_SEV = true;
+zen_faction_filter_0_ACM_O_SEV2 = true;
 zen_faction_filter_0_CFP_O_ABUSAYYAF = true;
 zen_faction_filter_0_CFP_O_ALQAEDA = true;
 zen_faction_filter_0_CFP_O_ALSHABAAB = true;
@@ -1125,8 +988,16 @@ zen_faction_filter_0_OPF_GEN_F = true;
 zen_faction_filter_0_OPF_R_F = true;
 zen_faction_filter_0_OPF_T_F = true;
 zen_faction_filter_0_RKSLA3_Airfield_Support = true;
-zen_faction_filter_1_ = true;
 zen_faction_filter_1_2_Mercian_Eden_Category = true;
+zen_faction_filter_1_ACM_B_BSA = true;
+zen_faction_filter_1_ACM_B_NAG = true;
+zen_faction_filter_1_ACM_B_NAG2 = true;
+zen_faction_filter_1_B_MasereOSC = true;
+zen_faction_filter_1_B_MasereRGDF = true;
+zen_faction_filter_1_B_MasereRMDF = true;
+zen_faction_filter_1_B_MasereRMDF2 = true;
+zen_faction_filter_1_B_MasereRMDF2_groups = true;
+zen_faction_filter_1_B_MasereRMDF_groups = true;
 zen_faction_filter_1_BLU_CTRG_F = true;
 zen_faction_filter_1_BLU_F = true;
 zen_faction_filter_1_BLU_G_F = true;
@@ -1180,7 +1051,11 @@ zen_faction_filter_1_rhs_faction_usmc_d = true;
 zen_faction_filter_1_rhs_faction_usmc_wd = true;
 zen_faction_filter_1_rhs_faction_usn = true;
 zen_faction_filter_1_RKSLA3_Airfield_Support = true;
-zen_faction_filter_1_USAF = true;
+zen_faction_filter_2_ACM_I_ARM = true;
+zen_faction_filter_2_ACM_I_HRA = true;
+zen_faction_filter_2_ACM_I_HRA2 = true;
+zen_faction_filter_2_ACM_I_Ves = true;
+zen_faction_filter_2_ACM_I_Ves2 = true;
 zen_faction_filter_2_CFP_I_ALNUSRA = true;
 zen_faction_filter_2_CFP_I_IS = true;
 zen_faction_filter_2_CFP_I_SDRebels = true;
@@ -1221,7 +1096,23 @@ zen_faction_filter_3_CUP_C_RU = true;
 zen_faction_filter_3_CUP_C_SAHRANI = true;
 zen_faction_filter_3_CUP_C_TK = true;
 zen_faction_filter_3_CUP_CIV_ASIA = true;
-zen_faction_filter_3_EdCat_jbad_vehicles = true;
 zen_faction_filter_3_IND_L_F = true;
-zen_faction_filter_3_plpCat_BeachObjects = true;
 zen_faction_filter_3_RKSLA3_Airfield_Support = true;
+
+// Advanced Running
+force advanced_run_dutyFactor = 1.5;
+
+// COXHOUND Ordnance and Ammo Settings
+cox_40mm_setting_bbdivider = 2;
+cox_40mm_setting_bbenable = true;
+cox_40mm_setting_bbincap = true;
+
+// Goobin's Gameplay Enhancements Canting
+gge_canting_var_crosshairColour = [1,1,1,1];
+force gge_canting_var_crosshairMode = false;
+gge_canting_var_disableLaser = true;
+gge_canting_var_enableGunLight = true;
+gge_canting_var_toggleADSMode = true;
+
+// Goobin's Gameplay Enhancements Core
+force gge_core_var_debugMode = false;
