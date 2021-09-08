@@ -1,0 +1,11 @@
+PREP(setUndercover);
+PREP(setUndercoverLocal);
+PREP(monitorActivity);
+PREP(explosivePlacedHandler);
+PREP(firedHandler);
+PREP(findPotentialSpotters);
+PREP(getEnemySides);
+PREP(spotted);
+PREP(findVisibleSpotter);
+PREP(findAudioSpotter);
+PREP(moduleToggleUndercover);
