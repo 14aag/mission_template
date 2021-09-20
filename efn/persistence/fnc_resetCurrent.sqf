@@ -1,5 +1,4 @@
 #include "script_component.hpp"
 
-GVAR(currentState) call CBA_fnc_deleteNamespace;
-GVAR(currentState) = false call CBA_fnc_createNamespace;
+GVAR(currentState) = createHashMap;
 [] call FUNC(save);

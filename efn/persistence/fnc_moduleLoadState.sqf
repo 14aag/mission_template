@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-private _hash = profileNamespace getVariable ["efn_fetched_states", createHashMap];
+private _hash = profileNamespace getVariable [QGVAR(fetchedStates), createHashMap];
 private _saves = (keys _hash) select {_x find worldName == ((count _x - count worldName) max 0)};
 
 if (count _saves == 0) exitWith {

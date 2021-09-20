@@ -5,8 +5,8 @@ if (isServer) then {
     GVAR(savePosition) = getMissionConfigValue [QGVAR(savePlayerPosition), false] in [true, 1];
     GVAR(persist) = !is3DENPreview && getMissionConfigValue [QGVAR(serverRestart), false] in [true, 1];
 
-    GVAR(currentState) = [] call CBA_fnc_createNamespace;
-    GVAR(persistence) = [] call CBA_fnc_createNamespace;
+    GVAR(currentState) = createHashMap;
+    GVAR(persistence) = createHashMap;
     GVAR(runCount) = 0;
 
     if (!GVAR(saveLoadout) && !GVAR(savePosition) && !GVAR(persist)) exitWith {};
@@ -26,14 +26,14 @@ if (isServer) then {
         params ["_unit", "_id", "_uid", "_name"];
         diag_log text format ["Handle Disconnect %1", str _this];
         private _unitState = [_unit] call FUNC(buildUnitState);
-        GVAR(currentState) setVariable [_uid, _unitState];
+        GVAR(currentState) set [_uid, _unitState];
 
         // We don't want the unit to live on as AI
         false
     }];
     [{CBA_missionTime > 0}, {
         if (GVAR(persist)) then {
-            private _hash = profileNamespace getVariable [GVAR(saveKey), [] call CBA_fnc_hashCreate];
+            private _hash = profileNamespace getVariable [GVAR(saveKey), createHashMap];
             [_hash] call FUNC(loadState);
         };
     }] call CBA_fnc_waitUntilAndExecute;
