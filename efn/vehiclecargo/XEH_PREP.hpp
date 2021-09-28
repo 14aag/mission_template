@@ -1,0 +1,15 @@
+PREP(addCargo);
+PREP(canLoadCargo);
+PREP(handleDeleted);
+PREP(handleDestroyed);
+PREP(initCargo);
+PREP(initVehicle);
+PREP(initVehicleActions);
+PREP(isCargoLoaded);
+PREP(loadCargo);
+PREP(serverUnload);
+PREP(startLoadCargo);
+PREP(startUnloadCargo);
+PREP(unloadCargo);
+PREP(zeusAddCargo);
+PREP(zeusCanAddCargo);
