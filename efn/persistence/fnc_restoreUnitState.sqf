@@ -12,13 +12,7 @@ if (_pos isEqualType []) then {
 };
 
 if !(_chestpack isEqualTo []) then {
-    [player, _chestpack select 0] call zade_boc_fnc_addChestpack;
-    private _var = player getVariable ["zade_boc_chestpack", nil];
-    if !(isNil "_var") then {
-        _var set [2, _chestpack select 1];
-        _var set [3, _chestpack select 2];
-    };
-    player setVariable ["zade_boc_chestpack", _var, true];
+    ([player] + _chestpack) call bocr_main_fnc_addChestpack;
 };
 
 if (_earplugs) then {

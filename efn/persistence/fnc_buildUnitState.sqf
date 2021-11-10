@@ -10,10 +10,11 @@ private _loadout = if (GVAR(saveLoadout)) then {
     _ret
 } else {objNull};
 
-private _chestpack = if (GVAR(saveLoadout)) then { _unit getVariable ["zade_boc_chestpack", []] } else {[]};
+private _chestpack = if (GVAR(saveLoadout)) then { _unit getVariable ["bocr_main_chestpack", []] } else {[]};
 if !(_chestpack isEqualTo []) then {
     _chestpack set [0, _chestpack select 0 select 0];
     _chestpack deleteAt 1;
+    _chestpack set [2, []];
 };
 
 private _earplugs = GVAR(saveLoadout) && _unit getVariable ["ACE_hasEarPlugsIn", false];
