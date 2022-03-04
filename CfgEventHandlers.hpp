@@ -53,6 +53,9 @@ class Extended_PreStart_EventHandlers {
     class efn_mission_undercover {
         init = "call compile preprocessFileLineNumbers 'efn\undercover\XEH_preStart.sqf'";
     };
+    class efn_mission_ambient {
+        init = "call compile preprocessFileLineNumbers 'efn\ambient\XEH_preStart.sqf'";
+    };
 };
 
 class Extended_PreInit_EventHandlers {
@@ -104,6 +107,9 @@ class Extended_PreInit_EventHandlers {
     class efn_mission_undercover {
         init = "call compile preprocessFileLineNumbers 'efn\undercover\XEH_preInit.sqf'";
     };
+    class efn_mission_ambient {
+        init = "call compile preprocessFileLineNumbers 'efn\ambient\XEH_preInit.sqf'";
+    };
 };
 
 class Extended_PostInit_EventHandlers {
@@ -154,5 +160,8 @@ class Extended_PostInit_EventHandlers {
     };
     class efn_mission_undercover {
         init = "call compile preprocessFileLineNumbers 'efn\undercover\XEH_postInit.sqf'";
+    };
+    class efn_mission_ambient {
+        init = "call compile preprocessFileLineNumbers 'efn\ambient\XEH_postInit.sqf'";
     };
 };

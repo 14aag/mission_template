@@ -45,3 +45,4 @@ efn_common_requireAFMmode = 1;
 
 #include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgSounds.hpp"
