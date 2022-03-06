@@ -10,12 +10,19 @@ if (hasInterface) then {
     ["14 AAG Effects", "Artillery", FUNC(moduleCreateArtilleryEffect)] call zen_custom_modules_fnc_register;
 };
 
-GVAR(mortarSounds) = [];
+GVAR(mortarSoundsDist) = [];
 {
     if (isClass (missionConfigFile >> "CfgSounds" >> _x)) then {
-        GVAR(mortarSounds) pushBack _x;
+        GVAR(mortarSoundsDist) pushBack _x;
     };
 } forEach [QGVAR(mortar_dist1), QGVAR(mortar_dist2), QGVAR(mortar_dist3), QGVAR(mortar_dist4)];
+
+GVAR(mortarSoundsMid) = [];
+{
+    if (isClass (missionConfigFile >> "CfgSounds" >> _x)) then {
+        GVAR(mortarSoundsMid) pushBack _x;
+    };
+} forEach [QGVAR(mortar_mid1), QGVAR(mortar_mid2), QGVAR(mortar_mid3), QGVAR(mortar_mid4)];
 
 GVAR(tracerSounds) = [];
 {

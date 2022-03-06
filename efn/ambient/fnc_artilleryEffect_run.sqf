@@ -95,25 +95,33 @@ _light setLightIntensity 100000;
 _light setLightAmbient [0, 0, 0];
 _light setLightColor [1, 0.6, 0.4];
 
-if (count GVAR(mortarSounds) > 0) then {
-    private _sound = selectRandom GVAR(mortarSounds);
+if (count GVAR(mortarSoundsDist) > 0) then {
     [{
-        params ["_impactTime", "_pos", "_sound"];
+        params ["_impactTime", "_pos"];
         private _soundTravelTime = CBA_missionTime - _impactTime;
 
         private _playerView = if (isNull curatorCamera) then { ACE_player } else { curatorCamera };
 
         if ((_soundTravelTime * 343) >= (_pos distance _playerView)) then {
-            private _source = "#particlesource" createVehicleLocal [0, 0, 0];
-            _source setPosASL _pos;
-            _source say3D [_sound, 3000];
-            [{ deleteVehicle _this; }, _source, 1] call CBA_fnc_waitAndExecute;
+            private _dist = "#particlesource" createVehicleLocal [0, 0, 0];
+            _dist setPosASL _pos;
+            _dist say3D [selectRandom GVAR(mortarSoundsDist), 3000];
+
+            private _mid = "#particlesource" createVehicleLocal [0, 0, 0];
+            _mid setPosASL _pos;
+            _dist say3D [selectRandom GVAR(mortarSoundsMid), 350];
+
+            private _tail = "#particlesource" createVehicleLocal [0, 0, 0];
+            _tail setPosASL _pos;
+            [{
+                _this say3D [QGVAR(mortar_tail), 1000];
+            }, _tail, 0.1] call CBA_fnc_waitAndExecute;
+            [{ {deleteVehicle _x} forEach _this }, [_dist, _mid, _tail], 5] call CBA_fnc_waitAndExecute;
             true
         } else {
             _soundTravelTime > 9;
         }
-    }, {}, [CBA_missionTime, getPosASL _source, _sound]] call CBA_fnc_waitUntilAndExecute;
-} else {
+    }, {}, [CBA_missionTime, getPosASL _source]] call CBA_fnc_waitUntilAndExecute;
 };
 
 [{
