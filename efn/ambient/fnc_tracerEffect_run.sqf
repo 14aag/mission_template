@@ -34,17 +34,7 @@ private _bullet = "B_127x107_Ball" createVehicleLocal [0, 0, 0];
 _bullet setPosASL getPosASL _source;
 _bullet setVelocity [_velocity * cos _angle * sin _dir, _velocity * cos _angle * cos _dir, _velocity * sin _angle];
 
-if (count GVAR(tracerSounds) > 0) then {
-    private _sound = "#particlesource" createVehicleLocal [0, 0, 0];
-    _sound setPosASL getPosASL _source;
-    _sound say3D [selectRandom GVAR(tracerSounds), 1700];
-
-    private _tail = "#particlesource" createVehicleLocal [0, 0, 0];
-    _tail setPosASL getPosASL _source;
-    _tail say3D [QGVAR(tracer_tail), 1700];
-
-    [{ {deleteVehicle _x} forEach _this }, [_sound, _tail], 1] call CBA_fnc_waitAndExecute;
-};
+[getPosASL _source, 1700, [], [], GVAR(tracerSounds), QGVAR(tracer_tail)] call FUNC(playEffectAudio);
 
 private _tracer = createSimpleObject [
     format ["A3\Weapons_f\Data\bullettracer\tracer_%1.p3d", _color],

@@ -6,7 +6,7 @@ _params params ["_range"];
 
 private _fireIntensity = 10;
 private _pos = AGLtoASL (_logic getPos [random _range, random 360]);
-private _source = "Logic" createVehicleLocal [0, 0, 0];
+private _source = "#particlesource" createVehicleLocal [0, 0, 0];
 _source setPosASL _pos;
 
 private _fire = "#particlesource" createVehicleLocal [0, 0, 0];
@@ -86,7 +86,6 @@ _smoke setParticleParams [
 _smoke setParticleCircle [0, [0, 0, 0]];
 _smoke setDropInterval 0.002;
 
-private _intensity = 500 + random 500;
 private _light = "#lightpoint" createVehicleLocal [0, 0, 0];
 _light setPosASL _pos;
 _light setLightAttenuation [4, 0, 0, 0.2, 1000, 2000];
@@ -95,34 +94,7 @@ _light setLightIntensity 100000;
 _light setLightAmbient [0, 0, 0];
 _light setLightColor [1, 0.6, 0.4];
 
-if (count GVAR(mortarSoundsDist) > 0) then {
-    [{
-        params ["_impactTime", "_pos"];
-        private _soundTravelTime = CBA_missionTime - _impactTime;
-
-        private _playerView = if (isNull curatorCamera) then { ACE_player } else { curatorCamera };
-
-        if ((_soundTravelTime * 343) >= (_pos distance _playerView)) then {
-            private _dist = "#particlesource" createVehicleLocal [0, 0, 0];
-            _dist setPosASL _pos;
-            _dist say3D [selectRandom GVAR(mortarSoundsDist), 3000];
-
-            private _mid = "#particlesource" createVehicleLocal [0, 0, 0];
-            _mid setPosASL _pos;
-            _dist say3D [selectRandom GVAR(mortarSoundsMid), 350];
-
-            private _tail = "#particlesource" createVehicleLocal [0, 0, 0];
-            _tail setPosASL _pos;
-            [{
-                _this say3D [QGVAR(mortar_tail), 1000];
-            }, _tail, 0.1] call CBA_fnc_waitAndExecute;
-            [{ {deleteVehicle _x} forEach _this }, [_dist, _mid, _tail], 5] call CBA_fnc_waitAndExecute;
-            true
-        } else {
-            _soundTravelTime > 9;
-        }
-    }, {}, [CBA_missionTime, getPosASL _source]] call CBA_fnc_waitUntilAndExecute;
-};
+[_pos, 3000, [], GVAR(mortarSoundsMid), GVAR(mortarSoundsDist), QGVAR(mortar_tail)] call FUNC(playEffectAudio);
 
 [{
     params ["_light", "_startTime", "_duration", "_intensity"];

@@ -4,10 +4,12 @@
 if (isServer) then {
     [QGVAR(initTracers), FUNC(createTracerEffect)] call CBA_fnc_addEventHandler;
     [QGVAR(initArtillery), FUNC(createArtilleryEffect)] call CBA_fnc_addEventHandler;
+    [QGVAR(initFlak), FUNC(createFlakEffect)] call CBA_fnc_addEventHandler;
 };
 if (hasInterface) then {
     ["14 AAG Effects", "Tracers", FUNC(moduleCreateTracerEffect)] call zen_custom_modules_fnc_register;
     ["14 AAG Effects", "Artillery", FUNC(moduleCreateArtilleryEffect)] call zen_custom_modules_fnc_register;
+    ["14 AAG Effects", "Flak", FUNC(moduleCreateFlakEffect)] call zen_custom_modules_fnc_register;
 };
 
 GVAR(mortarSoundsDist) = [];
@@ -31,6 +33,13 @@ GVAR(tracerSounds) = [];
     };
 } forEach [QGVAR(tracer_dist1), QGVAR(tracer_dist2), QGVAR(tracer_dist3), QGVAR(tracer_dist4)];
 
+GVAR(flakSounds) = [];
+{
+    if (isClass (missionConfigFile >> "CfgSounds" >> _x)) then {
+        GVAR(flakSounds) pushBack _x;
+    };
+} forEach [QGVAR(flak_dist1), QGVAR(flak_dist2), QGVAR(flak_dist3), QGVAR(flak_dist4)];
+
 GVAR(effects) = [];
 GVAR(stateMachine) = [{
     GVAR(effects) - [objNull]
@@ -49,11 +58,11 @@ GVAR(stateMachine) = [{
 }, {}, {}, "active"] call CBA_statemachine_fnc_addState;
 
 [GVAR(stateMachine), "idle", "active", {
-    private _distance = ACE_player distance2D _this;
+    private _distance = ACE_player distance _this;
     _distance < 2000 && _distance > 300;
 }] call CBA_statemachine_fnc_addTransition;
 
 [GVAR(stateMachine), "active", "idle", {
-    private _distance = ACE_player distance2D _this;
+    private _distance = ACE_player distance _this;
     _distance < 300 || _distance > 2000;
 }] call CBA_statemachine_fnc_addTransition;

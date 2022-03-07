@@ -55,4 +55,25 @@ class CfgSounds {
         sound[] = { "@A3\Sounds_F\arsenal\weapons_vehicles\cannon_40mm\Autocannon40mmBody_taildistant", 5, 1, 1700 };
         titles[] = { 0, "" };
     };
+
+    class efn_ambient_flak_dist1 {
+        name = "efn_flakDist1";
+        sound[] = { "@A3\Sounds_F\arsenal\explosives\shells\ShellLightB_distExp_01", 5, 1, 1500 };
+        titles[] = { 0, "" };
+    };
+    class efn_ambient_flak_dist2 {
+        name = "efn_flakDist2";
+        sound[] = { "@A3\Sounds_F\arsenal\explosives\shells\ShellLightB_distExp_02", 5, 1, 1500 };
+        titles[] = { 0, "" };
+    };
+    class efn_ambient_flak_dist3 {
+        name = "efn_flakDist3";
+        sound[] = { "@A3\Sounds_F\arsenal\explosives\shells\ShellLightB_distExp_03", 5, 1, 1500 };
+        titles[] = { 0, "" };
+    };
+    class efn_ambient_flak_tail {
+        name = "efn_flak";
+        sound[] = { "@A3\Sounds_F\arsenal\explosives\shells\ShellLightB_tailMeadows_01", 5, 1, 1500 };
+        titles[] = { 0, "" };
+    };
 };

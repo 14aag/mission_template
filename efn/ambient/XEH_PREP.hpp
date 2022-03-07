@@ -7,3 +7,8 @@ PREP(initArtillery);
 PREP(artilleryEffect_run);
 PREP(moduleCreateArtilleryEffect);
 PREP(createArtilleryEffect);
+PREP(initFlak);
+PREP(flakEffect_run);
+PREP(moduleCreateFlakEffect);
+PREP(createFlakEffect);
+PREP(playEffectAudio);
