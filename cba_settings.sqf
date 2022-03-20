@@ -691,7 +691,7 @@ diwako_dui_radar_showSpeaking_radioOnly = false;
 diwako_dui_radar_showSpeaking_replaceIcon = true;
 diwako_dui_radar_sortType = "none";
 diwako_dui_radar_sqlFirst = false;
-diwako_dui_radar_syncGroup = false;
+force diwako_dui_radar_syncGroup = true;
 diwako_dui_radar_vehicleCompassEnabled = false;
 diwako_dui_use_layout_editor = false;
 
