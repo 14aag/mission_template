@@ -17,3 +17,5 @@ PREP(moduleLoadState);
 PREP(moduleSaveLocally);
 PREP(fetchState);
 PREP(saveFetchedState);
+PREP(moduleSave);
+PREP(moduleResetSave);
