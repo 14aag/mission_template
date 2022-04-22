@@ -5,7 +5,6 @@ GVAR(idleSpots) = allMapMarkers select { (toLower _x) find QGVAR(airdrop_loiter)
 GVAR(dropzones) = allMapMarkers select { (toLower _x) find QGVAR(airdrop_dropzone) == 0 };
 publicVariable QGVAR(dropzones);
 
-GVAR(vehicles) = [];
 GVAR(stateMachine) = [{
     GVAR(vehicles) = GVAR(vehicles) select { _x isKindOf "Air" };
     GVAR(vehicles)
