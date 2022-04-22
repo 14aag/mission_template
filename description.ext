@@ -29,6 +29,8 @@ efn_persistence_excludeZeus = 0;
 // 0 - disabled (skips spectator and all of these respawn settings below)
 // 1 - tent (spawn at tent after timer seconds has passed, given that safe respawn conditions are met)
 // 2 - zeus (people stay in spectator until zeus decides to release them)
+// 3 - vehicle
+// 4 - dropzone
 efn_respawn_mode = 1;
 efn_respawn_ticketCount = 12;
 efn_respawn_timer = 175;

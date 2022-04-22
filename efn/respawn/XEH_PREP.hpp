@@ -12,3 +12,4 @@ PREP(moduleAssignRespawn);
 PREP(moduleRespawnPlayers);
 PREP(initVehicleRespawn);
 PREP(endTentPlacementMode);
+PREP(airdropStatemachine);

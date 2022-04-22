@@ -8,6 +8,12 @@ if (isServer) then {
     GVAR(minDistance) = getMissionConfigValue [QGVAR(minDistance), 0];
     GVAR(outOfTicketsRemove) = getMissionConfigValue [QGVAR(outOfTicketsRemove), true] in [true, 1];
     GVAR(tentCooldown) = getMissionConfigValue [QGVAR(tentCooldown), 0];
+
+    call FUNC(airdropStatemachine);
+
+    if (!isNil QGVAR(vehicle) && !isNull GVAR(vehicle) && {GVAR(vehicle) isKindOf "Air"}) then {
+        GVAR(vehicles) pushBack GVAR(vehicle);
+    };
 };
 
 if (!hasInterface) exitWith {};
@@ -19,6 +25,9 @@ GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
 GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
 
 [player, "killed", {
+    if (GVAR(mode) == RESPAWN_MODE_DROPZONE && {GVAR(dropzones) isNotEqualTo []}) then {
+        player setVariable [QGVAR(dropzone), [GVAR(dropzones), getPosASL player] call BIS_fnc_nearestPosition, 2];
+    };
     player setVariable [QGVAR(saved_loadout), getUnitLoadout player];
     [player, false] call FUNC(setAction);
 }] call CBA_fnc_addBISEventHandler;
@@ -36,9 +45,20 @@ GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
     };
 
     if (GVAR(enabled)) then {
-        player setVariable [QGVAR(dead), true, true];
-        [true] call FUNC(setSpectator);
         player setVariable [QGVAR(corpse), _corpse];
+        if (GVAR(mode) != RESPAWN_MODE_DROPZONE && GVAR(mode) != RESPAWN_MODE_VEHICLE) then {
+            player setVariable [QGVAR(dead), true, true];
+            [true] call FUNC(setSpectator);
+        } else {
+            if (!isNil QGVAR(vehicle) && !isNull GVAR(vehicle) && alive GVAR(vehicle)) then {
+                if (GVAR(mode) == RESPAWN_MODE_DROPZONE && {GVAR(vehicle) isKindOf "Air"}) then {
+                    [player] call bocr_main_fnc_actionOnChest;
+                    player addBackpack "B_Parachute";
+                };
+
+                player moveInCargo GVAR(vehicle);
+            };
+        };
         if (GVAR(mode) == RESPAWN_MODE_TENT) then {
             [{
                 if (player getVariable [QGVAR(dead), false]) then {
