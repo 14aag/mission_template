@@ -22,6 +22,7 @@ GVAR(minPlayersNear) = getMissionConfigValue [QGVAR(minPlayersNear), 1];
 GVAR(maxPlayerDistance) = getMissionConfigValue [QGVAR(maxPlayerDistance), 5];
 GVAR(mode) = getMissionConfigValue [QGVAR(mode), 1];
 GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
+GVAR(showGridOnSpawn) = getMissionConfigValue [QGVAR(showGridOnSpawn), false] in [true, 1];
 GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
 
 [player, "killed", {
@@ -88,6 +89,10 @@ GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
     player setVariable [QGVAR(dead), false, true];
 
     [false] call FUNC(setSpectator);
+    if (GVAR(showGridOnSpawn)) then {
+        private _grid = [getPos player] call ace_common_fnc_getMapGridFromPos;
+        systemChat format ["Spawned at %1 %2", (_grid select 0) select [0, 3], (_grid select 1) select [0, 3]];
+    };
 }] call CBA_fnc_addEventHandler;
 [QGVAR(force_leader_name_update), { [player] call FUNC(updateLeaderName); }] call CBA_fnc_addEventHandler;
 [QGVAR(notify), FUNC(notify)] call CBA_fnc_addEventHandler;
