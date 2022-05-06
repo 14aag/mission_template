@@ -1,9 +1,17 @@
 #include "script_component.hpp"
 #include "XEH_PREP.hpp"
 
+if (isServer) then {
+    [QGVAR(kh55Strike), FUNC(kh55Strike)] call CBA_fnc_addEventHandler;
+};
+
 if (!hasInterface) exitWith {};
 
 ["14 AAG", "Allow Weapons", FUNC(moduleAllowWeapons)] call zen_custom_modules_fnc_register;
+if (isClass (configFile >> "CfgAmmo" >> "rhs_ammo_kh55sh")) then {
+    ["14 AAG Fire Support", "Kh55 HE Strike", FUNC(moduleKh55Strike)] call zen_custom_modules_fnc_register;
+};
+
 ["zen_curatorDisplayLoaded", {[1] call FUNC(setZeusMarkerVisibility)}] call CBA_fnc_addEventHandler;
 ["zen_curatorDisplayUnloaded", {[0] call FUNC(setZeusMarkerVisibility)}] call CBA_fnc_addEventHandler;
 
