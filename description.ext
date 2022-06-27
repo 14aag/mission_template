@@ -15,7 +15,7 @@ disabledAI = 1;
 joinUnassigned = 1;
 aiKills = 0;
 
-enableDebugConsole[] = {"76561198073794863","76561197975814683"};
+enableDebugConsole[] = {"76561198073794863","76561197975814683","76561198011666908"};
 enableTargetDebug = 1;
 
 cba_settings_hasSettingsFile = 1;
@@ -39,7 +39,7 @@ efn_respawn_minDistance = 0;
 efn_respawn_tentCooldown = 0;
 efn_respawn_outOfTicketsRemove = 1;
 
-efn_respawn_showGridOnSpawn = 0;
+efn_respawn_showGridOnSpawn = 1;
 
 efn_common_missionStartTime = 1800;
 efn_common_requireAFMmode = 1;
