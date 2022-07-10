@@ -45,8 +45,8 @@ GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
         player setPosASL getPosASL GVAR(position);
     };
 
+    player setVariable [QGVAR(corpse), _corpse];
     if (GVAR(enabled)) then {
-        player setVariable [QGVAR(corpse), _corpse];
         if (GVAR(mode) != RESPAWN_MODE_DROPZONE && GVAR(mode) != RESPAWN_MODE_VEHICLE) then {
             player setVariable [QGVAR(dead), true, true];
             [true] call FUNC(setSpectator);
@@ -67,6 +67,8 @@ GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
                 };
             }, [], GVAR(timer)] call CBA_fnc_waitAndExecute;
         };
+    } else {
+        [QGVAR(respawn), []] call CBA_fnc_localEvent;
     };
 
     nil
