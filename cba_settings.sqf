@@ -25,7 +25,7 @@ force ace_advanced_throwing_showThrowArc = true;
 
 // ACE Advanced Vehicle Damage
 force ace_vehicle_damage_enableCarDamage = false;
-force ace_vehicle_damage_enabled = false;
+force ace_vehicle_damage_enabled = true;
 force ace_vehicle_damage_removeAmmoDuringCookoff = true;
 
 // ACE Arsenal
@@ -79,8 +79,8 @@ force ace_cookoff_probabilityCoef = 1;
 // ACE Crew Served Weapons
 ace_csw_ammoHandling = 2;
 ace_csw_defaultAssemblyMode = false;
-ace_csw_dragAfterDeploy = false;
-ace_csw_handleExtraMagazines = true;
+force ace_csw_dragAfterDeploy = true;
+force ace_csw_handleExtraMagazines = true;
 ace_csw_handleExtraMagazinesType = 0;
 ace_csw_progressBarTimeCoefficent = 1;
 
@@ -204,7 +204,7 @@ force ace_repair_engineerSetting_repair = 1;
 force ace_repair_engineerSetting_wheel = 0;
 force ace_repair_fullRepairLocation = 3;
 force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
-force ace_repair_locationsBoostTraining = false;
+force ace_repair_locationsBoostTraining = true;
 force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
 force ace_repair_repairDamageThreshold = 0.600118;
 force ace_repair_repairDamageThreshold_engineer = 0.800653;
@@ -360,7 +360,7 @@ ace_nametags_showVehicleCrewInfo = true;
 ace_nametags_tagSize = 2;
 
 // ACE Nightvision
-force ace_nightvision_aimDownSightsBlur = 0.2;
+force ace_nightvision_aimDownSightsBlur = 0.4;
 force ace_nightvision_disableNVGsWithSights = false;
 force ace_nightvision_effectScaling = 0.7;
 force ace_nightvision_fogScaling = 0.1;
@@ -389,7 +389,7 @@ force ace_finger_enabled = true;
 ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
 force ace_finger_indicatorForSelf = true;
 force ace_finger_maxRange = 5;
-force ace_finger_proximityScaling = false;
+ace_finger_proximityScaling = false;
 force ace_finger_sizeCoef = 1;
 
 // ACE Pylons
@@ -456,9 +456,9 @@ force ace_hitreactions_minDamageToTrigger = 0.1;
 ace_inventory_inventoryDisplaySize = 0;
 force ace_laser_dispersionCount = 2;
 force ace_laser_showLaserOnMap = 0;
-force ace_marker_flags_placeAnywhere = false;
+force ace_marker_flags_placeAnywhere = true;
 force ace_microdagr_mapDataAvailable = 2;
-ace_microdagr_waypointPrecision = 3;
+force ace_microdagr_waypointPrecision = 3;
 force ace_noradio_enabled = true;
 ace_optionsmenu_showNewsOnMainMenu = true;
 force ace_overpressure_distanceCoefficient = 1;
@@ -601,8 +601,8 @@ CUP_CheckCfgPatches = false;
 CUP_Vehicles_PreventBarrelClip = true;
 
 // CUP Static Weapons
-force CUP_staticWeapons_allowMovement = false;
-force CUP_staticWeapons_allowRotation = false;
+force CUP_staticWeapons_allowMovement = true;
+force CUP_staticWeapons_allowRotation = true;
 
 // DUI - Squad Radar - Indicators
 diwako_dui_indicators_crew_range_enabled = false;
@@ -708,18 +708,18 @@ diwako_dui_radar_vehicleCompassEnabled = false;
 diwako_dui_use_layout_editor = false;
 
 // dzn Artillery Illumination
-dzn_Flares_H_Color = [1,1,0.5];
-dzn_Flares_H_Deviation = 25;
+force dzn_Flares_H_Color = [1,1,0.5];
+force dzn_Flares_H_Deviation = 25;
 force dzn_Flares_H_Enabled = true;
-dzn_Flares_H_Intensity = 10;
-dzn_Flares_H_ListSetting = "StaticCannon, rhs_2s3tank_base";
-dzn_Flares_H_Range = 450;
-dzn_Flares_M_Color = [1,1,0.5];
-dzn_Flares_M_Deviation = 25;
+force dzn_Flares_H_Intensity = 10;
+force dzn_Flares_H_ListSetting = "StaticCannon, rhs_2s3tank_base";
+force dzn_Flares_H_Range = 450;
+force dzn_Flares_M_Color = [1,1,0.5];
+force dzn_Flares_M_Deviation = 25;
 force dzn_Flares_M_Enabled = true;
-dzn_Flares_M_Intensity = 10;
-dzn_Flares_M_ListSetting = "StaticMortar, Mortar_01_base_F, CUP_B_M1129_MC_MK19_Desert, CUP_B_M1129_MC_MK19_Woodland";
-dzn_Flares_M_Range = 400;
+force dzn_Flares_M_Intensity = 10;
+force dzn_Flares_M_ListSetting = "StaticMortar, Mortar_01_base_F, CUP_B_M1129_MC_MK19_Desert, CUP_B_M1129_MC_MK19_Woodland";
+force dzn_Flares_M_Range = 400;
 
 // dzn Extended Jamming
 dzn_EJAM_AllowFullInspectMenu = true;
@@ -775,34 +775,30 @@ force grad_trenches_functions_allowShortEnvelope = true;
 force grad_trenches_functions_allowSmallEnvelope = true;
 force grad_trenches_functions_allowTrenchDecay = false;
 force grad_trenches_functions_allowVehicleEnvelope = true;
-grad_trenches_functions_bigEnvelopeDamageMultiplier = 2;
+force grad_trenches_functions_bigEnvelopeDamageMultiplier = 2;
 force grad_trenches_functions_bigEnvelopeDigTime = 40;
 force grad_trenches_functions_bigEnvelopeRemovalTime = -1;
 force grad_trenches_functions_buildFatigueFactor = 1;
 force grad_trenches_functions_camouflageRequireEntrenchmentTool = false;
 grad_trenches_functions_createTrenchMarker = false;
 force grad_trenches_functions_decayTime = 1800;
-grad_trenches_functions_giantEnvelopeDamageMultiplier = 1;
+force grad_trenches_functions_giantEnvelopeDamageMultiplier = 1;
 force grad_trenches_functions_giantEnvelopeDigTime = 90;
 force grad_trenches_functions_giantEnvelopeRemovalTime = -1;
 force grad_trenches_functions_hitDecayMultiplier = 1;
 force grad_trenches_functions_LongEnvelopeDigTime = 100;
 force grad_trenches_functions_LongEnvelopeRemovalTime = -1;
-grad_trenches_functions_shortEnvelopeDamageMultiplier = 2;
+force grad_trenches_functions_shortEnvelopeDamageMultiplier = 2;
 force grad_trenches_functions_shortEnvelopeDigTime = 20;
 force grad_trenches_functions_shortEnvelopeRemovalTime = -1;
-grad_trenches_functions_smallEnvelopeDamageMultiplier = 3;
+force grad_trenches_functions_smallEnvelopeDamageMultiplier = 3;
 force grad_trenches_functions_smallEnvelopeDigTime = 30;
 force grad_trenches_functions_smallEnvelopeRemovalTime = -1;
 force grad_trenches_functions_stopBuildingAtFatigueMax = false;
 force grad_trenches_functions_timeoutToDecay = 7200;
-grad_trenches_functions_vehicleEnvelopeDamageMultiplier = 1;
+force grad_trenches_functions_vehicleEnvelopeDamageMultiplier = 1;
 force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
 force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
-
-// KNB
-KNB_book_aceAction = true;
-KNB_panel_aceAction = true;
 
 // LAMBS Danger
 force lambs_danger_cqbRange = 60;
@@ -818,7 +814,7 @@ force lambs_danger_disableAutonomousSmokeGrenades = false;
 // LAMBS Danger Eventhandlers
 force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
 force lambs_eventhandlers_ExplosionReactionTime = 9;
-force lambs_eventhandlers_panicChance = 0.1;
+force lambs_eventhandlers_panicChance = 0.12;
 
 // LAMBS Danger WP
 force lambs_wp_autoAddArtillery = false;
@@ -955,12 +951,12 @@ TFAR_voiceCone = true;
 
 // TSP Animate
 force tsp_cba_animate_door = true;
-tsp_cba_animate_dynamicReadyBush = true;
-tsp_cba_animate_dynamicReadyFriend = 3;
-tsp_cba_animate_dynamicReadyFriendAngle = 35;
-tsp_cba_animate_dynamicReadyObject = 2;
+force tsp_cba_animate_dynamicReadyBush = true;
+force tsp_cba_animate_dynamicReadyFriend = 2;
+force tsp_cba_animate_dynamicReadyFriendAngle = 15;
+force tsp_cba_animate_dynamicReadyObject = 1.5;
 tsp_cba_animate_dynamicReadyPoll = 0.25;
-tsp_cba_animate_dynamicReadyVertical = -0.1;
+force tsp_cba_animate_dynamicReadyVertical = -0.1;
 force tsp_cba_animate_map = true;
 force tsp_cba_animate_nvg = true;
 force tsp_cba_animate_walk = false;
@@ -979,6 +975,12 @@ force tsp_cba_breach_military = "[""Land_Budova4_in"",""Land_Budova4"",""Barrack
 force tsp_cba_breach_reinforced = "[""Land_Ammostore2"",""Land_Garaz_s_tankem"",""Land_Garaz_bez_tanku"",""Land_Cargo_House_V4_F"",""Land_Cargo_Tower_V1_F"",""Land_Cargo_HQ_V4_F"",""Land_Cargo_Tower_V1_No4_F"",""Land_Cargo_Tower_V1_No5_F"",""Land_Cargo_Tower_V1_No7_F"",""Land_Cargo_Tower_V4_F"",""Land_Cargo_Tower_V1_No2_F"",""Land_Cargo_Tower_V2_F"",""Land_Cargo_Tower_V3_F"",""Land_Cargo_Tower_V1_No1_F"",""Land_Cargo_Tower_V1_No3_F"",""Land_Cargo_HQ_V2_F"",""Land_Medevac_HQ_V1_F"",""Land_Cargo_HQ_V1_F"",""Land_Cargo_House_V2_F"",""Land_Medevac_house_V1_F"",""Land_Cargo_Tower_V1_No6_F"",""Land_Cargo_House_V1_F"",""Land_Cargo_HQ_V3_F"",""Land_Cargo_House_V3_F""]";
 force tsp_cba_breach_wall_physics = false;
 force tsp_cba_breach_wall_velocity = "[0,0,-0.5]";
+
+// TSP Melee
+force tsp_cba_melee = true;
+force tsp_cba_melee_damageModifier = 1;
+force tsp_cba_melee_moveset = false;
+force tsp_cba_melee_movesetPoll = 0;
 
 // Turret Enhanced
 Fat_Lurch_Grid = true;
