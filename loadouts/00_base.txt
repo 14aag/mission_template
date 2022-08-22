@@ -1,1 +1,1 @@
-[[],[],[],["tfl_g3_field_uniform",[]],[],[],"AAG_Beret_NCO","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch",""]]
+[[],[],[],["U_BG_Guerilla2_3",[["ACE_EarPlugs",2]]],[],[],"","",[],["","ItemAndroid","","","ItemWatch",""]]
