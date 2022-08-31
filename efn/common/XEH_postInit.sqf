@@ -14,9 +14,10 @@ GVAR(currentMapChannel) = 3;
 }] call CBA_fnc_addEventHandler;
 
 {
-    _x enableChannel [false, false];
+    _x enableChannel [false, true];
 } forEach GVAR(disabledChannels);
 
+/*
 [missionNamespace, "Map", {
     params ["_open", ""];
     private _current = GVAR(currentMapChannel);
@@ -33,5 +34,6 @@ GVAR(currentMapChannel) = 3;
 
     setCurrentChannel _current;
 }] call CBA_fnc_addBISEventHandler;
+*/
 
 ["unit", FUNC(setupMoveToLeader), true] call CBA_fnc_addPlayerEventHandler;
