@@ -252,7 +252,7 @@ ace_maptools_rotateModifierKey = 1;
 
 // ACE Medical
 force ace_medical_ai_enabledFor = 2;
-force ace_medical_AIDamageThreshold = 0.8;
+force ace_medical_AIDamageThreshold = 0.4;
 force ace_medical_bleedingCoefficient = 1;
 ace_medical_blood_bloodLifetime = 900;
 force ace_medical_blood_enabledFor = 2;
