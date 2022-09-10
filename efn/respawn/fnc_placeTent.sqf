@@ -6,7 +6,7 @@ if (_playerCount < GVAR(minPlayersNear)) exitWith { ["Not enough people nearby"]
 private _pos = player getRelPos [1.8, 0];
 
 _pos set [2, ((getPosATL player) select 2)];
-GVAR(tent) = createSimpleObject ["Misc_Backpackheap", _pos, true];
+GVAR(tent) = createSimpleObject [GVAR(tentType), _pos, true];
 GVAR(tent) setPosATL _pos;
 GVAR(tent) attachTo [player];
 

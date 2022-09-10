@@ -40,6 +40,7 @@ efn_respawn_tentCooldown = 0;
 efn_respawn_outOfTicketsRemove = 1;
 
 efn_respawn_showGridOnSpawn = 1;
+efn_respawn_tentType = "Misc_Backpackheap";
 
 efn_common_missionStartTime = 1800;
 efn_common_requireAFMmode = 1;

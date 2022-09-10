@@ -1,5 +1,10 @@
 #include "script_component.hpp"
 
+GVAR(tentType) = getMissionConfigValue [QGVAR(backpackType), "Misc_Backpackheap"];
+if (!(GVAR(tentType) isEqualType "") || {GVAR(backpackType) isEqualTo ""}) then {
+    GVAR(tentType) = "Misc_Backpackheap";
+};
+
 if (isServer) then {
     [QGVAR(handle_player_respawn), FUNC(handlePlayerRespawnEvent)] call CBA_fnc_addEventHandler;
     [QGVAR(place_tent), FUNC(handlePlaceTentEvent)] call CBA_fnc_addEventHandler;
