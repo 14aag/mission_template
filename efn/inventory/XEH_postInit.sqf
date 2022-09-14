@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+if (hasInterface) then {
+    [QGVAR(forbidLooting), FUNC(forbidLooting)] call CBA_fnc_addEventHandler;
+};
+
 ["loadout", {
     [{
         params ["_unit", "_newUnitLoadout", "_oldUnitLoadout"];
