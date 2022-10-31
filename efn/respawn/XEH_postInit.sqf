@@ -52,26 +52,13 @@ GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
 
     player setVariable [QGVAR(corpse), _corpse];
     if (GVAR(enabled)) then {
-        if (GVAR(mode) != RESPAWN_MODE_DROPZONE && GVAR(mode) != RESPAWN_MODE_VEHICLE) then {
-            player setVariable [QGVAR(dead), true, true];
-            [true] call FUNC(setSpectator);
-        } else {
-            if (!isNil QGVAR(vehicle) && !isNull GVAR(vehicle) && alive GVAR(vehicle)) then {
-                if (GVAR(mode) == RESPAWN_MODE_DROPZONE && {GVAR(vehicle) isKindOf "Air"}) then {
-                    [player] call bocr_main_fnc_actionOnChest;
-                    player addBackpack "B_Parachute";
-                };
-
-                player moveInCargo GVAR(vehicle);
+        player setVariable [QGVAR(dead), true, true];
+        [true] call FUNC(setSpectator);
+        [{
+            if (player getVariable [QGVAR(dead), false]) then {
+                [QGVAR(handle_player_respawn), [player]] call CBA_fnc_serverEvent;
             };
-        };
-        if (GVAR(mode) == RESPAWN_MODE_TENT) then {
-            [{
-                if (player getVariable [QGVAR(dead), false]) then {
-                    [QGVAR(handle_player_respawn), [player]] call CBA_fnc_serverEvent;
-                };
-            }, [], GVAR(timer)] call CBA_fnc_waitAndExecute;
-        };
+        }, [], GVAR(timer)] call CBA_fnc_waitAndExecute;
     } else {
         [QGVAR(respawn), []] call CBA_fnc_localEvent;
     };
@@ -94,6 +81,17 @@ GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
     };
     player setVariable [QGVAR(corpse), nil];
     player setVariable [QGVAR(dead), false, true];
+
+    if (GVAR(mode) == RESPAWN_MODE_DROPZONE || GVAR(mode) == RESPAWN_MODE_VEHICLE) then {
+        if (!isNil QGVAR(vehicle) && !isNull GVAR(vehicle) && alive GVAR(vehicle)) then {
+            if (GVAR(mode) == RESPAWN_MODE_DROPZONE && {GVAR(vehicle) isKindOf "Air"}) then {
+                [player] call bocr_main_fnc_actionOnChest;
+                player addBackpack "B_Parachute";
+            };
+
+            player moveInCargo GVAR(vehicle);
+        };
+    };
 
     [false] call FUNC(setSpectator);
     if (GVAR(showGridOnSpawn)) then {
