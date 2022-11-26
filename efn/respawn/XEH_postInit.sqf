@@ -20,12 +20,12 @@ if (isServer) then {
         GVAR(vehicles) pushBack GVAR(vehicle);
     };
 };
+GVAR(mode) = getMissionConfigValue [QGVAR(mode), 1];
 
 if (!hasInterface) exitWith {};
 
 GVAR(minPlayersNear) = getMissionConfigValue [QGVAR(minPlayersNear), 1];
 GVAR(maxPlayerDistance) = getMissionConfigValue [QGVAR(maxPlayerDistance), 5];
-GVAR(mode) = getMissionConfigValue [QGVAR(mode), 1];
 GVAR(timer) = getMissionConfigValue [QGVAR(timer), 0];
 GVAR(showGridOnSpawn) = getMissionConfigValue [QGVAR(showGridOnSpawn), false] in [true, 1];
 GVAR(enabled) = GVAR(mode) != RESPAWN_MODE_DISABLED;
