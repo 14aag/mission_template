@@ -61,3 +61,37 @@ if (hasInterface) then {
     if (_unit != ACE_player) exitWith {};
     [false, _unit] call ace_common_fnc_setVolume;
 }] call CBA_fnc_addEventHandler;
+
+["ModuleEffectsFire_F", "init", {
+    params ["_logic"];
+    [{
+        params ["_logic"];
+        private _emitter = _logic getVariable ["effectEmitter", []];
+        private _light = _logic getVariable ["effectLight", []];
+        count _emitter > 0 && count _light > 0
+    }, {
+        params ["_logic"];
+        private _emitter = _logic getVariable "effectEmitter" select 0;
+        private _light = _logic getVariable "effectLight" select 0;
+        _emitter setPosASL getPosASL _logic;
+        _light setPosASL getPosASL _logic;
+
+        _emitter attachTo [_logic];
+        _light attachTo [_logic];
+    }, [_logic]] call CBA_fnc_waitUntilAndExecute;
+}, false, [], true] call CBA_fnc_addClassEventHandler;
+
+["ModuleEffectsSmoke_F", "init", {
+    params ["_logic"];
+    [{
+        params ["_logic"];
+        private _emitter = _logic getVariable ["effectEmitter", []];
+        count _emitter > 0
+    }, {
+        params ["_logic"];
+        private _emitter = _logic getVariable "effectEmitter" select 0;
+        _emitter setPosASL getPosASL _logic;
+
+        _emitter attachTo [_logic];
+    }, [_logic]] call CBA_fnc_waitUntilAndExecute;
+}, false, [], true] call CBA_fnc_addClassEventHandler;
