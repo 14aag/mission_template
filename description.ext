@@ -44,6 +44,7 @@ efn_respawn_tentType = "Misc_Backpackheap";
 
 efn_common_missionStartTime = 1800;
 efn_common_requireAFMmode = 1;
+efn_common_personalMoonBrightness = 150;
 
 #include "KPGUI\KPGUI_defines.hpp"
 #include "KPCF\ui\KPCF_dialog.hpp"

@@ -37,3 +37,23 @@ GVAR(currentMapChannel) = 3;
 */
 
 ["unit", FUNC(setupMoveToLeader), true] call CBA_fnc_addPlayerEventHandler;
+
+private _fnc_setMoonBrightness = {
+    params ["_brightness", "_color"];
+    GVAR(personalMoon) setLightBrightness _brightness;
+    GVAR(personalMoon) setLightColor _color;
+    GVAR(personalMoon) setLightAmbient _color;
+    GVAR(personalMoonColor) = _color;
+    GVAR(personalMoonBrightness) = _brightness;
+};
+
+GVAR(personalMoon) = "#lightpoint" createVehicleLocal [0, 0, 0];
+GVAR(personalMoon) setLightDayLight true;
+[getMissionConfigValue [QGVAR(personalMoonBrightness), 0], [0.15, 0.15, 0.25]] call _fnc_setMoonBrightness;
+
+[{
+    private _camera = positionCameraToWorld [0, 0, 0];
+    GVAR(personalMoon) setPosASL [_camera # 0, _camera # 1, -1000];
+}] call CBA_fnc_addPerFrameHandler;
+
+[QGVAR(configurePersonalMoon), _fnc_setMoonBrightness] call CBA_fnc_addEventHandler;
