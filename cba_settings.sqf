@@ -11,8 +11,8 @@ force ace_advanced_fatigue_deployedSwayFactor = 1;
 force ace_advanced_fatigue_enabled = true;
 force ace_advanced_fatigue_enableStaminaBar = true;
 force ace_advanced_fatigue_fadeStaminaBar = true;
-force ace_advanced_fatigue_loadFactor = 0.8;
-force ace_advanced_fatigue_performanceFactor = 2;
+force ace_advanced_fatigue_loadFactor = 1;
+force ace_advanced_fatigue_performanceFactor = 1.8;
 force ace_advanced_fatigue_recoveryFactor = 2.5;
 force ace_advanced_fatigue_restedSwayFactor = 1;
 force ace_advanced_fatigue_swayFactor = 1;
@@ -388,9 +388,9 @@ ace_nametags_tagSize = 2;
 // ACE Nightvision
 force ace_nightvision_aimDownSightsBlur = 0.4;
 force ace_nightvision_disableNVGsWithSights = false;
-force ace_nightvision_effectScaling = 0.7;
+force ace_nightvision_effectScaling = 0.8;
 force ace_nightvision_fogScaling = 0.1;
-force ace_nightvision_noiseScaling = 0.4;
+force ace_nightvision_noiseScaling = 0.5;
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -514,7 +514,7 @@ force ace_microdagr_waypointPrecision = 3;
 force ace_noradio_enabled = true;
 ace_optionsmenu_showNewsOnMainMenu = true;
 force ace_overpressure_distanceCoefficient = 1;
-force ace_parachute_failureChance = 0;
+force ace_parachute_failureChance = 0.10;
 force ace_parachute_hideAltimeter = true;
 force ace_tagging_quickTag = 1;
 
@@ -646,8 +646,8 @@ force BCE_veh_IR_fn = true;
 force BCE_AI_CAS_Support_fn = false;
 force BCE_AIAir_IR_fn = true;
 force BCE_inf_IR_Lig_S_fn = true;
-force BCE_LandVeh_Laser_fn = false;
-force BCE_LandVeh_Light_fn = false;
+force BCE_LandVeh_Laser_fn = true;
+force BCE_LandVeh_Light_fn = true;
 force BCE_veh_IR_S_fn = true;
 
 // BettIR
@@ -695,7 +695,7 @@ force CUP_staticWeapons_allowMovement = true;
 force CUP_staticWeapons_allowRotation = true;
 
 // DUI - Squad Radar - Indicators
-diwako_dui_indicators_crew_range_enabled = false;
+diwako_dui_indicators_crew_range_enabled = true;
 diwako_dui_indicators_fov_scale = false;
 diwako_dui_indicators_icon_buddy = true;
 diwako_dui_indicators_icon_leader = true;
@@ -847,10 +847,10 @@ force emr_main_whitelistStr = "";
 force emr_main_yeetCoefficient = 1.4;
 
 // FoxHole
-force J3FF_FHcover = "5";
+force J3FF_FHcover = "120";
 force J3FF_FHcustomItem = false;
-force J3FF_FHdepth = "5";
-J3FF_FHdig = "5";
+force J3FF_FHdepth = "3";
+J3FF_FHdig = "120";
 
 // GRAD Trenches
 force grad_trenches_functions_allowBigEnvelope = true;
