@@ -850,7 +850,7 @@ force emr_main_yeetCoefficient = 1.4;
 force J3FF_FHcover = "120";
 force J3FF_FHcustomItem = false;
 force J3FF_FHdepth = "3";
-J3FF_FHdig = "120";
+force J3FF_FHdig = "120";
 
 // GRAD Trenches
 force grad_trenches_functions_allowBigEnvelope = true;
