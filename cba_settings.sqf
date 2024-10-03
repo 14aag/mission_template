@@ -664,6 +664,9 @@ BCE_PicFileSize_edit = "25";
 // Better CAS Environment (Server)
 force BCE_AI_CAS_Support_fn = false;
 force BCE_AIAir_IR_fn = true;
+BCE_cTab_Marker_Sync = "_USER";
+BCE_cTab_Marker_Sync_time = 1;
+BCE_cTab_Side_Display = true;
 force BCE_inf_IR_Lig_S_fn = true;
 force BCE_LandVeh_Laser_fn = true;
 force BCE_LandVeh_Light_fn = true;
@@ -707,6 +710,8 @@ crowsza_pingbox_CBA_Setting_enabled = true;
 crowsza_pingbox_CBA_Setting_fade_duration = 300;
 crowsza_pingbox_CBA_Setting_fade_enabled = true;
 crowsza_pingbox_CBA_Setting_oldLimit = 600;
+crowsza_zeus_text_CBA_Setting_OnKilledModule_helper = true;
+crowsza_zeus_text_CBA_Setting_OnKilledModule_helper_color = [1,1,1,1];
 crowsza_zeus_text_CBA_Setting_rc_helper = true;
 crowsza_zeus_text_CBA_Setting_rc_helper_color = [1,1,1,1];
 crowsza_zeus_text_CBA_Setting_surrender_helper = true;
@@ -1006,9 +1011,9 @@ force IC_setting_craterDiameterScale = 1;
 IC_setting_debugMode = false;
 force IC_setting_limitDebris = true;
 force IC_setting_limitGroundTextures = true;
-force IC_setting_maxDebris = 100;
-force IC_setting_maxDebrisCountPerCrater = 6;
-force IC_setting_maxGroundTextures = 100;
+force IC_setting_maxDebris = 40;
+force IC_setting_maxDebrisCountPerCrater = 2;
+force IC_setting_maxGroundTextures = 40;
 
 // LAMBS Danger
 force lambs_danger_cqbRange = 60;
@@ -1183,39 +1188,161 @@ tfar_terrain_interception_coefficient = 7;
 TFAR_voiceCone = true;
 
 // TSP Animate
+tsp_cba_animate_attachment = true;
+tsp_cba_animate_Bang = true;
+tsp_cba_animate_Bird = true;
+tsp_cba_animate_black = "[""optic_tws_mg""]";
+tsp_cba_animate_Breach = true;
+tsp_cba_animate_Cancel = true;
+tsp_cba_animate_cant = true;
+tsp_cba_animate_captive = true;
+tsp_cba_animate_clacker = true;
+tsp_cba_animate_compass = true;
+tsp_cba_animate_Contact = true;
+tsp_cba_animate_Dab = true;
 force tsp_cba_animate_door = true;
-force tsp_cba_animate_dynamicReadyBush = true;
-force tsp_cba_animate_dynamicReadyFriend = 2;
-force tsp_cba_animate_dynamicReadyFriendAngle = 15;
-force tsp_cba_animate_dynamicReadyObject = 1.5;
-tsp_cba_animate_dynamicReadyPoll = 0.25;
-force tsp_cba_animate_dynamicReadyVertical = -0.1;
-force tsp_cba_animate_friendsAreObjects = false;
+tsp_cba_animate_Duo = true;
+tsp_cba_animate_friend = 2;
+tsp_cba_animate_grenade = true;
+tsp_cba_animate_Heart = true;
+tsp_cba_animate_Horns = true;
+tsp_cba_animate_Inspect = true;
+tsp_cba_animate_Ivan = true;
+tsp_cba_animate_Jackoff = true;
+tsp_cba_animate_Kata = true;
+tsp_cba_animate_ladder = true;
+tsp_cba_animate_Loser = true;
+tsp_cba_animate_Mahalo = true;
 force tsp_cba_animate_map = true;
+tsp_cba_animate_Metal = true;
 force tsp_cba_animate_nvg = true;
+tsp_cba_animate_object = 1.5;
+tsp_cba_animate_Ok = true;
+tsp_cba_animate_Paper = true;
+tsp_cba_animate_Peace = true;
+tsp_cba_animate_poll = 0.25;
+tsp_cba_animate_port = true;
+tsp_cba_animate_Pushups = true;
+tsp_cba_animate_Rock = true;
+tsp_cba_animate_Scissors = true;
+tsp_cba_animate_shake = 1;
+tsp_cba_animate_sling = true;
+tsp_cba_animate_sling_add = false;
+tsp_cba_animate_sling_pos = "[[0.1, 0.8, 0.15], [-90, 40, 70]]";
+tsp_cba_animate_sling_scroll = true;
+tsp_cba_animate_sling_sprint = false;
+tsp_cba_animate_sound = 1;
+tsp_cba_animate_sprint = true;
+tsp_cba_animate_Squats = true;
+tsp_cba_animate_Stefan = true;
+tsp_cba_animate_Suicide = true;
+tsp_cba_animate_tactical = true;
+tsp_cba_animate_tap = true;
+force tsp_cba_animate_throw = false;
+tsp_cba_animate_ThumbsDown = true;
+tsp_cba_animate_ThumbsUp = true;
+tsp_cba_animate_uav = true;
 force tsp_cba_animate_walk = false;
+tsp_cba_animate_walk_default = 1;
+tsp_cba_animate_walk_lower = 1;
+tsp_cba_animate_walk_max = 1.6;
+tsp_cba_animate_watch = true;
+tsp_cba_animate_Zozo = true;
+
+// TSP Animate - Radio
+tsp_cba_radio = true;
+tsp_cba_radio_aiming = true;
+tsp_cba_radio_headsets = "[""G_WirelessEarpiece_F""]";
+tsp_cba_radio_helmets = "[""NCR_Helmet15th"",""NCR_Helmet15thBlack"",""NCR_Helmet15thWhite"",""NCR_CVCHelmet15th"",""NCR_CVCHelmet15thBlack"",""NCR_CVCHelmet15thGogglesBlack"",""NCR_CVCHelmet15thGoggles"",""NCR_CVCHelmet15thWhite"",""NCR_CVCHelmet15thGogglesWhite"",""NCR_CVCHelmet15th_Allfather"",""NCR_CVCHelmet15th_Foxo"",""NCR_CVCHelmet15th_Lance"",""NCR_CVCHelmet15th_Roe"",""NCR_CVCHelmet15th_Sunny"",""NCR_CVCHelmet15th_Tato"",""NCR_CVCHelmet15th_Tex"",""NCR_ReconHelmet"",""NCR_ReconHelmetBrown"",""NCR_ReconHelmetGray"",""RA_Slater_helmet"",""RA_Marine_helmet"",""RA_Ranger_helmet"",""power_armor_helmet_t45d_dow""]";
+tsp_cba_radio_preference_acre_bf888s = "Model";
+tsp_cba_radio_preference_ACRE_PRC117F = "Handset";
+tsp_cba_radio_preference_acre_prc148 = "Model";
+tsp_cba_radio_preference_acre_prc152 = "Vest";
+tsp_cba_radio_preference_acre_prc343 = "Vest";
+tsp_cba_radio_preference_ACRE_PRC77 = "Handset";
+tsp_cba_radio_preference_acre_sem52SL = "Vest";
+tsp_cba_radio_preference_ACRE_SEM70 = "Handset";
+tsp_cba_radio_preference_JLTS_clone_comlink = "Wrist";
+tsp_cba_radio_preference_JLTS_droid_comlink = "Ear";
+tsp_cba_radio_preference_Others = "Handset";
+tsp_cba_radio_preference_TFAR_anprc148jem = "Model";
+tsp_cba_radio_preference_TFAR_anprc152 = "Vest";
+tsp_cba_radio_preference_TFAR_anprc154 = "Vest";
+tsp_cba_radio_preference_TFAR_fadak = "Model";
+tsp_cba_radio_preference_TFAR_pnr1000a = "Model";
+tsp_cba_radio_preference_TFAR_rf7800str = "Vest";
+tsp_cba_radio_vehicle = true;
+tsp_cba_radio_vest_armor = true;
+tsp_cba_radio_vests = "[]";
 
 // TSP Breach
 force tsp_cba_breach = true;
 force tsp_cba_breach_ace = true;
-force tsp_cba_breach_ace_locking = true;
 force tsp_cba_breach_ammo = "[""B_12Gauge_Slug_NoCartridge"", ""rhs_ammo_12g_slug"", ""rhs_ammo_12g_00buckshot""]";
-force tsp_cba_breach_ammoMultiplier = 1;
-force tsp_cba_breach_autoTime = 5;
-force tsp_cba_breach_lockBlacklist = "[]";
-force tsp_cba_breach_lockDoor = 0.75;
-force tsp_cba_breach_lockHouse = 0.25;
+tsp_cba_breach_ammo_multiplier = 1;
+tsp_cba_breach_auto = 5;
+tsp_cba_breach_break = true;
+tsp_cba_breach_lock_blacklist = "[]";
+tsp_cba_breach_lock_door = 0.75;
+tsp_cba_breach_lock_house = 0.25;
+tsp_cba_breach_lockpick = "[0,0.75,0.5,0.05]";
 force tsp_cba_breach_military = "[""Land_Budova4_in"",""Land_Budova4"",""Barrack2"",""Land_Barrack2"",""Land_MilOffices_V1_F"",""Land_Mil_Barracks_L_EP1"",""Land_Barrack2_EP1"",""Land_Mil_Barracks_EP1"",""Land_Mil_Barracks_no_interior_EP1_CUP"",""Land_Mil_Barracks_i_EP1"",""Land_Mil_Barracks_L"",""Land_Mil_Barracks_no_interior_CUP"",""Land_Mil_Barracks_i"",""Land_Mil_Barracks"",""Land_GuardHouse_02_F"",""Land_Mil_Guardhouse_EP1"",""Land_Mil_Guardhouse"",""Land_Mil_Guardhouse_no_interior_CUP"",""Land_GuardHouse_02_grey_F"",""Land_Barracks_03_F"",""Land_Barracks_05_F"",""Land_Barracks_02_F"",""Land_Barracks_04_F"",""Land_ControlTower_02_F"",""Land_Mil_Guardhouse_no_interior_EP1_CUP"",""Land_Radar_01_HQ_F"",""Land_i_Barracks_V2_F"",""Land_i_Barracks_V1_F"",""Land_u_Barracks_V2_F"",""Land_Barracks_06_F"",""Land_Mil_House_dam_EP1"",""Land_Barracks_01_grey_F"",""Land_Barracks_01_dilapidated_F"",""Land_Mil_House_EP1"",""Land_Army_hut2_int"",""Land_Barracks_01_camo_F"",""Land_Army_hut_int"",""Land_Army_hut3_long"",""Land_Army_hut2"",""Land_Army_hut3_long_int""]";
+tsp_cba_breach_paperclip = "[0,0.5,0.25,0.15]";
+tsp_cba_breach_picking_time = 20;
 force tsp_cba_breach_reinforced = "[""Land_Ammostore2"",""Land_Garaz_s_tankem"",""Land_Garaz_bez_tanku"",""Land_Cargo_House_V4_F"",""Land_Cargo_Tower_V1_F"",""Land_Cargo_HQ_V4_F"",""Land_Cargo_Tower_V1_No4_F"",""Land_Cargo_Tower_V1_No5_F"",""Land_Cargo_Tower_V1_No7_F"",""Land_Cargo_Tower_V4_F"",""Land_Cargo_Tower_V1_No2_F"",""Land_Cargo_Tower_V2_F"",""Land_Cargo_Tower_V3_F"",""Land_Cargo_Tower_V1_No1_F"",""Land_Cargo_Tower_V1_No3_F"",""Land_Cargo_HQ_V2_F"",""Land_Medevac_HQ_V1_F"",""Land_Cargo_HQ_V1_F"",""Land_Cargo_House_V2_F"",""Land_Medevac_house_V1_F"",""Land_Cargo_Tower_V1_No6_F"",""Land_Cargo_House_V1_F"",""Land_Cargo_HQ_V3_F"",""Land_Cargo_House_V3_F""]";
+tsp_cba_breach_shock = 240;
 force tsp_cba_breach_vanilla = false;
-force tsp_cba_breach_wall_physics = false;
-force tsp_cba_breach_wall_velocity = "[0,0,-0.5]";
+tsp_cba_breach_walls = "[
+[""AHHH"", ""Land_BrickWall_04_l_5m_F"",""Land_BrickWall_04_l_5m_d_F""],
+[""AHHH"", ""Land_BrickWall_03_l_5m_v2_F"",""Land_BrickWall_03_l_5m_v2_d_F""],
+[""AHHH"", ""Land_BrickWall_03_l_5m_v1_F"",""Land_BrickWall_03_l_5m_v2_d_F""],
+[""AHHH"", ""Land_BrickWall_02_l_5m_F"",""Land_BrickWall_02_l_5m_d_F""],
+[""AHHH"", ""Land_BrickWall_01_l_5m_F"",""Land_BrickWall_01_l_5m_d_F""],
+[""AHHH"", ""Land_Stone_8m_F"",""Land_Stone_8mD_F""],
+[""AHHH"", ""Land_WallCity_01_8m_yellow_F"",""Land_WallCity_01_8m_dmg_yellow_F""],
+[""AHHH"", ""Land_City_8m_F"",""Land_City_8mD_F""],
+[""AHHH"", ""Land_WallCity_01_8m_whiteblue_F"",""Land_WallCity_01_8m_dmg_whiteblue_F""],
+[""AHHH"", ""Land_WallCity_01_8m_blue_F"",""Land_WallCity_01_8m_dmg_blue_F""],
+[""AHHH"", ""Land_WallCity_01_8m_grey_F"",""Land_WallCity_01_8m_dmg_grey_F""],
+[""AHHH"", ""Land_WallCity_01_8m_pink_F"",""Land_WallCity_01_8m_dmg_pink_F""],
+[""AHHH"", ""Land_SilageWall_01_l_5m_F"",""Land_SilageWall_01_l_d_F""],
+[""AHHH"", ""Land_ConcreteWall_02_m_8m_F"",""Land_ConcreteWall_02_m_d_F""],
+[""AHHH"", ""Land_ConcreteWall_01_m_4m_F"",""Land_ConcreteWall_01_m_d_F""],
+[""AHHH"", ""Land_ConcreteWall_01_m_8m_F"",""Land_ConcreteWall_01_m_d_F""],
+[""AHHH"", ""Land_PipeFence_01_m_8m_F"",""Land_PipeFence_01_m_d_F""],
+[""AHHH"", ""Land_City2_8m_F"",""Land_City2_8mD_F""],
+[""AHHH"", ""Land_Wall_IndCnc_4_F"",""Land_Wall_IndCnc_End_2_F""],
+[""AHHH"", ""Land_CamoConcreteWall_01_l_4m_v1_F"",""Land_CamoConcreteWall_01_l_end_v1_F""],
+[""AHHH"", ""Land_Mil_WallBig_4m_F"",""Land_Mil_WallBig_4m_damaged_center_F""],
+[""mil_wallbig_4m_battered_f"", ""Land_Mil_WallBig_4m_battered_F"",""Land_Mil_WallBig_4m_damaged_right_F""],
+[""AHHH"", ""Land_Mil_WallBig_Corner_F"",""Land_Mil_WallBig_debris_F""],
+[""AHHH"", ""Land_Mil_WallBig_corner_battered_F"",""Land_Mil_WallBig_debris_F""]
+]";
+tsp_cba_flashbang_brightness = 1;
+tsp_cba_flashbang_distance = 10;
+tsp_cba_flashbang_fire = true;
+tsp_cba_flashbang_friends = 0.1;
+tsp_cba_flashbang_intensity = 1;
+tsp_cba_flashbang_smoke = true;
+tsp_cba_flashbang_sparks = true;
+tsp_cba_flashbang_spray = 0.4;
+tsp_cba_flashbang_surrender = 0.1;
+
+// TSP Core
+tsp_cba_angle = -0.1;
+tsp_cba_compat = false;
+tsp_cba_core_chvd = false;
+tsp_cba_core_pause = false;
+tsp_cba_hint = "Subtitle";
+tsp_cba_hint_distance = 20;
+tsp_param_faction = false;
 
 // TSP Melee
 force tsp_cba_melee = true;
-force tsp_cba_melee_damageModifier = 1;
-force tsp_cba_melee_moveset = false;
-force tsp_cba_melee_movesetPoll = 0;
+tsp_cba_melee_damage = 1;
+tsp_cba_melee_disarm = 1;
+tsp_cba_melee_speed = 15;
+tsp_cba_melee_stamina = 1;
 
 // Turret Enhanced
 Fat_Lurch_Grid = true;
@@ -1252,6 +1379,7 @@ force WBK_HeadLamps_IsAIActivateHeadlamps = false;
 force WBK_HeadLamps_IsVolumetricAppearOnAIParam = false;
 
 // Zeus Enhanced
+zen_area_markers_editableMarkers = 0;
 zen_building_markers_enabled = false;
 zen_camera_adaptiveSpeed = true;
 zen_camera_defaultSpeedCoef = 1;
@@ -1289,6 +1417,56 @@ zen_vision_enableRedGreenThermal = false;
 zen_vision_enableRedHotCold = false;
 zen_vision_enableWhiteHot = true;
 zen_vision_enableWhiteHotRedCold = false;
+
+// Zeus Enhanced - Attributes
+zen_attributes_enableAbilities = true;
+zen_attributes_enableAmmo = true;
+zen_attributes_enableAmmoCargo = true;
+zen_attributes_enableArsenal = true;
+zen_attributes_enableBuildingMarker = true;
+zen_attributes_enableDamage = true;
+zen_attributes_enableEngine = true;
+zen_attributes_enableExecute = true;
+zen_attributes_enableFuel = true;
+zen_attributes_enableFuelCargo = true;
+zen_attributes_enableGarage = true;
+zen_attributes_enableGroupBehaviour = true;
+zen_attributes_enableGroupCombatMode = true;
+zen_attributes_enableGroupExecute = true;
+zen_attributes_enableGroupFormation = true;
+zen_attributes_enableGroupID = true;
+zen_attributes_enableGroupSide = true;
+zen_attributes_enableGroupSkill = true;
+zen_attributes_enableGroupSpeed = true;
+zen_attributes_enableGroupStance = true;
+zen_attributes_enableHealth = true;
+zen_attributes_enableInventory = true;
+zen_attributes_enableLights = true;
+zen_attributes_enableMarkerAlpha = true;
+zen_attributes_enableMarkerColor = true;
+zen_attributes_enableMarkerText = true;
+zen_attributes_enableName = true;
+zen_attributes_enablePlateNumber = true;
+zen_attributes_enableRank = true;
+zen_attributes_enableRepairCargo = true;
+zen_attributes_enableRespawnPosition = true;
+zen_attributes_enableRespawnVehicle = true;
+zen_attributes_enableSensors = true;
+zen_attributes_enableSkill = true;
+zen_attributes_enableSkills = true;
+zen_attributes_enableStance = true;
+zen_attributes_enableStates = true;
+zen_attributes_enableTraits = true;
+zen_attributes_enableVehicleLock = true;
+zen_attributes_enableWaypointBehaviour = true;
+zen_attributes_enableWaypointCombatMode = true;
+zen_attributes_enableWaypointFormation = true;
+zen_attributes_enableWaypointLoiterAltitude = true;
+zen_attributes_enableWaypointLoiterDirection = true;
+zen_attributes_enableWaypointLoiterRadius = true;
+zen_attributes_enableWaypointSpeed = true;
+zen_attributes_enableWaypointTimeout = true;
+zen_attributes_enableWaypointType = true;
 
 // Zeus Enhanced - Faction Filter
 zen_faction_filter_0_CPC_O_NAM_VC = true;
