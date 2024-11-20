@@ -8,7 +8,7 @@ if !(hasInterface) exitWith {};
 
     private _args = switch (toLower _type) do {
         case "zeus": {
-            [{!isNull (getAssignedCuratorLogic player)}, format ["(Zeus) %1", _sender]];
+            [{!isNull (getAssignedCuratorLogic player)}, format ["(Zeus) %1:", _sender]];
         };
         case "whisper": {
             [{profileName isEqualTo _receiver}, format ["Whisper from %1", _sender]];
@@ -20,6 +20,9 @@ if !(hasInterface) exitWith {};
     _args params ["_condition", "_text"];
 
     if ([] call _condition) then {
-        [_msg, _text] call FUNC(showMessage);
+        GVAR(chatChannel) radioChannelAdd [ACE_player];
+        GVAR(chatChannel) radioChannelSetCallSign _text;
+        ACE_player customChat [GVAR(chatChannel), _msg];
+        GVAR(chatChannel) radioChannelRemove [ACE_player];
     };
 }] call CBA_fnc_addEventHandler;
