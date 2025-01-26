@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
-GVAR(tentType) = getMissionConfigValue [QGVAR(backpackType), "Misc_Backpackheap"];
-if (!(GVAR(tentType) isEqualType "") || {GVAR(backpackType) isEqualTo ""}) then {
+GVAR(tentType) = getMissionConfigValue [QGVAR(tentType), "Misc_Backpackheap"];
+if (!(GVAR(tentType) isEqualType "") || {GVAR(tentType) isEqualTo ""}) then {
     GVAR(tentType) = "Misc_Backpackheap";
 };
 
