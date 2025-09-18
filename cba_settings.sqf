@@ -664,7 +664,7 @@ force ace_winddeflection_vehicleEnabled = true;
 
 // ACE Zeus
 ace_zeus_autoAddObjects = false;
-force ace_zeus_canCreateZeus = 1;
+force ace_zeus_canCreateZeus = 0;
 ace_zeus_radioOrdnance = false;
 ace_zeus_remoteWind = false;
 ace_zeus_revealMines = 0;
