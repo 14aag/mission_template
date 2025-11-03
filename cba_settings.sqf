@@ -16,9 +16,9 @@ force ace_advanced_fatigue_recoveryFactor = 2;
 force ace_advanced_fatigue_terrainGradientFactor = 0.5;
 
 // ACE Advanced Missile Guidance
-force ace_missileguidance_chaffEffectivenessCoef = 1;
-force ace_missileguidance_flareAngleCoef = 1;
-force ace_missileguidance_flareEffectivenessCoef = 1;
+force ace_missileguidance_chaffEffectivenessCoef = 1.2;
+force ace_missileguidance_flareAngleCoef = 1.2;
+force ace_missileguidance_flareEffectivenessCoef = 1.2;
 
 // ACE Advanced Throwing
 force ace_advanced_throwing_enabled = true;
@@ -180,7 +180,7 @@ force ace_hearing_earplugsVolume = 0.7;
 force ace_hearing_enableCombatDeafness = true;
 force ace_hearing_enabledForZeusUnits = false;
 ace_hearing_enableNoiseDucking = true;
-force ace_hearing_explosionDeafnessCoefficient = 1;
+force ace_hearing_explosionDeafnessCoefficient = 0.2;
 force ace_hearing_unconsciousnessVolume = 0.325311;
 
 // ACE Interaction
@@ -1073,7 +1073,7 @@ force grad_trenches_functions_vehicleTrenchBuildSpeed = 5;
 force cigs_core_set_ace_arsenal_tab = true;
 force cigs_core_set_adv_fatigue_cough_modifier = 1;
 force cigs_core_set_adv_fatigue_decrease_delay = 5;
-force cigs_core_set_adv_fatigue_enabled = false;
+force cigs_core_set_adv_fatigue_enabled = true;
 force cigs_core_set_adv_fatigue_modifier = 1;
 force cigs_core_set_effect_combustion_chance = 0;
 force cigs_core_set_smoke_particles = 1;
@@ -1151,14 +1151,14 @@ force IC_setting_allowAdjustObjects = true;
 force IC_setting_allowDebris = true;
 force IC_setting_allowGroundTextures = true;
 force IC_setting_allowSmallExplosions = false;
-force IC_setting_craterDepthScale = 1;
-force IC_setting_craterDiameterScale = 1;
+force IC_setting_craterDepthScale = 0.5;
+force IC_setting_craterDiameterScale = 0.5;
 force IC_setting_debugMode = false;
 force IC_setting_limitDebris = true;
 force IC_setting_limitGroundTextures = true;
-force IC_setting_maxDebris = 40;
+force IC_setting_maxDebris = 20;
 force IC_setting_maxDebrisCountPerCrater = 2;
-force IC_setting_maxGroundTextures = 40;
+force IC_setting_maxGroundTextures = 20;
 
 // LAMBS Danger
 force lambs_danger_cqbRange = 60;
