@@ -27,6 +27,7 @@ force ace_advanced_throwing_enablePickUpAttached = true;
 ace_advanced_throwing_enableTempWindInfo = true;
 force ace_advanced_throwing_showMouseControls = true;
 force ace_advanced_throwing_showThrowArc = true;
+ace_advanced_throwing_throwStepSetting = 8;
 
 // ACE Advanced Vehicle Damage
 force ace_vehicle_damage_enableCarDamage = false;
@@ -139,7 +140,7 @@ force acex_field_rations_waterSourceActions = 2;
 force ace_fire_dropWeapon = 1;
 force ace_fire_enabled = true;
 force ace_fire_enableFlare = false;
-force ace_fire_enableScreams = true;
+ace_fire_enableScreams = true;
 
 // ACE Fortify
 force ace_fortify_markObjectsOnMap = 1;
@@ -179,21 +180,21 @@ ace_hearing_disableEarRinging = false;
 force ace_hearing_earplugsVolume = 0.7;
 force ace_hearing_enableCombatDeafness = true;
 force ace_hearing_enabledForZeusUnits = false;
-ace_hearing_enableNoiseDucking = true;
+force ace_hearing_enableNoiseDucking = true;
 force ace_hearing_explosionDeafnessCoefficient = 0.2;
 force ace_hearing_unconsciousnessVolume = 0.325311;
 
 // ACE Interaction
 force ace_interaction_disableNegativeRating = true;
-ace_interaction_enableAnimActions = true;
+force ace_interaction_enableAnimActions = true;
 force ace_interaction_enableGroupRenaming = true;
-ace_interaction_enableMagazinePassing = true;
+force ace_interaction_enableMagazinePassing = true;
 force ace_interaction_enableTeamManagement = true;
-ace_interaction_enableThrowablePassing = true;
-ace_interaction_enableWeaponAttachments = true;
-ace_interaction_interactWithEnemyCrew = 0;
+force ace_interaction_enableThrowablePassing = true;
+force ace_interaction_enableWeaponAttachments = true;
+force ace_interaction_interactWithEnemyCrew = 0;
 force ace_interaction_interactWithTerrainObjects = false;
-ace_interaction_remoteTeamManagement = true;
+force ace_interaction_remoteTeamManagement = true;
 
 // ACE Interaction Menu
 ace_gestures_showOnInteractionMenu = 2;
@@ -231,6 +232,7 @@ force ace_cargo_enableRename = true;
 force ace_cargo_loadTimeCoefficient = 1.5;
 ace_cargo_openAfterUnload = 0;
 force ace_cargo_paradropTimeCoefficent = 2.5;
+force ace_cargo_unloadOnKilled = 0.5;
 force ace_rearm_distance = 20;
 force ace_rearm_enabled = true;
 force ace_rearm_level = 1;
@@ -317,6 +319,7 @@ force ace_medical_statemachine_fatalInjuriesAI = 0;
 force ace_medical_statemachine_fatalInjuriesPlayer = 0;
 force ace_medical_useLimbDamage = 0;
 force ace_medical_vitals_simulateSpO2 = false;
+ace_medical_windowOnWakeUp = 1;
 
 // ACE Medical Interface
 ace_medical_feedback_bloodVolumeEffectType = 0;
@@ -460,7 +463,7 @@ force ace_finger_enabled = true;
 ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
 force ace_finger_indicatorForSelf = true;
 force ace_finger_maxRange = 5;
-ace_finger_proximityScaling = false;
+force ace_finger_proximityScaling = false;
 force ace_finger_sizeCoef = 1;
 
 // ACE Pylons
@@ -506,7 +509,7 @@ force ace_repair_wheelRepairRequiredItems = [];
 
 // ACE Respawn
 force ace_respawn_removeDeadBodiesDisconnected = true;
-force ace_respawn_savePreDeathGear = true;
+force ace_respawn_savePreDeathGear = false;
 
 // ACE Scopes
 force ace_scopes_correctZeroing = true;
@@ -644,6 +647,9 @@ acex_volume_reduction = 8;
 acex_volume_remindIfLowered = false;
 acex_volume_showNotification = true;
 
+// ACE Wardrobe
+ace_wardrobe_enableAction = true;
+
 // ACE Weapons
 force ace_common_persistentLaserEnabled = true;
 force ace_reload_displayText = true;
@@ -699,16 +705,9 @@ force BCE_Tracker_Render_sdr = 10000;
 force BCE_UnitTrack_fn = true;
 force BCE_veh_IR_fn = true;
 
-// Better CAS Environment (cTab ATAK Camera)
-BCE_PicFilePath_edit = "";
-BCE_PicFileSize_edit = "25";
-
 // Better CAS Environment (Server)
 force BCE_AI_CAS_Support_fn = false;
 force BCE_AIAir_IR_fn = true;
-force BCE_cTab_Marker_Sync = "_USER";
-force BCE_cTab_Marker_Sync_time = 1;
-force BCE_cTab_Side_Display = true;
 force BCE_inf_IR_Lig_S_fn = true;
 force BCE_LandVeh_Laser_fn = true;
 force BCE_LandVeh_Light_fn = true;
@@ -757,6 +756,8 @@ crowsza_pingbox_CBA_Setting_enabled = true;
 crowsza_pingbox_CBA_Setting_fade_duration = 300;
 crowsza_pingbox_CBA_Setting_fade_enabled = true;
 crowsza_pingbox_CBA_Setting_oldLimit = 600;
+crowsza_pingbox_CBA_Setting_Pingbox_Size = 3;
+crowsza_pingbox_CBA_Setting_spamPing_threshold = 60;
 crowsza_zeus_text_CBA_Setting_OnKilledModule_helper = true;
 crowsza_zeus_text_CBA_Setting_OnKilledModule_helper_color = [1,1,1,1];
 crowsza_zeus_text_CBA_Setting_rc_helper = true;
@@ -1069,82 +1070,92 @@ force grad_trenches_functions_vehicleEnvelopeDigTime = 150;
 force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
 force grad_trenches_functions_vehicleTrenchBuildSpeed = 5;
 
-// Immersive Cigs
-force cigs_core_set_ace_arsenal_tab = true;
+// Immersive Cigs - AI
+force cigs_ai_set_cigsonai_chance = 0.33;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_Apollo_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_baja_blast_cigpack = true;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_black_devil_cigpack = true;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_cigars_cigarbox_5 = false;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_craven_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_crayons_crayonpack = true;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_eckstein_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_Kosmos_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_lucky_strike_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_morley_cigpack = true;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_nil_cigpack = true;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_pops_poppack = true;
+cigs_ai_set_cigsonai_custom_#_CIV_cigs_Voron_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_Apollo_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_baja_blast_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_black_devil_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_cigars_cigarbox_5 = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_craven_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_crayons_crayonpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_eckstein_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_Kosmos_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_lucky_strike_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_morley_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_nil_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_pops_poppack = false;
+cigs_ai_set_cigsonai_custom_#_EAST_cigs_Voron_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_Apollo_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_baja_blast_cigpack = true;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_black_devil_cigpack = true;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_cigars_cigarbox_5 = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_craven_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_crayons_crayonpack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_eckstein_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_Kosmos_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_lucky_strike_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_morley_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_nil_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_pops_poppack = false;
+cigs_ai_set_cigsonai_custom_#_GUER_cigs_Voron_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_Apollo_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_baja_blast_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_black_devil_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_cigars_cigarbox_5 = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_craven_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_crayons_crayonpack = true;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_eckstein_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_Kosmos_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_lucky_strike_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_morley_cigpack = true;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_nil_cigpack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_pops_poppack = false;
+cigs_ai_set_cigsonai_custom_#_WEST_cigs_Voron_cigpack = false;
+force cigs_ai_set_cigsonai_delay = 5;
+force cigs_ai_set_cigsonai_enable = false;
+force cigs_ai_set_cigsonai_side_enabled_CIV = false;
+force cigs_ai_set_cigsonai_side_enabled_EAST = false;
+force cigs_ai_set_cigsonai_side_enabled_GUER = false;
+force cigs_ai_set_cigsonai_side_enabled_WEST = false;
+force cigs_ai_set_dynamicSmoking_checkUnitInventory = true;
+force cigs_ai_set_dynamicSmoking_enable = false;
+force cigs_ai_set_dynamicSmoking_slot = "GOGGLES";
+force cigs_ai_set_dynamicSmoking_slot_remove = true;
+force cigs_ai_set_dynamicSmoking_time_avg = 15;
+
+// Immersive Cigs - Common
 force cigs_core_set_adv_fatigue_cough_modifier = 1;
 force cigs_core_set_adv_fatigue_decrease_delay = 5;
 force cigs_core_set_adv_fatigue_enabled = true;
 force cigs_core_set_adv_fatigue_modifier = 1;
 force cigs_core_set_effect_combustion_chance = 0;
-force cigs_core_set_smoke_particles = 1;
+force cigs_core_set_require_holstered_weapon = true;
+force cigs_legacy_set_loudout_replacer_enable_mission = true;
+force cigs_legacy_set_loudout_replacer_enable_personal = true;
+
+// Immersive Cigs - Player Preferences
+force cigs_core_set_ace_arsenal_tab = true;
+cigs_core_set_smoke_particles = 1;
+cigs_core_set_smoking_frequency = 1;
+cigs_core_set_smoking_intensity = 1;
 cigs_core_set_sp_addCigpack = true;
 cigs_core_set_sp_addCigpack_type = "cigs_morley_cigpack";
 cigs_core_set_sp_addItems = false;
 cigs_core_set_sp_addLighter = false;
 cigs_core_set_sp_addLighter_type = "cigs_matches";
-cigs_legacy_set_loudout_replacer_enable_mission = true;
-cigs_legacy_set_loudout_replacer_enable_personal = true;
-
-// Immersive Cigs - Cigs On AI
-force cigs_core_set_cigsonai_chance = 0.15;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_Apollo_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_baja_blast_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_black_devil_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_cigars_cigarbox_5 = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_craven_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_crayons_crayonpack = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_eckstein_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_Kosmos_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_lucky_strike_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_morley_cigpack = true;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_nil_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_pops_poppack = true;
-force cigs_core_set_cigsonai_custom_#_CIV_cigs_Voron_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_Apollo_cigpack = true;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_baja_blast_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_black_devil_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_cigars_cigarbox_5 = true;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_craven_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_crayons_crayonpack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_eckstein_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_Kosmos_cigpack = true;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_lucky_strike_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_morley_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_nil_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_pops_poppack = false;
-force cigs_core_set_cigsonai_custom_#_EAST_cigs_Voron_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_Apollo_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_baja_blast_cigpack = true;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_black_devil_cigpack = true;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_cigars_cigarbox_5 = true;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_craven_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_crayons_crayonpack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_eckstein_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_Kosmos_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_lucky_strike_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_morley_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_nil_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_pops_poppack = false;
-force cigs_core_set_cigsonai_custom_#_GUER_cigs_Voron_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_Apollo_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_baja_blast_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_black_devil_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_cigars_cigarbox_5 = true;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_craven_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_crayons_crayonpack = true;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_eckstein_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_Kosmos_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_lucky_strike_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_morley_cigpack = true;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_nil_cigpack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_pops_poppack = false;
-force cigs_core_set_cigsonai_custom_#_WEST_cigs_Voron_cigpack = false;
-force cigs_core_set_cigsonai_delay = 5;
-force cigs_core_set_cigsonai_enable = false;
-
-// Immersive Cigs - Player Preferences
-cigs_core_set_smoking_frequency = 1;
-cigs_core_set_smoking_intensity = 1;
 
 // Improved Craters
 force IC_setting_allowAdjustObjects = true;
@@ -1244,21 +1255,6 @@ force SSD_DS_r_chest = 0.15;
 force SSD_DS_r_general = 0.05;
 force SSD_DS_r_head = 0;
 force SSD_DS_r_stomach = 0.1;
-
-// TFAR - Animations
-force radioAnims_cba_ads = true;
-force radioAnims_cba_Earpieces = "[""G_WirelessEarpiece_F""]";
-force radioAnims_cba_main = true;
-force radioAnims_cba_preference_fadak = "Vest";
-force radioAnims_cba_preference_Others = "Hand";
-force radioAnims_cba_preference_pnr1000 = "Vest";
-force radioAnims_cba_preference_PRC148 = "Hand";
-force radioAnims_cba_preference_PRC152 = "Vest";
-force radioAnims_cba_preference_PRC154 = "Hand";
-force radioAnims_cba_preference_rf7800 = "Vest";
-force radioAnims_cba_vehicles = true;
-force radioAnims_cba_vestarmor = true;
-force radioAnims_cba_vests = "[]";
 
 // TFAR - Clientside settings
 TFAR_curatorCamEars = false;
@@ -1478,31 +1474,31 @@ force tsp_cba_breach_reinforced = "[""Land_Ammostore2"",""Land_Garaz_s_tankem"",
 force tsp_cba_breach_shock = 240;
 force tsp_cba_breach_stun = true;
 force tsp_cba_breach_vanilla = false;
-force tsp_cba_breach_walls = "[ 
-[""AHHH"", ""Land_BrickWall_04_l_5m_F"",""Land_BrickWall_04_l_5m_d_F""], 
-[""AHHH"", ""Land_BrickWall_03_l_5m_v2_F"",""Land_BrickWall_03_l_5m_v2_d_F""], 
-[""AHHH"", ""Land_BrickWall_03_l_5m_v1_F"",""Land_BrickWall_03_l_5m_v2_d_F""], 
-[""AHHH"", ""Land_BrickWall_02_l_5m_F"",""Land_BrickWall_02_l_5m_d_F""], 
-[""AHHH"", ""Land_BrickWall_01_l_5m_F"",""Land_BrickWall_01_l_5m_d_F""], 
-[""AHHH"", ""Land_Stone_8m_F"",""Land_Stone_8mD_F""], 
-[""AHHH"", ""Land_WallCity_01_8m_yellow_F"",""Land_WallCity_01_8m_dmg_yellow_F""], 
-[""AHHH"", ""Land_City_8m_F"",""Land_City_8mD_F""], 
-[""AHHH"", ""Land_WallCity_01_8m_whiteblue_F"",""Land_WallCity_01_8m_dmg_whiteblue_F""], 
-[""AHHH"", ""Land_WallCity_01_8m_blue_F"",""Land_WallCity_01_8m_dmg_blue_F""], 
-[""AHHH"", ""Land_WallCity_01_8m_grey_F"",""Land_WallCity_01_8m_dmg_grey_F""], 
-[""AHHH"", ""Land_WallCity_01_8m_pink_F"",""Land_WallCity_01_8m_dmg_pink_F""], 
-[""AHHH"", ""Land_SilageWall_01_l_5m_F"",""Land_SilageWall_01_l_d_F""], 
-[""AHHH"", ""Land_ConcreteWall_02_m_8m_F"",""Land_ConcreteWall_02_m_d_F""], 
-[""AHHH"", ""Land_ConcreteWall_01_m_4m_F"",""Land_ConcreteWall_01_m_d_F""], 
-[""AHHH"", ""Land_ConcreteWall_01_m_8m_F"",""Land_ConcreteWall_01_m_d_F""], 
-[""AHHH"", ""Land_PipeFence_01_m_8m_F"",""Land_PipeFence_01_m_d_F""], 
-[""AHHH"", ""Land_City2_8m_F"",""Land_City2_8mD_F""], 
-[""AHHH"", ""Land_Wall_IndCnc_4_F"",""Land_Wall_IndCnc_End_2_F""], 
-[""AHHH"", ""Land_CamoConcreteWall_01_l_4m_v1_F"",""Land_CamoConcreteWall_01_l_end_v1_F""], 
-[""AHHH"", ""Land_Mil_WallBig_4m_F"",""Land_Mil_WallBig_4m_damaged_center_F""], 
-[""mil_wallbig_4m_battered_f"", ""Land_Mil_WallBig_4m_battered_F"",""Land_Mil_WallBig_4m_damaged_right_F""], 
-[""AHHH"", ""Land_Mil_WallBig_Corner_F"",""Land_Mil_WallBig_debris_F""], 
-[""AHHH"", ""Land_Mil_WallBig_corner_battered_F"",""Land_Mil_WallBig_debris_F""] 
+force tsp_cba_breach_walls = "[    
+[""AHHH"", ""Land_BrickWall_04_l_5m_F"",""Land_BrickWall_04_l_5m_d_F""],    
+[""AHHH"", ""Land_BrickWall_03_l_5m_v2_F"",""Land_BrickWall_03_l_5m_v2_d_F""],    
+[""AHHH"", ""Land_BrickWall_03_l_5m_v1_F"",""Land_BrickWall_03_l_5m_v2_d_F""],    
+[""AHHH"", ""Land_BrickWall_02_l_5m_F"",""Land_BrickWall_02_l_5m_d_F""],    
+[""AHHH"", ""Land_BrickWall_01_l_5m_F"",""Land_BrickWall_01_l_5m_d_F""],    
+[""AHHH"", ""Land_Stone_8m_F"",""Land_Stone_8mD_F""],    
+[""AHHH"", ""Land_WallCity_01_8m_yellow_F"",""Land_WallCity_01_8m_dmg_yellow_F""],    
+[""AHHH"", ""Land_City_8m_F"",""Land_City_8mD_F""],    
+[""AHHH"", ""Land_WallCity_01_8m_whiteblue_F"",""Land_WallCity_01_8m_dmg_whiteblue_F""],    
+[""AHHH"", ""Land_WallCity_01_8m_blue_F"",""Land_WallCity_01_8m_dmg_blue_F""],    
+[""AHHH"", ""Land_WallCity_01_8m_grey_F"",""Land_WallCity_01_8m_dmg_grey_F""],    
+[""AHHH"", ""Land_WallCity_01_8m_pink_F"",""Land_WallCity_01_8m_dmg_pink_F""],    
+[""AHHH"", ""Land_SilageWall_01_l_5m_F"",""Land_SilageWall_01_l_d_F""],    
+[""AHHH"", ""Land_ConcreteWall_02_m_8m_F"",""Land_ConcreteWall_02_m_d_F""],    
+[""AHHH"", ""Land_ConcreteWall_01_m_4m_F"",""Land_ConcreteWall_01_m_d_F""],    
+[""AHHH"", ""Land_ConcreteWall_01_m_8m_F"",""Land_ConcreteWall_01_m_d_F""],    
+[""AHHH"", ""Land_PipeFence_01_m_8m_F"",""Land_PipeFence_01_m_d_F""],    
+[""AHHH"", ""Land_City2_8m_F"",""Land_City2_8mD_F""],    
+[""AHHH"", ""Land_Wall_IndCnc_4_F"",""Land_Wall_IndCnc_End_2_F""],    
+[""AHHH"", ""Land_CamoConcreteWall_01_l_4m_v1_F"",""Land_CamoConcreteWall_01_l_end_v1_F""],    
+[""AHHH"", ""Land_Mil_WallBig_4m_F"",""Land_Mil_WallBig_4m_damaged_center_F""],    
+[""mil_wallbig_4m_battered_f"", ""Land_Mil_WallBig_4m_battered_F"",""Land_Mil_WallBig_4m_damaged_right_F""],    
+[""AHHH"", ""Land_Mil_WallBig_Corner_F"",""Land_Mil_WallBig_debris_F""],    
+[""AHHH"", ""Land_Mil_WallBig_corner_battered_F"",""Land_Mil_WallBig_debris_F""]    
 ]";
 
 // TSP Breach - Flashbang
@@ -1532,6 +1528,7 @@ force tsp_cba_melee_damage = 1;
 force tsp_cba_melee_disarm = 1;
 force tsp_cba_melee_speed = 15;
 force tsp_cba_melee_stamina = 1;
+force tsp_cba_melee_volume = 1;
 
 // Turret Enhanced
 force Fat_Lurch_Grid = false;
@@ -1558,8 +1555,6 @@ force vet_unflipping_unit_mass_limit = 3000;
 force vet_unflipping_vehicle_mass_limit = 100000;
 
 // WBK Simple Blood
-force WBK_BloodMod_BlockIMS = true;
-force WBK_BloodMod_IMS = true;
 force WBK_Smpl_Bld_HeadshotParticles_Blood = true;
 force WBK_Smpl_Bld_HeadshotParticles_Meat = true;
 force WBK_Smpl_Bld_SplatterOnWalls = true;
@@ -1706,23 +1701,14 @@ zen_faction_filter_0_UK3CB_CHD_W_O = true;
 zen_faction_filter_0_UK3CB_CHD_W_O_groups = true;
 zen_faction_filter_0_UK3CB_CPD_O = true;
 zen_faction_filter_0_UK3CB_CSAT_A_O = true;
-zen_faction_filter_0_UK3CB_CSAT_A_O_groups = true;
 zen_faction_filter_0_UK3CB_CSAT_B_O = true;
-zen_faction_filter_0_UK3CB_CSAT_B_O_groups = true;
 zen_faction_filter_0_UK3CB_CSAT_F_O = true;
-zen_faction_filter_0_UK3CB_CSAT_F_O_groups = true;
 zen_faction_filter_0_UK3CB_CSAT_G_O = true;
-zen_faction_filter_0_UK3CB_CSAT_G_O_groups = true;
 zen_faction_filter_0_UK3CB_CSAT_M_O = true;
-zen_faction_filter_0_UK3CB_CSAT_M_O_groups = true;
 zen_faction_filter_0_UK3CB_CSAT_N_O = true;
-zen_faction_filter_0_UK3CB_CSAT_N_O_groups = true;
 zen_faction_filter_0_UK3CB_CSAT_S_O = true;
-zen_faction_filter_0_UK3CB_CSAT_S_O_groups = true;
 zen_faction_filter_0_UK3CB_CSAT_U_O = true;
-zen_faction_filter_0_UK3CB_CSAT_U_O_groups = true;
 zen_faction_filter_0_UK3CB_CSAT_W_O = true;
-zen_faction_filter_0_UK3CB_CSAT_W_O_groups = true;
 zen_faction_filter_0_UK3CB_CW_SOV_O_EARLY = true;
 zen_faction_filter_0_UK3CB_CW_SOV_O_LATE = true;
 zen_faction_filter_0_UK3CB_FIA_O = true;
@@ -1748,10 +1734,15 @@ zen_faction_filter_0_UK3CB_NAP_O_groups = true;
 zen_faction_filter_0_UK3CB_NFA_O = true;
 zen_faction_filter_0_UK3CB_NFA_O_groups = true;
 zen_faction_filter_0_UK3CB_NPD_O = true;
+zen_faction_filter_0_UK3CB_PLM_O = true;
 zen_faction_filter_0_UK3CB_TKA_O = true;
 zen_faction_filter_0_UK3CB_TKC_O = true;
 zen_faction_filter_0_UK3CB_TKM_O = true;
 zen_faction_filter_0_UK3CB_TKP_O = true;
+zen_faction_filter_0_UK3CB_TNM_O = true;
+zen_faction_filter_0_UK3CB_TPD_O = true;
+zen_faction_filter_0_UK3CB_WEI_O = true;
+zen_faction_filter_0_UK3CB_WEI_O_groups = true;
 zen_faction_filter_1_Airfield_Logistics = true;
 zen_faction_filter_1_BLU_CTRG_F = true;
 zen_faction_filter_1_BLU_F = true;
@@ -1827,11 +1818,16 @@ zen_faction_filter_1_UK3CB_NAP_B_groups = true;
 zen_faction_filter_1_UK3CB_NFA_B = true;
 zen_faction_filter_1_UK3CB_NFA_B_groups = true;
 zen_faction_filter_1_UK3CB_NPD_B = true;
+zen_faction_filter_1_UK3CB_PLM_B = true;
 zen_faction_filter_1_UK3CB_TKA_B = true;
 zen_faction_filter_1_UK3CB_TKC_B = true;
 zen_faction_filter_1_UK3CB_TKM_B = true;
 zen_faction_filter_1_UK3CB_TKP_B = true;
+zen_faction_filter_1_UK3CB_TNM_B = true;
+zen_faction_filter_1_UK3CB_TPD_B = true;
 zen_faction_filter_1_UK3CB_UN_B = true;
+zen_faction_filter_1_UK3CB_WEI_B = true;
+zen_faction_filter_1_UK3CB_WEI_B_groups = true;
 zen_faction_filter_2_CPC_I_PIC = true;
 zen_faction_filter_2_CPC_I_Pirate = true;
 zen_faction_filter_2_CUP_I_NAPA = true;
@@ -1899,11 +1895,16 @@ zen_faction_filter_2_UK3CB_NAP_I_groups = true;
 zen_faction_filter_2_UK3CB_NFA_I = true;
 zen_faction_filter_2_UK3CB_NFA_I_groups = true;
 zen_faction_filter_2_UK3CB_NPD_I = true;
+zen_faction_filter_2_UK3CB_PLM_I = true;
 zen_faction_filter_2_UK3CB_TKA_I = true;
 zen_faction_filter_2_UK3CB_TKC_I = true;
 zen_faction_filter_2_UK3CB_TKM_I = true;
 zen_faction_filter_2_UK3CB_TKP_I = true;
+zen_faction_filter_2_UK3CB_TNM_I = true;
+zen_faction_filter_2_UK3CB_TPD_I = true;
 zen_faction_filter_2_UK3CB_UN_I = true;
+zen_faction_filter_2_UK3CB_WEI_I = true;
+zen_faction_filter_2_UK3CB_WEI_I_groups = true;
 zen_faction_filter_3_CIV_F = true;
 zen_faction_filter_3_CIV_IDAP_F = true;
 zen_faction_filter_3_CPC_O_NAM_CIV = true;
